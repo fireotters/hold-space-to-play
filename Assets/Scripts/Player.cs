@@ -42,10 +42,9 @@ public class Player : MonoBehaviour
         // We move the player.
         controller.Move(moveDirection * Time.deltaTime);
 
-        // 
+        // If it collides with the ceiling, the character bonks off it.
         if (controller.collisionFlags == CollisionFlags.Above)
         {
-            print("I'm touching the ceiling!");
             moveDirection.y = 0;
         }
 
