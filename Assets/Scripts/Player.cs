@@ -171,7 +171,7 @@ public class Player : MonoBehaviour
     /// </summary>
     void CameraFollowPlayer()
     {
-        camera.transform.SetPositionAndRotation(new Vector3(camera.transform.position.x, gameObject.transform.position.y,  -1f), Quaternion.identity);
+        camera.transform.SetPositionAndRotation(new Vector3(camera.transform.position.x, gameObject.transform.position.y + 1f,  -1f), Quaternion.identity);
     }
 
     /// <summary>
