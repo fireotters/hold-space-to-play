@@ -39,6 +39,7 @@ public class UI_Script : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             beingHeld = false;
+            player.SetPlayerDirection("stop");
             if (startHoldTime + timeTapToChange >= Time.time)
             {
                 ChangeSelection();
@@ -95,16 +96,14 @@ public class UI_Script : MonoBehaviour
         switch (currentOutline)
         {
             case "LeftArrow":
-                //player.MovePlayerTo("left");
-                player.moveLeft = true;
+                player.SetPlayerDirection("left");
                 Debug.Log("Moved Left.");
                 break;
             case "UpArrow":
                 player.jump = true;
                 break;
             case "RightArrow":
-                //player.MovePlayerTo("right");
-                player.moveRight = true;
+                player.SetPlayerDirection("right");
                 Debug.Log("Moved Right.");
                 break;
         }
