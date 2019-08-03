@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UI_Script : MonoBehaviour
 {
 
-    public Image outlineImg, leftArrowImg, upArrowImg, rightArrowImg, pauseImg;
+    public Image outlineImg, leftArrowImg, upArrowImg, rightArrowImg;
     private string currentOutline;
 
     float startHoldTime = 0f;
@@ -15,8 +15,6 @@ public class UI_Script : MonoBehaviour
     float timeBetweenTapAndHold = 0.8f; // Set to (timeHoldToActivate - timeTapToChange)
     float timeHoldToCancel = 4f;
     bool cancelling = false;
-
-    int numberOfRapidPresses = 0;
 
 
     void Start()
