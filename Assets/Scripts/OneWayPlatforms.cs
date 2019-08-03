@@ -4,27 +4,32 @@ using UnityEngine;
 
 public class OneWayPlatforms : MonoBehaviour
 {
-    [SerializeField] private Collider parentCollider;
-    SpriteRenderer triggerRenderer;
+    [SerializeField] SpriteRenderer topTriggerRenderer, bottomTriggerRenderer;
+    Collider parentCollider;
 
     void Awake()
     {
-        
-        triggerRenderer = GetComponent<SpriteRenderer>();
+        parentCollider = GetComponent<Collider>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        if (topTriggerRenderer == null || bottomTriggerRenderer == null)
+        {
+            Debug.LogError("No triggers have been specified!");
+            Destroy(gameObject);
+        }
+
         parentCollider.enabled = false;
-        triggerRenderer.enabled = false;
+        topTriggerRenderer.enabled = false;
+        bottomTriggerRenderer.enabled = false;
     }
 
-    void OnTriggerEnter(Collider other)
+    public void SetPlatformCollider(bool value)
     {
-        if (other.tag == "PlatformTrigger")
-        {
-            parentCollider.enabled = true;
-        }
+        parentCollider.enabled = value;
     }
+
+
 }

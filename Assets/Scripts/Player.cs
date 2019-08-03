@@ -64,6 +64,21 @@ public class Player : MonoBehaviour
         CameraFollowPlayer();
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "TopTrigger")
+        {
+            print("SOLID!");
+            SetOneWayPlatformCollisionTo(other, true);
+        }
+        else if (other.tag == "BottomTrigger")
+        {
+            print("NOT SOLID!");
+            SetOneWayPlatformCollisionTo(other, false);
+        }
+
+    }
+
     /// <summary>
     /// This function tells the animator what values to set to its variables.
     /// These variables are defined in Unity and they change the animation being played.
@@ -109,5 +124,12 @@ public class Player : MonoBehaviour
     void CameraFollowPlayer()
     {
         camera.transform.SetPositionAndRotation(new Vector3(0f, gameObject.transform.position.y,  -1f), Quaternion.identity);
+    }
+
+    void SetOneWayPlatformCollisionTo(Collider collider, bool value)
+    {
+        OneWayPlatforms platform = collider.gameObject.GetComponentInParent<OneWayPlatforms>();
+
+        platform.SetPlatformCollider(value);
     }
 }
