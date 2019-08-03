@@ -40,6 +40,7 @@ public class UI_Script : MonoBehaviour
             else if (startHoldTime + timeHoldToActivate <= Time.time)
             {
                 ActivateSelection();
+                cancelling = true;
             }
             else
             {
