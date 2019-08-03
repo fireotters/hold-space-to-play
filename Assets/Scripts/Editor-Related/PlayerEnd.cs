@@ -5,6 +5,15 @@ using UnityEngine;
 
 public class PlayerEnd : MonoBehaviour
 {
+    private SpriteRenderer sprite;
+
+    void Start()
+    {
+        sprite = GetComponent<SpriteRenderer>();
+
+        sprite.enabled = false;    
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")

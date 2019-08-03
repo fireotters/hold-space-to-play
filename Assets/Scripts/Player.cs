@@ -104,7 +104,7 @@ public class Player : MonoBehaviour
     }
 
     /// <summary>
-    /// 
+    /// Sets the camera position to look wherever the player is vertically speaking.
     /// </summary>
     void CameraFollowPlayer()
     {
