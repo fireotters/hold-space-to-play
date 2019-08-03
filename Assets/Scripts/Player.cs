@@ -68,12 +68,10 @@ public class Player : MonoBehaviour
     {
         if (other.tag == "TopTrigger")
         {
-            print("SOLID!");
             SetOneWayPlatformCollisionTo(other, true);
         }
         else if (other.tag == "BottomTrigger")
         {
-            print("NOT SOLID!");
             SetOneWayPlatformCollisionTo(other, false);
         }
 
@@ -126,6 +124,11 @@ public class Player : MonoBehaviour
         camera.transform.SetPositionAndRotation(new Vector3(0f, gameObject.transform.position.y,  -1f), Quaternion.identity);
     }
 
+    /// <summary>
+    /// Enables or disables the collider of the target one way platform.
+    /// </summary>
+    /// <param name="collider">One Way Platform's trigger collider.</param>
+    /// <param name="value">Value we want to set.</param>
     void SetOneWayPlatformCollisionTo(Collider collider, bool value)
     {
         OneWayPlatforms platform = collider.gameObject.GetComponentInParent<OneWayPlatforms>();
