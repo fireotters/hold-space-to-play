@@ -18,11 +18,13 @@ public class UI_Script : MonoBehaviour
 
     int numberOfRapidPresses = 0;
 
+    Player player;
 
     void Start()
     {
         outlineImg.transform.position = upArrowImg.transform.position;
         currentOutline = "UpArrow";
+        player = FindObjectOfType<Player>();
     }
 
     void Update()
@@ -88,12 +90,16 @@ public class UI_Script : MonoBehaviour
         switch (currentOutline)
         {
             case "LeftArrow":
+                //player.MovePlayerTo("left");
+                player.moveLeft = true;
                 Debug.Log("Moved Left.");
                 break;
             case "UpArrow":
-                Debug.Log("Jumped.");
+                player.jump = true;
                 break;
             case "RightArrow":
+                //player.MovePlayerTo("right");
+                player.moveRight = true;
                 Debug.Log("Moved Right.");
                 break;
         }

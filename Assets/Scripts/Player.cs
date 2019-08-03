@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,8 +11,10 @@ public class Player : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private Vector3 moveDirection = Vector3.zero;
-
     private Camera camera;
+    private float movementValue = 0f;
+
+    public bool jump = false, moveLeft = false, moveRight = false;
 
     void Awake()
     {
@@ -31,17 +34,19 @@ public class Player : MonoBehaviour
     void Update()
     {
         // What counts as "grounded"?
-        // Any **3D COLLIDER** counts as ground. Even in 2D games. Thank you Cross you're my saviour <3
+        // Any **3D COLLIDER** + 3D Rigidbody counts as ground. Even in 2D games. 
+        // Thank you Cross you're my saviour <3
         if (controller.isGrounded)
         {
             // We obtain what direction is being inputed, and we multiply that value by the speed multiplier.
-            moveDirection = new Vector2(Input.GetAxis("Horizontal"), 0.0f);
+            moveDirection = new Vector2(CalculateMovementValue(), 0.0f);
             moveDirection *= speedMultiplier;
 
-            // If the Space key is pressed, player jumps.
-            if (Input.GetKeyDown(KeyCode.Space))
+            // If the jump boolean is true, player jumps.
+            if (jump)
             {
                 Jump();
+                jump = false;
             }
         }
 
@@ -62,6 +67,20 @@ public class Player : MonoBehaviour
         SetAnimatorValues(Mathf.Abs(moveDirection.x), !controller.isGrounded);
 
         CameraFollowPlayer();
+    }
+
+    float CalculateMovementValue()
+    {
+        if ((moveLeft && movementValue > -5.0f) || ((!moveRight && !moveLeft) && movementValue != 0))
+        {
+            movementValue -= Time.deltaTime;
+        }
+        else if (moveRight && movementValue < 5.0f)
+        {
+            movementValue += Time.deltaTime;
+        }
+
+        return movementValue;
     }
 
     void OnTriggerEnter(Collider other)
@@ -121,7 +140,7 @@ public class Player : MonoBehaviour
     /// </summary>
     void CameraFollowPlayer()
     {
-        camera.transform.SetPositionAndRotation(new Vector3(0f, gameObject.transform.position.y,  -1f), Quaternion.identity);
+        camera.transform.SetPositionAndRotation(new Vector3(camera.transform.position.x, gameObject.transform.position.y,  -1f), Quaternion.identity);
     }
 
     /// <summary>
