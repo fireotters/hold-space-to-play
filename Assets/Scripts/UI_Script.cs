@@ -97,14 +97,12 @@ public class UI_Script : MonoBehaviour
         {
             case "LeftArrow":
                 player.SetPlayerDirection("left");
-                Debug.Log("Moved Left.");
                 break;
             case "UpArrow":
                 player.jump = true;
                 break;
             case "RightArrow":
                 player.SetPlayerDirection("right");
-                Debug.Log("Moved Right.");
                 break;
         }
     }

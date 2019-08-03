@@ -6,6 +6,8 @@ TagManager:
   tags:
   - TopTrigger
   - BottomTrigger
+  - Key
+  - Lock
   layers:
   - Default
   - TransparentFX
