@@ -61,6 +61,13 @@ public class Player : MonoBehaviour
         {
             moveDirection.y = 0;
         }
+        
+        if (controller.collisionFlags == CollisionFlags.Sides)
+        {
+            print("COLLIDING AGAINST WALL!");
+            moveLeft = false;
+            moveRight = false;
+        }
 
         CheckFlipCharacter(moveDirection.x);
         // Animate player.
