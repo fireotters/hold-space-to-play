@@ -20,11 +20,13 @@ public class UI_Script : MonoBehaviour
 
     int numberOfRapidPresses = 0;
 
+    Player player;
 
     void Start()
     {
         outlineImg.transform.position = upArrowImg.transform.position;
         currentOutline = "UpArrow";
+        player = FindObjectOfType<Player>();
         StartCoroutine(FadeBlack("from"));
     }
 
@@ -37,6 +39,7 @@ public class UI_Script : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             beingHeld = false;
+            player.SetPlayerDirection("stop");
             if (startHoldTime + timeTapToChange >= Time.time)
             {
                 ChangeSelection();
@@ -93,12 +96,14 @@ public class UI_Script : MonoBehaviour
         switch (currentOutline)
         {
             case "LeftArrow":
+                player.SetPlayerDirection("left");
                 Debug.Log("Moved Left.");
                 break;
             case "UpArrow":
-                Debug.Log("Jumped.");
+                player.jump = true;
                 break;
             case "RightArrow":
+                player.SetPlayerDirection("right");
                 Debug.Log("Moved Right.");
                 break;
         }

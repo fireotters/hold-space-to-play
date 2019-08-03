@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,8 +11,10 @@ public class Player : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private Vector3 moveDirection = Vector3.zero;
-
     private Camera camera;
+    private float movementValue = 0f, baseSpeed = 1.5f;
+    public bool jump = false;
+    private bool moveLeft = false, moveRight = false;
 
     void Awake()
     {
@@ -31,17 +34,19 @@ public class Player : MonoBehaviour
     void Update()
     {
         // What counts as "grounded"?
-        // Any **3D COLLIDER** counts as ground. Even in 2D games. Thank you Cross you're my saviour <3
+        // Any **3D COLLIDER** + 3D Rigidbody counts as ground. Even in 2D games. 
+        // Thank you Cross you're my saviour <3
         if (controller.isGrounded)
         {
             // We obtain what direction is being inputed, and we multiply that value by the speed multiplier.
-            moveDirection = new Vector2(Input.GetAxis("Horizontal"), 0.0f);
+            moveDirection = new Vector2(CalculateMovementValue(), 0.0f);
             moveDirection *= speedMultiplier;
 
-            // If the Space key is pressed, player jumps.
-            if (Input.GetKeyDown(KeyCode.Space))
+            // If the jump boolean is true, player jumps.
+            if (jump)
             {
                 Jump();
+                jump = false;
             }
         }
 
@@ -56,12 +61,55 @@ public class Player : MonoBehaviour
         {
             moveDirection.y = 0;
         }
-
+        
         CheckFlipCharacter(moveDirection.x);
         // Animate player.
         SetAnimatorValues(Mathf.Abs(moveDirection.x), !controller.isGrounded);
 
         CameraFollowPlayer();
+    }
+
+    /// <summary>
+    /// Calculates the movement value needed to be fed into the Vector2 used
+    /// for moving the CharacterController.
+    /// </summary>
+    /// <returns>The horizontal Movement value.</returns>
+    float CalculateMovementValue()
+    {
+        // If moveLeft == true and the movementValue is bigger than the negative base speed
+        // we subtract deltaTime to movementValue
+        if (moveLeft && movementValue >= -baseSpeed)
+        {
+            movementValue -= Time.deltaTime;
+        }
+        // If moveRight == true and the movement is lower than the base speed, we add deltaTime
+        // to movementValue
+        else if (moveRight && movementValue <= baseSpeed)
+        {
+            movementValue += Time.deltaTime;
+        }
+        // fuck my life and fuck everything this section took way too much of time to add other things to the game
+        // If both moveRight and moveLeft == false and the Space key is not being pressed
+        // depending on if the movementValue is positive or negative, we start subtracting or adding
+        // deltaTime to the value. Once the value reaches 0.1 levels of precision, we just set the value to 0,
+        // since deltaTime never ends up returning plain zero.
+        else if ((!moveRight && !moveLeft) && !Input.GetKey(KeyCode.Space))
+        {
+            if (movementValue > 0.1f)
+            {
+                movementValue -= Time.deltaTime;
+            }
+            else if (movementValue < -0.1f)
+            {
+                movementValue += Time.deltaTime;
+            }
+            else if (movementValue <= 0.1f || movementValue >= -0.1f)
+            {
+                movementValue = 0;
+            }
+        }
+
+        return movementValue;
     }
 
     void OnTriggerEnter(Collider other)
@@ -74,7 +122,6 @@ public class Player : MonoBehaviour
         {
             SetOneWayPlatformCollisionTo(other, false);
         }
-
     }
 
     /// <summary>
@@ -92,7 +139,10 @@ public class Player : MonoBehaviour
         animator.SetBool("IsJumping", isJumping);
     }
 
-    // Checks if the sprite needs to be flipped.
+    /// <summary>
+    /// Checks if the sprite needs to be flipped.
+    /// </summary>
+    /// <param name="xvalue">x value of player controller</param>    
     void CheckFlipCharacter(float xvalue)
     {
         if (xvalue > 0 && spriteRenderer.flipX)
@@ -121,7 +171,7 @@ public class Player : MonoBehaviour
     /// </summary>
     void CameraFollowPlayer()
     {
-        camera.transform.SetPositionAndRotation(new Vector3(0f, gameObject.transform.position.y,  -1f), Quaternion.identity);
+        camera.transform.SetPositionAndRotation(new Vector3(camera.transform.position.x, gameObject.transform.position.y + 1f,  -1f), Quaternion.identity);
     }
 
     /// <summary>
@@ -134,5 +184,31 @@ public class Player : MonoBehaviour
         OneWayPlatforms platform = collider.gameObject.GetComponentInParent<OneWayPlatforms>();
 
         platform.SetPlatformCollider(value);
+    }
+
+    /// <summary>
+    /// Sets the direction of the player 
+    /// </summary>
+    /// <param name="direction">What direction the player should go to.</param>
+    public void SetPlayerDirection(string direction)
+    {
+        if (direction == "left")
+        {
+            moveLeft = true;
+            moveRight = false;
+            movementValue = 0f;
+        }
+        else if (direction  == "right")
+        {
+            moveRight = true;
+            moveLeft = false;
+            movementValue = 0f;
+        }
+        else if (direction == "stop")
+        {
+            moveRight = false;
+            moveLeft = false;
+        }
+
     }
 }
