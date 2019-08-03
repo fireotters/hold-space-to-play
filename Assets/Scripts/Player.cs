@@ -2,10 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    #region Variables
     [SerializeField] private float speedMultiplier = 0, jumpSpeed = 0, gravity = 0;
+    [SerializeField] private Text keyCounter;
 
     private CharacterController controller;
     private SpriteRenderer spriteRenderer;
@@ -15,7 +18,10 @@ public class Player : MonoBehaviour
     private float movementValue = 0f, baseSpeed = 1.5f;
     public bool jump = false;
     private bool moveLeft = false, moveRight = false;
+    private int amountOfKeys = 0;
+    #endregion
 
+    #region Unity methods
     void Awake()
     {
         controller = GetComponent<CharacterController>();
@@ -23,6 +29,7 @@ public class Player : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         camera = FindObjectOfType<Camera>();
+        keyCounter = FindObjectOfType<Text>();
     }
 
     void Start()
@@ -69,6 +76,36 @@ public class Player : MonoBehaviour
         CameraFollowPlayer();
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        switch (other.tag)
+        {
+            case "TopTrigger":
+                SetOneWayPlatformCollisionTo(other, true);
+                break;
+            case "BottomTrigger":
+                SetOneWayPlatformCollisionTo(other, false);
+                break;
+            case "Key":
+                amountOfKeys++;
+                UpdateKeyCounter();
+                Destroy(other.gameObject);
+                // Key key = other.gameObject.GetComponent<Key>();
+                // key.DestroyBehaviour();
+                break;
+            case "Lock":
+                if (amountOfKeys != 0)
+                {
+                    amountOfKeys--;
+                    UpdateKeyCounter();
+                    Destroy(other.gameObject);
+                }
+                break;
+        }
+    }
+    #endregion
+
+    #region Other methods
     /// <summary>
     /// Calculates the movement value needed to be fed into the Vector2 used
     /// for moving the CharacterController.
@@ -110,18 +147,6 @@ public class Player : MonoBehaviour
         }
 
         return movementValue;
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "TopTrigger")
-        {
-            SetOneWayPlatformCollisionTo(other, true);
-        }
-        else if (other.tag == "BottomTrigger")
-        {
-            SetOneWayPlatformCollisionTo(other, false);
-        }
     }
 
     /// <summary>
@@ -198,7 +223,7 @@ public class Player : MonoBehaviour
             moveRight = false;
             movementValue = 0f;
         }
-        else if (direction  == "right")
+        else if (direction == "right")
         {
             moveRight = true;
             moveLeft = false;
@@ -209,6 +234,12 @@ public class Player : MonoBehaviour
             moveRight = false;
             moveLeft = false;
         }
-
     }
+
+    void UpdateKeyCounter()
+    {
+        keyCounter.text = amountOfKeys.ToString();
+    }
+
+    #endregion
 }
