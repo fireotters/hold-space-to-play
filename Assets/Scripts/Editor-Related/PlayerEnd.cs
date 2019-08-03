@@ -11,9 +11,10 @@ public class PlayerEnd : MonoBehaviour
             TriggerEndLevel();
     }
 
-    // TODO: Do something when level finishes (
+    // TODO: Do something when level finishes
     void TriggerEndLevel()
     {
         print("End of level reached.");
+        Destroy(gameObject);
     }
 }

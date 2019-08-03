@@ -11,11 +11,20 @@ public class Player : MonoBehaviour
     private Animator animator;
     private Vector3 moveDirection = Vector3.zero;
 
+    private Camera camera;
+
     void Awake()
     {
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        camera = FindObjectOfType<Camera>();
+    }
+
+    void Start()
+    {
+        CameraFollowPlayer();
     }
 
     // Update is called once per frame
@@ -51,6 +60,8 @@ public class Player : MonoBehaviour
         CheckFlipCharacter(moveDirection.x);
         // Animate player.
         SetAnimatorValues(Mathf.Abs(moveDirection.x), !controller.isGrounded);
+
+        CameraFollowPlayer();
     }
 
     /// <summary>
@@ -81,11 +92,22 @@ public class Player : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Whenever called, the player jumps.
+    /// </summary>
     void Jump()
     {
         if (controller.isGrounded)
         {
             moveDirection.y = jumpSpeed;
         }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    void CameraFollowPlayer()
+    {
+        camera.transform.SetPositionAndRotation(new Vector3(0f, gameObject.transform.position.y,  -1f), Quaternion.identity);
     }
 }
