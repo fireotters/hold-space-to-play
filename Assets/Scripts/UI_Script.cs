@@ -19,7 +19,7 @@ public class UI_Script : MonoBehaviour
 
     int numberOfRapidPresses = 0;
 
-    Player player;
+    public Player player;
 
     void Start()
     {
@@ -31,6 +31,10 @@ public class UI_Script : MonoBehaviour
 
     void Update()
     {
+        if (player == null) //Because Unity is the worst
+        {
+            player = FindObjectOfType<Player>();
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             startHoldTime = Time.time;
