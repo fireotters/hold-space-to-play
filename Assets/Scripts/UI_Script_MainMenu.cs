@@ -23,12 +23,15 @@ public class UI_Script_MainMenu : MonoBehaviour
     public GameObject optionsDialog;
     public Slider optionMusicSlider, optionSFXSlider;
     public AudioMixer mixer;
+    private MusicManager musicManager;
 
     public GameObject fadeBlack;
 
 
     void Start()
     {
+        musicManager = GameObject.FindObjectOfType<MusicManager>();
+        musicManager.ChangeMusicTrack(0);
         if (!PlayerPrefs.HasKey("Music") || !PlayerPrefs.HasKey("SFX"))
         {
             PlayerPrefs.SetFloat("Music", 0.5f);

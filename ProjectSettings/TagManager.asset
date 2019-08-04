@@ -8,6 +8,7 @@ TagManager:
   - BottomTrigger
   - Key
   - Lock
+  - Flag
   layers:
   - Default
   - TransparentFX
