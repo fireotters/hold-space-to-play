@@ -197,7 +197,7 @@ public class UI_Script_MainMenu : MonoBehaviour
         print(levelSelectText.text);
         if (int.TryParse(levelSelectText.text, out int levelNo))
         {
-            if (levelNo > 0 && levelNo < 5)
+            if (levelNo > 0 && levelNo < 9)
             {
                 levelNoSelected = levelNo;
                 StartCoroutine(FadeBlack("to"));

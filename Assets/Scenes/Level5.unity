@@ -11351,7 +11351,7 @@ PrefabInstance:
     - target: {fileID: 3435034123848993748, guid: 0789323d59eaa694389993ea2bee7600,
         type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 1.5000001
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0789323d59eaa694389993ea2bee7600, type: 3}
@@ -11854,6 +11854,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4593923664176206152, guid: bf3b0e299d4fc19448023a9828c6a7dc,
+        type: 3}
+      propertyPath: choiceOfMusic
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf3b0e299d4fc19448023a9828c6a7dc, type: 3}
