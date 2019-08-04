@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1090564586137347987}
   - component: {fileID: 1090564586137347986}
   - component: {fileID: 1090564586137347990}
+  - component: {fileID: 2000233261139211011}
   m_Layer: 0
   m_Name: OneWayPlatformCollider
   m_TagString: Untagged
@@ -127,6 +128,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topTriggerRenderer: {fileID: 1090564586482201835}
   bottomTriggerRenderer: {fileID: 1090564587249648312}
+--- !u!114 &2000233261139211011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090564586137347997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a5a904449a915249becbef491a6f3f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1090564586482201749
 GameObject:
   m_ObjectHideFlags: 0
