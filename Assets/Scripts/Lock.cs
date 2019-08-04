@@ -4,15 +4,36 @@ using UnityEngine;
 
 public class Lock : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private AudioSource sfx;
+    private Animator animator;
+    private SpriteRenderer lockSprite;
+    [SerializeField] private Collider lockCollider = null;
+
+    void Awake()
     {
+        lockSprite = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+        sfx = GetComponent<AudioSource>();
+        if (lockCollider == null)
+        {
+            Debug.LogError("You need to specify the collision box collider in the Inspector!");
+        }
+    }
+
+    public void DestroyLock()
+    {
+        lockCollider.enabled = false;
+        sfx.Play();
+        animator.SetBool("Die", true);
+        Invoke("Die", 0.51f);
         
     }
 
-    // Update is called once per frame
-    void Update()
+    void Die()
     {
-        
+        lockSprite.enabled = false;
+        Destroy(gameObject);
     }
+
+    
 }

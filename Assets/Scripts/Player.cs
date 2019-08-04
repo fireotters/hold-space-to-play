@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private Vector3 moveDirection = Vector3.zero;
-    private Camera camera;
+    private new Camera camera;
     private float movementValue = 0f, baseSpeed = 1.5f;
     public bool jump = false;
     private bool moveLeft = false, moveRight = false;
@@ -94,16 +94,16 @@ public class Player : MonoBehaviour
             case "Key":
                 amountOfKeys++;
                 UpdateKeyCounter();
-                Destroy(other.gameObject);
-                // Key key = other.gameObject.GetComponent<Key>();
-                // key.DestroyBehaviour();
+                Key key = other.gameObject.GetComponent<Key>();
+                key.DestroyKey();
                 break;
             case "Lock":
-                if (amountOfKeys != 0)
+                if (amountOfKeys > 0)
                 {
                     amountOfKeys--;
                     UpdateKeyCounter();
-                    Destroy(other.gameObject);
+                    Lock lockObject = other.gameObject.GetComponent<Lock>();
+                    lockObject.DestroyLock();
                 }
                 break;
         }
