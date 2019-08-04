@@ -23,7 +23,8 @@ public class UI_Script : MonoBehaviour
     void Start()
     {
         musicManager = GameObject.FindObjectOfType<MusicManager>();
-        musicManager.ChangeMusicTrack(choiceOfMusic);
+        if (musicManager)
+            musicManager.ChangeMusicTrack(choiceOfMusic);
         outlineImg.transform.position = upArrowImg.transform.position;
         currentOutline = "UpArrow";
         player = FindObjectOfType<Player>();
