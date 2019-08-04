@@ -46,7 +46,6 @@ public class Player : MonoBehaviour
             if (jump)
             {
                 Jump();
-                jump = false;
             }
         }
 
@@ -64,7 +63,13 @@ public class Player : MonoBehaviour
         
         CheckFlipCharacter(moveDirection.x);
         // Animate player.
-        SetAnimatorValues(Mathf.Abs(moveDirection.x), !controller.isGrounded);
+        SetAnimatorValues(Mathf.Abs(moveDirection.x), jump);
+
+        // The jump falsify statement was moved from where it was, so that SetAnimatorValues can use jump as a bool
+        if (jump)
+        {
+            jump = false;
+        }
 
         CameraFollowPlayer();
     }
