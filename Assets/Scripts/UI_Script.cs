@@ -11,9 +11,8 @@ public class UI_Script : MonoBehaviour
 
     float startHoldTime = 0f;
     float timeTapToChange = 0.2f;
-    float timeHoldToActivate = 1.0f;
-    float timeBetweenTapAndHold = 0.8f; // Set to (timeHoldToActivate - timeTapToChange)
-    float timeHoldToCancel = 4f;
+    float timeHoldToActivate = 0.5f;
+    float timeBetweenTapAndHold = 0.3f; // Set to (timeHoldToActivate - timeTapToChange)
     bool cancelling = false;
     bool beingHeld = false;
     public GameObject fadeBlack;
