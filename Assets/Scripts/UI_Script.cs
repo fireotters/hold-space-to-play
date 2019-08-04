@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UI_Script : MonoBehaviour
 {
@@ -23,7 +24,10 @@ public class UI_Script : MonoBehaviour
     void Start()
     {
         musicManager = GameObject.FindObjectOfType<MusicManager>();
-        musicManager.ChangeMusicTrack(choiceOfMusic);
+        if (musicManager)
+        {
+            musicManager.ChangeMusicTrack(choiceOfMusic);
+        }
         outlineImg.transform.position = upArrowImg.transform.position;
         currentOutline = "UpArrow";
         player = FindObjectOfType<Player>();
@@ -35,6 +39,11 @@ public class UI_Script : MonoBehaviour
         if (player == null) //Because Unity is the worst
         {
             player = FindObjectOfType<Player>();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            StartCoroutine(FadeBlack("to"));
+            Invoke("ExitLevel", 1f);
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -182,5 +191,10 @@ public class UI_Script : MonoBehaviour
                 yield return null;
             }
         }
+    }
+
+    void ExitLevel()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }

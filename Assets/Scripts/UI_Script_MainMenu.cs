@@ -24,6 +24,9 @@ public class UI_Script_MainMenu : MonoBehaviour
     public Slider optionMusicSlider, optionSFXSlider;
     public AudioMixer mixer;
     private MusicManager musicManager;
+    private int levelNoSelected;
+    public Text levelSelectText;
+    public AudioSource sfxDemoSlider;
 
     public GameObject fadeBlack;
 
@@ -31,7 +34,10 @@ public class UI_Script_MainMenu : MonoBehaviour
     void Start()
     {
         musicManager = GameObject.FindObjectOfType<MusicManager>();
-        musicManager.ChangeMusicTrack(0);
+        if (musicManager)
+        {
+            musicManager.ChangeMusicTrack(0);
+        }
         if (!PlayerPrefs.HasKey("Music") || !PlayerPrefs.HasKey("SFX"))
         {
             PlayerPrefs.SetFloat("Music", 0.5f);
@@ -172,6 +178,7 @@ public class UI_Script_MainMenu : MonoBehaviour
     void ShowOptions()
     {
         optionsAreOpen = true;
+        musicManager.sfxDemo = sfxDemoSlider;
         optionsDialog.SetActive(true);
         optionMusicSlider.SetValueWithoutNotify(PlayerPrefs.GetFloat("Music"));
         optionSFXSlider.SetValueWithoutNotify(PlayerPrefs.GetFloat("SFX"));
@@ -183,6 +190,25 @@ public class UI_Script_MainMenu : MonoBehaviour
         optionMusicSlider.SetValueWithoutNotify(PlayerPrefs.GetFloat("Music"));
         optionSFXSlider.SetValueWithoutNotify(PlayerPrefs.GetFloat("SFX"));
         beingHeld = false;
+    }
+
+    public void GoToLevel()
+    {
+        print(levelSelectText.text);
+        if (int.TryParse(levelSelectText.text, out int levelNo))
+        {
+            if (levelNo > 0 && levelNo < 5)
+            {
+                levelNoSelected = levelNo;
+                StartCoroutine(FadeBlack("to"));
+                Invoke("DoLevelLoad", 1f);
+            }
+        }
+    }
+
+    void DoLevelLoad()
+    {
+        SceneManager.LoadScene("Level" + levelNoSelected);
     }
 
     // Other functions
