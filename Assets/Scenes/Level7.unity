@@ -6345,22 +6345,22 @@ PrefabInstance:
     - target: {fileID: 3435034123848993748, guid: 0789323d59eaa694389993ea2bee7600,
         type: 3}
       propertyPath: m_Tiles.Array.data[72].second.m_TileIndex
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3435034123848993748, guid: 0789323d59eaa694389993ea2bee7600,
         type: 3}
       propertyPath: m_Tiles.Array.data[72].second.m_TileSpriteIndex
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3435034123848993748, guid: 0789323d59eaa694389993ea2bee7600,
         type: 3}
       propertyPath: m_Tiles.Array.data[72].second.m_TileFlags
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3435034123848993748, guid: 0789323d59eaa694389993ea2bee7600,
         type: 3}
       propertyPath: m_Tiles.Array.data[72].second.m_ColliderType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3435034123848993748, guid: 0789323d59eaa694389993ea2bee7600,
         type: 3}
