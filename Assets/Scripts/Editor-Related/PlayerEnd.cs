@@ -13,7 +13,7 @@ public class PlayerEnd : MonoBehaviour
 
     void Awake()
     {
-        if (levelToLoad == null)
+        if (levelToLoad == "")
         {
             Debug.LogError("You must input a scene name to load in the Inspector!");
         }
