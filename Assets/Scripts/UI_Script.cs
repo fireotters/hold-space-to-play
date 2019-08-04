@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UI_Script : MonoBehaviour
 {
-
+    public int choiceOfMusic;
     public Image outlineImg, leftArrowImg, upArrowImg, rightArrowImg, pauseImg;
     private string currentOutline;
 
@@ -17,12 +17,13 @@ public class UI_Script : MonoBehaviour
     bool beingHeld = false;
     public GameObject fadeBlack;
 
-    int numberOfRapidPresses = 0;
-
-    public Player player;
+    private Player player;
+    private MusicManager musicManager;
 
     void Start()
     {
+        musicManager = GameObject.FindObjectOfType<MusicManager>();
+        musicManager.ChangeMusicTrack(choiceOfMusic);
         outlineImg.transform.position = upArrowImg.transform.position;
         currentOutline = "UpArrow";
         player = FindObjectOfType<Player>();
