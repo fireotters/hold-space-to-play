@@ -136,6 +136,7 @@ MonoBehaviour:
   speedMultiplier: 3
   jumpSpeed: 8
   gravity: 20
+  keyCounter: {fileID: 0}
   jump: 0
 --- !u!54 &3201534138099777405
 Rigidbody:
