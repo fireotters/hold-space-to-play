@@ -9,8 +9,9 @@ public class MusicManager : MonoBehaviour
     public AudioMixer mixer;
     public AudioSource sfxDemo, currentMusicPlayer;
     public AudioClip mainMenuMusic, track1, track2, track3;
-    private int lastTrackRequested;
+    private int lastTrackRequested = 1;
 
+    public static MusicManager instance;
     public void ChangeMusic(float sliderValue) {
         mixer.SetFloat("MusicVolume", Mathf.Log10(sliderValue) * 20);
         PlayerPrefs.SetFloat("Music", sliderValue);
@@ -26,13 +27,25 @@ public class MusicManager : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     public void ChangeMusicTrack(int index)
     {
         if (index != lastTrackRequested)
         {
+            if (currentMusicPlayer.isPlaying)
+            {
+                currentMusicPlayer.Stop();
+            }
             switch (index)
             {
                 case 0:
@@ -55,4 +68,5 @@ public class MusicManager : MonoBehaviour
             lastTrackRequested = index;
         }
     }
+
 }
