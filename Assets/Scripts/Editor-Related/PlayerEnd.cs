@@ -22,7 +22,7 @@ public class PlayerEnd : MonoBehaviour
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
-
+        fadeBlack = GameObject.FindObjectOfType<Canvas>().GetComponent<UI_Script>().fadeBlack;
         sprite.enabled = false;    
     }
 
@@ -31,7 +31,7 @@ public class PlayerEnd : MonoBehaviour
         if (other.tag == "Player")
         {
             StartCoroutine(FadeBlack("to"));
-            Invoke("TriggerEndLevel", 1f);
+            Invoke("TriggerEndLevel", 5f);
         }
     }
 
@@ -48,6 +48,7 @@ public class PlayerEnd : MonoBehaviour
         float speedOfFade = 1.2f;
         float fadingAlpha;
         fadeBlack.SetActive(true);
+        yield return new WaitForSeconds(3f);
         if (ToOrFrom == "from")
         {
             fadingAlpha = 1f;

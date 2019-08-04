@@ -106,6 +106,13 @@ public class Player : MonoBehaviour
                     lockObject.DestroyLock();
                 }
                 break;
+            case "Flag":
+                {
+                    Flag flagObject = other.gameObject.GetComponent<Flag>();
+                    flagObject.FlagAnim();
+                    movementValue = 0;
+                }
+                break;
         }
     }
     #endregion

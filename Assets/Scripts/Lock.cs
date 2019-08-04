@@ -25,13 +25,18 @@ public class Lock : MonoBehaviour
         lockCollider.enabled = false;
         sfx.Play();
         animator.SetBool("Die", true);
-        Invoke("Die", 0.51f);
+        Invoke("Die", 0.5f);
         
     }
 
     void Die()
     {
         lockSprite.enabled = false;
+        Invoke("ActuallyDie", 2f);
+    }
+
+    void ActuallyDie()
+    {
         Destroy(gameObject);
     }
 
