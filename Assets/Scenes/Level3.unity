@@ -10735,8 +10735,8 @@ Transform:
   - {fileID: 3879040540295212302}
   - {fileID: 2084364550}
   - {fileID: 768029534}
-  - {fileID: 532614493}
   - {fileID: 4740873106353926442}
+  - {fileID: 532614493}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10942,6 +10942,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4593923664176206152, guid: bf3b0e299d4fc19448023a9828c6a7dc,
+        type: 3}
+      propertyPath: choiceOfMusic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf3b0e299d4fc19448023a9828c6a7dc, type: 3}
