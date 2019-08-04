@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedMultiplier: 3
-  jumpSpeed: 8
+  jumpSpeed: 10
   gravity: 20
   keyCounter: {fileID: 0}
   jump: 0
