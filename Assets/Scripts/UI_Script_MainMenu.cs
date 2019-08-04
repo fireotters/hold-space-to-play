@@ -185,7 +185,7 @@ public class UI_Script_MainMenu : MonoBehaviour
     // Other functions
     void OpenGame()
     {
-        SceneManager.LoadScene("UI Test");
+        SceneManager.LoadScene("Level1");
     }
     public IEnumerator FadeBlack(string ToOrFrom)
     {
