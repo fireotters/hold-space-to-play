@@ -6,7 +6,6 @@ public class PlayerStart : MonoBehaviour
 {
     [SerializeField] private GameObject player = null;
 
-    // Start is called before the first frame update
     void Start()
     {
         // Spawns a player.

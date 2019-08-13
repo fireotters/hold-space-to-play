@@ -20,9 +20,12 @@ public class UI_Script : MonoBehaviour
 
     private Player player;
     private MusicManager musicManager;
+    private GameObject baseUI;
 
     void Start()
     {
+        baseUI = gameObject.transform.GetChild(0).gameObject;
+        baseUI.SetActive(true);
         musicManager = GameObject.FindObjectOfType<MusicManager>();
         if (musicManager)
         {

@@ -194,7 +194,6 @@ public class UI_Script_MainMenu : MonoBehaviour
 
     public void GoToLevel()
     {
-        print(levelSelectText.text);
         if (int.TryParse(levelSelectText.text, out int levelNo))
         {
             if (levelNo > 0 && levelNo < 9)

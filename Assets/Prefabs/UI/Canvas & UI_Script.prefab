@@ -271,13 +271,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a11e9474ca94ed74d96bdf0a58679ebc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  choiceOfMusic: 0
   outlineImg: {fileID: 4593923665232443735}
   leftArrowImg: {fileID: 4593923664810220412}
   upArrowImg: {fileID: 4593923664416877373}
   rightArrowImg: {fileID: 4593923663941709137}
   pauseImg: {fileID: 0}
   fadeBlack: {fileID: 4593923665380204550}
-  player: {fileID: 0}
 --- !u!1 &4593923664416877375
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,12 +586,12 @@ GameObject:
   - component: {fileID: 4593923665429352279}
   - component: {fileID: 4593923665429352278}
   m_Layer: 5
-  m_Name: Base UI
+  m_Name: Base UI (don't move from 1st position)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4593923665429352273
 RectTransform:
   m_ObjectHideFlags: 0

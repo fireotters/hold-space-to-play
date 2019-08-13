@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1090564586137347985}
   - component: {fileID: 1090564586137347984}
-  - component: {fileID: 1090564586137347987}
-  - component: {fileID: 1090564586137347986}
   - component: {fileID: 1090564586137347990}
   - component: {fileID: 2000233261139211011}
+  - component: {fileID: 7855801124501510930}
   m_Layer: 0
   m_Name: OneWayPlatformCollider
   m_TagString: Untagged
@@ -85,35 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &1090564586137347987
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090564586137347997}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.56, y: 0.3975889, z: 0.2}
-  m_Center: {x: 0, y: 0.03286529, z: 0}
---- !u!54 &1090564586137347986
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090564586137347997}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!114 &1090564586137347990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,6 +110,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a5a904449a915249becbef491a6f3f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &7855801124501510930
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090564586137347997}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.009258956}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 0.64}
+    newSize: {x: 2.56, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.56, y: 0.5103721}
+  m_EdgeRadius: 0
 --- !u!1 &1090564586482201749
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,8 +146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1090564586482201834}
   - component: {fileID: 1090564586482201835}
-  - component: {fileID: 1090564586482201833}
-  - component: {fileID: 1090564586482201832}
+  - component: {fileID: 3400988024667504096}
   m_Layer: 0
   m_Name: SolidifyTriggerTop
   m_TagString: TopTrigger
@@ -221,35 +216,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &1090564586482201833
-BoxCollider:
+--- !u!61 &3400988024667504096
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1090564586482201749}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 0.64}
+    newSize: {x: 2.56, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 0.3975889, z: 0.2}
-  m_Center: {x: 0, y: 0.03286529, z: 0}
---- !u!54 &1090564586482201832
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090564586482201749}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
+  m_Size: {x: 2.56, y: 0.64}
+  m_EdgeRadius: 0
 --- !u!1 &1090564587249648292
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,8 +252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1090564587249648293}
   - component: {fileID: 1090564587249648312}
-  - component: {fileID: 1090564587249648315}
-  - component: {fileID: 1090564587249648314}
+  - component: {fileID: 7301360954371046862}
   m_Layer: 0
   m_Name: SolidifyTriggerBottom
   m_TagString: BottomTrigger
@@ -331,32 +322,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &1090564587249648315
-BoxCollider:
+--- !u!61 &7301360954371046862
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1090564587249648292}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 0.64}
+    newSize: {x: 2.56, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 0.3975889, z: 0.2}
-  m_Center: {x: 0, y: 0.03286529, z: 0}
---- !u!54 &1090564587249648314
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090564587249648292}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
+  m_Size: {x: 2.56, y: 0.64}
+  m_EdgeRadius: 0
