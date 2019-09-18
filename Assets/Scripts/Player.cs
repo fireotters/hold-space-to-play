@@ -7,13 +7,15 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     #region Variables
-    [SerializeField] private float speedMultiplier = 0, jumpSpeed = 0;
+    [SerializeField] private float speedMultiplier = 0, jumpForce = 3f;
     [SerializeField] private Text keyCounter;
 
+    private Rigidbody2D rb;
     public Player_Controller_2D controller;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
-    private Vector2 moveDirection = Vector2.zero;
+    private float moveDirection;
+    private float jumpMovement = 0f;
     private new Camera camera;
     private float movementValue = 0f, baseSpeed = 1.5f;
     public bool jump = false;
@@ -27,6 +29,7 @@ public class Player : MonoBehaviour
         controller = GetComponent<Player_Controller_2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
 
         camera = FindObjectOfType<Camera>();
         keyCounter = FindObjectOfType<Text>();
@@ -43,34 +46,40 @@ public class Player : MonoBehaviour
         if (controller.isGrounded)
         {
             // We obtain what direction is being inputed, and we multiply that value by the speed multiplier.
-            moveDirection = new Vector2(CalculateMovementValue(), 0f);
-            moveDirection *= speedMultiplier;
-            // If the jump boolean is true, player jumps.
-            if (jump)
-            {
-                moveDirection.y = 20000f;
-            }
+            moveDirection = CalculateMovementValue() * speedMultiplier;
+        }
+        else
+        {
+            jump = false;
         }
 
-        // We move the player.
-        controller.Move(moveDirection * Time.deltaTime);
-
-        /*
-        // If it collides with the ceiling, the character bonks off it.
+        /* If it collides with the ceiling, the character bonks off it.
         if (controller.collisionFlags == CollisionFlags.Above)
         {
             moveDirection.y = 0;
         }*/
         
         // Flip sprite depending on move direction
-        CheckFlipCharacter(moveDirection.x);
+        CheckFlipCharacter(moveDirection);
 
         // Animate player and falsify jump boolean for next frame
-        SetAnimatorValues(Mathf.Abs(moveDirection.x), jump);
-        if (jump) { jump = false; }
+        SetAnimatorValues(Mathf.Abs(moveDirection), jump);
 
         // Set camera to center on the character
         CameraFollowPlayer();
+    }
+
+    private void FixedUpdate()
+    {
+        if (controller.isGrounded)
+        {
+            if (jump)
+            {
+                Jump();
+                jump = false;
+            }
+        }
+        rb.velocity = new Vector2(moveDirection, rb.velocity.y);
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -233,6 +242,10 @@ public class Player : MonoBehaviour
     void UpdateKeyCounter()
     {
         keyCounter.text = amountOfKeys.ToString();
+    }
+    public void Jump()
+    {
+        rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
     }
 
     #endregion

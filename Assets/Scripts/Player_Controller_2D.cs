@@ -12,7 +12,6 @@ public class Player_Controller_2D : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
@@ -32,13 +31,4 @@ public class Player_Controller_2D : MonoBehaviour
     }
 
 
-    public void Move(Vector2 move)
-    {
-        rb.velocity = move;
-    }
-
-    public void Jump(float jumpforce)
-    {
-        rb.AddForce(Vector2.up * jumpforce);
-    }
 }
