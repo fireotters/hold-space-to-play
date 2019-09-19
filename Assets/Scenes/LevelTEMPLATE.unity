@@ -17904,6 +17904,8 @@ GameObject:
   - component: {fileID: 3435034125687221552}
   - component: {fileID: 3435034125687221555}
   - component: {fileID: 8058611622993433051}
+  - component: {fileID: 3435034125687221559}
+  - component: {fileID: 3435034125687221558}
   m_Layer: 0
   m_Name: Platform Tilemap
   m_TagString: Untagged
@@ -17911,6 +17913,147 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!50 &3435034125687221558
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3435034125687221557}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
+--- !u!66 &3435034125687221559
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3435034125687221557}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 8058611622993433051}
+    m_ColliderPaths:
+    - - X: 349999971
+        Y: -40000000
+      - X: 349999971
+        Y: 180000000
+      - X: 30000000
+        Y: 179999971
+      - X: 30000029
+        Y: -40000000
+    - - X: 300000000
+        Y: 10000029
+      - X: 80000000
+        Y: 10000029
+      - X: 80000029
+        Y: 130000000
+      - X: 300000000
+        Y: 129999971
+    - - X: 200624986
+        Y: 40000000
+      - X: 220000000
+        Y: 49687517
+      - X: 219999985
+        Y: 50312507
+      - X: 200624986
+        Y: 60000000
+      - X: 199375003
+        Y: 59999997
+      - X: 180000000
+        Y: 50312483
+      - X: 180000015
+        Y: 49687493
+      - X: 199375014
+        Y: 40000000
+    - - X: 150312484
+        Y: 40000000
+      - X: 160000000
+        Y: 49687512
+      - X: 159999992
+        Y: 50312506
+      - X: 150312484
+        Y: 60000000
+      - X: 149687498
+        Y: 59999992
+      - X: 140000000
+        Y: 50312488
+      - X: 140000008
+        Y: 49687494
+      - X: 149687516
+        Y: 40000000
+    - - X: 119999971
+        Y: 20000000
+      - X: 119999971
+        Y: 25000000
+      - X: 110000000
+        Y: 25000029
+      - X: 109999971
+        Y: 30000000
+      - X: 90000000
+        Y: 29999971
+      - X: 90000029
+        Y: 25000000
+      - X: 100000000
+        Y: 24999971
+      - X: 100000029
+        Y: 20000000
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 34.999996, y: 18}
+      - {x: 3, y: 17.999996}
+      - {x: 3.0000029, y: -4}
+      - {x: 34.999996, y: -4}
+    - - {x: 8, y: 1.0000029}
+      - {x: 8.000003, y: 13}
+      - {x: 30, y: 12.999997}
+      - {x: 30, y: 1.0000029}
+    - - {x: 22, y: 4.9687514}
+      - {x: 21.999998, y: 5.031251}
+      - {x: 20.0625, y: 6}
+      - {x: 19.937502, y: 5.9999995}
+      - {x: 18, y: 5.0312486}
+      - {x: 18.000002, y: 4.968749}
+      - {x: 19.937502, y: 4}
+      - {x: 20.0625, y: 4}
+    - - {x: 16, y: 4.9687514}
+      - {x: 16, y: 5.0312505}
+      - {x: 15.031248, y: 6}
+      - {x: 14.968751, y: 5.999999}
+      - {x: 14, y: 5.031249}
+      - {x: 14, y: 4.9687495}
+      - {x: 14.968752, y: 4}
+      - {x: 15.031248, y: 4}
+    - - {x: 11.999997, y: 2.5}
+      - {x: 11, y: 2.5000029}
+      - {x: 10.999997, y: 3}
+      - {x: 9, y: 2.9999971}
+      - {x: 9.000003, y: 2.5}
+      - {x: 10, y: 2.4999971}
+      - {x: 10.000003, y: 2}
+      - {x: 11.999997, y: 2}
+  m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.000005
 --- !u!19719996 &8058611622993433051
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -17923,7 +18066,7 @@ TilemapCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
