@@ -25,6 +25,7 @@ public class Player_Controller_2D : MonoBehaviour
         {
             if (colliders[i].gameObject != gameObject)
             {
+                // TODO find a way to disallow double jumps inside oneway platforms
                 isGrounded = true;
             }
         }

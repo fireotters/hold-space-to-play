@@ -15,7 +15,6 @@ public class Player : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private float moveDirection;
-    private float jumpMovement = 0f;
     private new Camera camera;
     private float movementValue = 0f, baseSpeed = 1.5f;
     public bool jump = false;
@@ -30,9 +29,18 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-
         camera = FindObjectOfType<Camera>();
-        keyCounter = FindObjectOfType<Text>();
+
+        // Find key counter text object
+        var listOfTextObjects = FindObjectsOfType<Text>();
+        foreach (Text textObject in listOfTextObjects)
+        {
+            if (textObject.transform.name == "KeyCounter (don't rename)")
+            {
+                keyCounter = textObject;
+                break;
+            }
+        }
     }
 
     void Start()
@@ -50,41 +58,45 @@ public class Player : MonoBehaviour
         }
         else
         {
+            // Or falsify jump boolean if the player is not grounded.
             jump = false;
         }
-
-        /* If it collides with the ceiling, the character bonks off it.
-        if (controller.collisionFlags == CollisionFlags.Above)
-        {
-            moveDirection.y = 0;
-        }*/
         
         // Flip sprite depending on move direction
         CheckFlipCharacter(moveDirection);
 
-        // Animate player and falsify jump boolean for next frame
+        // Animate player
         SetAnimatorValues(Mathf.Abs(moveDirection), jump);
 
         // Set camera to center on the character
         CameraFollowPlayer();
     }
 
+    /// <summary>
+    /// Physics updates occur here.
+    /// Movement to the left and right are dictated by a change of velocity.
+    /// Jumping is achieved by adding an upward force.
+    /// </summary>
     private void FixedUpdate()
     {
         if (controller.isGrounded)
         {
             if (jump)
             {
-                Jump();
+                rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
                 jump = false;
             }
         }
         rb.velocity = new Vector2(moveDirection, rb.velocity.y);
     }
 
+    /// <summary>
+    /// Decides upon action to take if a trigger is entered by the Player.
+    /// </summary>
+    /// <param name="other">Colliding object with Player</param>
     void OnTriggerEnter2D(Collider2D other)
     {
-        print(other);
+        //print(other);
         switch (other.tag)
         {
             case "TopTrigger":
@@ -139,7 +151,6 @@ public class Player : MonoBehaviour
         {
             movementValue += Time.deltaTime;
         }
-        // fuck my life and fuck everything this section took way too much of time to add other things to the game
         // If both moveRight and moveLeft == false and the Space key is not being pressed
         // depending on if the movementValue is positive or negative, we start subtracting or adding
         // deltaTime to the value. Once the value reaches 0.1 levels of precision, we just set the value to 0,
@@ -195,7 +206,7 @@ public class Player : MonoBehaviour
     }
 
     /// <summary>
-    /// Sets the camera position to look wherever the player is vertically speaking.
+    /// Sets the camera position to look wherever the player is, both vertically and horizontally
     /// </summary>
     void CameraFollowPlayer()
     {
@@ -242,10 +253,6 @@ public class Player : MonoBehaviour
     void UpdateKeyCounter()
     {
         keyCounter.text = amountOfKeys.ToString();
-    }
-    public void Jump()
-    {
-        rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
     }
 
     #endregion

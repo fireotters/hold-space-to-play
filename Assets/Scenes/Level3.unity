@@ -7216,6 +7216,8 @@ GameObject:
   - component: {fileID: 3435034124290292456}
   - component: {fileID: 3435034124290292459}
   - component: {fileID: 8058611624381974019}
+  - component: {fileID: 3435034124290292463}
+  - component: {fileID: 3435034124290292462}
   m_Layer: 0
   m_Name: Platform Tilemap
   m_TagString: Untagged
@@ -7223,6 +7225,138 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!66 &3435034124290292462
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3435034124290292461}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 8058611624381974019}
+    m_ColliderPaths:
+    - - X: 349999971
+        Y: -40000000
+      - X: 349999971
+        Y: 180000000
+      - X: 20000000
+        Y: 179999971
+      - X: 20000029
+        Y: -40000000
+    - - X: 250000000
+        Y: 30000029
+      - X: 110000000
+        Y: 30000029
+      - X: 110000029
+        Y: 40000000
+      - X: 170000000
+        Y: 40000029
+      - X: 169999985
+        Y: 40312507
+      - X: 150624986
+        Y: 50000000
+      - X: 110000000
+        Y: 50000029
+      - X: 110000029
+        Y: 110000000
+      - X: 250000000
+        Y: 109999971
+      - X: 249999971
+        Y: 80000000
+      - X: 189375003
+        Y: 79999997
+      - X: 170000000
+        Y: 70312479
+      - X: 169999971
+        Y: 70000000
+      - X: 169375003
+        Y: 69999997
+      - X: 150000000
+        Y: 60312483
+      - X: 150000029
+        Y: 60000000
+      - X: 170624997
+        Y: 60000003
+      - X: 190000000
+        Y: 69687521
+      - X: 190000029
+        Y: 70000000
+      - X: 250000000
+        Y: 69999971
+      - X: 249999971
+        Y: 50000000
+      - X: 209375003
+        Y: 49999997
+      - X: 190000000
+        Y: 40312483
+      - X: 190000029
+        Y: 40000000
+      - X: 250000000
+        Y: 39999971
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 34.999996, y: 18}
+      - {x: 2, y: 17.999996}
+      - {x: 2.0000029, y: -4}
+      - {x: 34.999996, y: -4}
+    - - {x: 11, y: 3.0000029}
+      - {x: 11.000003, y: 4}
+      - {x: 17, y: 4.000003}
+      - {x: 16.999998, y: 4.031251}
+      - {x: 15.062499, y: 5}
+      - {x: 11, y: 5.000003}
+      - {x: 11.000003, y: 11}
+      - {x: 25, y: 10.999997}
+      - {x: 24.999996, y: 8}
+      - {x: 18.937502, y: 8}
+      - {x: 17, y: 7.031248}
+      - {x: 16.999996, y: 7}
+      - {x: 16.937502, y: 7}
+      - {x: 15, y: 6.0312486}
+      - {x: 15.000004, y: 6}
+      - {x: 17.0625, y: 6.0000005}
+      - {x: 19, y: 6.968752}
+      - {x: 19.000004, y: 7}
+      - {x: 25, y: 6.9999967}
+      - {x: 24.999996, y: 5}
+      - {x: 20.937502, y: 4.9999995}
+      - {x: 19, y: 4.0312486}
+      - {x: 19.000004, y: 4}
+      - {x: 25, y: 3.9999971}
+      - {x: 25, y: 3.0000029}
+  m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.000005
+--- !u!50 &3435034124290292463
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3435034124290292461}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!483693784 &3435034124989933560
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -13637,7 +13771,7 @@ Tilemap:
       - {fileID: -538331831730588137, guid: a0e035ca30c889a40b5ca91c8c104a40, type: 3}
       - {fileID: -1385786070971223102, guid: a0e035ca30c889a40b5ca91c8c104a40, type: 3}
       - {fileID: 6116080786932476827, guid: a0e035ca30c889a40b5ca91c8c104a40, type: 3}
-      m_AnimationSpeed: 1.5000001
+      m_AnimationSpeed: 1.5
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   m_TileAssetArray:
@@ -13798,7 +13932,7 @@ TilemapCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001

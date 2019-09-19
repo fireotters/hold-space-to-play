@@ -9,8 +9,9 @@ public class PlayerEnd : MonoBehaviour
 {
     private SpriteRenderer sprite;
     public GameObject fadeBlack;
-    [SerializeField] private string levelToLoad;
+    public string levelToLoad;
     [SerializeField] private GameObject flag = null;
+    private bool levelEnding = false;
 
     void Awake()
     {
@@ -39,8 +40,9 @@ public class PlayerEnd : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && !levelEnding)
         {
+            levelEnding = true;
             StartCoroutine(FadeBlack("to"));
             Invoke("TriggerEndLevel", 5f);
         }

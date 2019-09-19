@@ -27,6 +27,7 @@ public class UI_Script_MainMenu : MonoBehaviour
     private int levelNoSelected;
     public Text levelSelectText;
     public AudioSource sfxDemoSlider;
+    public Button fullscreenToggle;
 
     public GameObject fadeBlack;
 
@@ -180,8 +181,10 @@ public class UI_Script_MainMenu : MonoBehaviour
         optionsAreOpen = true;
         musicManager.sfxDemo = sfxDemoSlider;
         optionsDialog.SetActive(true);
+        fullscreenToggle.interactable = !Screen.fullScreen;
         optionMusicSlider.SetValueWithoutNotify(PlayerPrefs.GetFloat("Music"));
         optionSFXSlider.SetValueWithoutNotify(PlayerPrefs.GetFloat("SFX"));
+
     }
     public void CloseOptions()
     {
@@ -208,6 +211,33 @@ public class UI_Script_MainMenu : MonoBehaviour
     void DoLevelLoad()
     {
         SceneManager.LoadScene("Level" + levelNoSelected);
+    }
+
+    public void SwapFullscreen()
+    {
+        fullscreenToggle.interactable = false;
+        Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, true);
+    }
+
+    public void SetResolution(int resolutionChoice)
+    {
+        fullscreenToggle.interactable = true;
+        switch (resolutionChoice)
+        {
+            case 480:
+                Screen.SetResolution(848, 480, false);
+                break;
+            case 720:
+                Screen.SetResolution(1280, 720, false);
+                break;
+            case 1080:
+                Screen.SetResolution(1920, 1080, false);
+                break;
+            case 1440:
+                Screen.SetResolution(2560, 1440, false);
+                break;
+        }
+            
     }
 
     // Other functions

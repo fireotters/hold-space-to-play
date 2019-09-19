@@ -13855,6 +13855,8 @@ GameObject:
   - component: {fileID: 3435034125660974291}
   - component: {fileID: 3435034125660974288}
   - component: {fileID: 8058611623019417656}
+  - component: {fileID: 3435034125660974296}
+  - component: {fileID: 3435034125660974295}
   m_Layer: 0
   m_Name: Platform Tilemap
   m_TagString: Untagged
@@ -13862,6 +13864,81 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!66 &3435034125660974295
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3435034125660974294}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 8058611623019417656}
+    m_ColliderPaths:
+    - - X: 349999971
+        Y: -40000000
+      - X: 349999971
+        Y: 180000000
+      - X: 20000000
+        Y: 179999971
+      - X: 20000029
+        Y: -40000000
+    - - X: 250000000
+        Y: 40000029
+      - X: 140000000
+        Y: 40000029
+      - X: 139999971
+        Y: 60000000
+      - X: 110000000
+        Y: 60000029
+      - X: 110000029
+        Y: 110000000
+      - X: 250000000
+        Y: 109999971
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 34.999996, y: 18}
+      - {x: 2, y: 17.999996}
+      - {x: 2.0000029, y: -4}
+      - {x: 34.999996, y: -4}
+    - - {x: 14, y: 4.000003}
+      - {x: 13.999997, y: 6}
+      - {x: 11, y: 6.000003}
+      - {x: 11.000003, y: 11}
+      - {x: 25, y: 10.999997}
+      - {x: 25, y: 4.000003}
+  m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.000005
+--- !u!50 &3435034125660974296
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3435034125660974294}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!19719996 &8058611623019417656
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -13874,7 +13951,7 @@ TilemapCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
