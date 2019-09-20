@@ -4,304 +4,304 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 8351446633001484291
-    second: entities_0
+    second: idle_0
   - first:
       213: -4472081488600128898
-    second: entities_1
+    second: idle_1
   - first:
       213: 5793479280948049655
-    second: entities_2
+    second: idle_2
   - first:
       213: -3333249045553888777
-    second: entities_3
+    second: idle_whistle_00
   - first:
       213: 8862369697692505149
-    second: entities_4
+    second: idle_whistle_01
   - first:
       213: 5662891429576332192
-    second: entities_5
+    second: idle_whistle_02
   - first:
       213: -2674780064655468220
-    second: entities_6
+    second: idle_whistle_03
   - first:
       213: 4862552147654451688
-    second: entities_7
+    second: idle_whistle_04
   - first:
       213: 770849671259497214
-    second: entities_8
+    second: idle_whistle_05
   - first:
       213: 2733724926189066201
-    second: entities_9
+    second: idle_whistle_06
   - first:
       213: 2922111715158936421
-    second: entities_10
+    second: idle_whistle_07
   - first:
       213: -126080620982740698
-    second: entities_11
+    second: idle_whistle_08
   - first:
       213: 7241908573746217322
-    second: entities_12
+    second: idle_whistle_09
   - first:
       213: 5560722041020433753
-    second: entities_13
+    second: idle_whistle_10
   - first:
       213: 1314975134902996109
-    second: entities_14
+    second: transition_00
   - first:
       213: -2758370812054750887
-    second: entities_15
+    second: transition_01
   - first:
       213: -9090483375485207264
-    second: entities_16
+    second: arrow_side_00
   - first:
       213: -7715146940215050474
-    second: entities_17
+    second: arrow_side_01
   - first:
       213: -3084815649463381292
-    second: entities_18
+    second: arrow_jump_00
   - first:
       213: -7907213263010668988
-    second: entities_19
+    second: arrow_jump_01
   - first:
       213: 8867846849865183266
-    second: entities_20
+    second: flag_00
   - first:
       213: -1336603779177938332
-    second: entities_21
+    second: flag_01
   - first:
       213: -5904831066459085948
-    second: entities_22
+    second: flag_02
   - first:
       213: 5510108494981649723
-    second: entities_23
+    second: flag_03
   - first:
       213: 9184941543588803369
-    second: entities_24
+    second: flag_04
   - first:
       213: -6443996585779770525
-    second: entities_25
+    second: flag_05
   - first:
       213: 7716124130459126054
-    second: entities_26
+    second: flag_06
   - first:
       213: -7824597604956129159
-    second: entities_27
+    second: flag_07
   - first:
       213: 5484865005425093007
-    second: entities_28
+    second: flag_08
   - first:
       213: -5296783737283920344
-    second: entities_29
+    second: flag_09
   - first:
       213: -5353816958834298247
-    second: entities_30
+    second: key_00
   - first:
       213: -6839334606735254777
-    second: entities_31
+    second: key_01
   - first:
       213: -4764492561997394921
-    second: entities_32
+    second: key_02
   - first:
       213: -4341680960389158503
-    second: entities_33
+    second: key_03
   - first:
       213: 5851312051657031553
-    second: entities_34
+    second: key_04
   - first:
       213: -4383206711541363213
-    second: entities_35
+    second: key_05
   - first:
       213: 2133231079315736028
-    second: entities_36
+    second: key_06
   - first:
       213: 3950092692530196530
-    second: entities_37
+    second: Z_unused_00
   - first:
       213: -3980626608919580852
-    second: entities_38
+    second: Z_unused_01
   - first:
       213: -6998554007256161178
-    second: entities_39
+    second: Z_unused_02
   - first:
       213: -1241727555665670120
-    second: entities_40
+    second: Z_unused_03
   - first:
       213: -4840837034010483080
-    second: entities_41
+    second: Z_unused_04
   - first:
       213: -1389229828965841458
-    second: entities_42
+    second: Z_unused_05
   - first:
       213: 4098777455423325226
-    second: entities_43
+    second: Z_unused_06
   - first:
       213: -1757538524961444048
-    second: entities_44
+    second: Z_unused_07
   - first:
       213: 3522481388739591978
-    second: entities_45
+    second: Z_unused_08
   - first:
       213: -4235783643209216427
-    second: entities_46
+    second: Z_unused_09
   - first:
       213: -2995771923102725436
-    second: entities_47
+    second: Z_unused_10
   - first:
       213: 1359857210830824479
-    second: entities_48
+    second: Z_unused_11
   - first:
       213: -6408685955794362682
-    second: entities_49
+    second: Z_unused_12
   - first:
       213: -7644336318332734074
-    second: entities_50
+    second: Z_unused_13
   - first:
       213: 3075827985002996553
-    second: entities_51
+    second: Z_unused_14
   - first:
       213: -2359420963581942939
-    second: entities_52
+    second: Z_unused_15
   - first:
       213: 5061764134079956584
-    second: entities_53
+    second: Z_unused_16
   - first:
       213: 5710189427276567009
-    second: entities_54
+    second: Z_unused_17
   - first:
       213: 468998857567141365
-    second: entities_55
+    second: Z_unused_18
   - first:
       213: -3523785055187102557
-    second: entities_56
+    second: Z_unused_19
   - first:
       213: 1147358615915789582
-    second: entities_57
+    second: Z_unused_20
   - first:
       213: 7857509822677534405
-    second: entities_58
+    second: Z_unused_21
   - first:
       213: 1685210322256795007
-    second: entities_59
+    second: Z_unused_22
   - first:
       213: 5727853551829246295
-    second: entities_60
+    second: Z_unused_23
   - first:
       213: -5266129353151989054
-    second: entities_61
+    second: Z_unused_24
   - first:
       213: 8994278551933311282
-    second: entities_62
+    second: Z_unused_25
   - first:
       213: -3836965428541862056
-    second: entities_63
+    second: Z_unused_26
   - first:
       213: 8802227589980529124
-    second: entities_64
+    second: Z_unused_27
   - first:
       213: 1782709275939928395
-    second: entities_65
+    second: Z_unused_28
   - first:
       213: -641957316627241269
-    second: entities_66
+    second: Z_unused_29
   - first:
       213: -2366390509769804235
-    second: entities_67
+    second: Z_unused_30
   - first:
       213: -4861103390895609230
-    second: entities_68
+    second: Z_unused_31
   - first:
       213: 4391050161496630600
-    second: entities_69
+    second: Z_unused_32
   - first:
       213: 8610620635893968720
-    second: entities_70
+    second: Z_unused_33
   - first:
       213: 3897165184854057297
-    second: entities_71
+    second: Z_unused_34
   - first:
       213: 6168733545679353504
-    second: entities_72
+    second: Z_unused_35
   - first:
       213: 2435601303191939364
-    second: entities_73
+    second: Z_unused_36
   - first:
       213: -5531176999874274816
-    second: entities_74
+    second: Z_unused_37
   - first:
       213: -1404099294291513631
-    second: entities_75
+    second: Z_unused_38
   - first:
       213: 915559612217798556
-    second: entities_76
+    second: Z_unused_39
   - first:
       213: 2986231002732492731
-    second: entities_77
+    second: Z_unused_40
   - first:
       213: 1765187003512173692
-    second: entities_78
+    second: Z_unused_41
   - first:
       213: -3174208355130788161
-    second: entities_79
+    second: Z_unused_42
   - first:
       213: -4304894105239185054
-    second: entities_80
+    second: Z_unused_43
   - first:
       213: 7904138973167657541
-    second: entities_81
+    second: Z_unused_44
   - first:
       213: -8991700231776803824
-    second: entities_82
+    second: Z_unused_45
   - first:
       213: 1411180749046001073
-    second: entities_83
+    second: Z_unused_46
   - first:
       213: 8730699792218291461
-    second: entities_84
+    second: Z_unused_47
   - first:
       213: -3583097539999545588
-    second: entities_85
+    second: Z_unused_48
   - first:
       213: -3840172955030510005
-    second: entities_86
+    second: Z_unused_49
   - first:
       213: 7111550217468131485
-    second: entities_87
+    second: Z_unused_50
   - first:
       213: -5873832913217184496
-    second: entities_88
+    second: Z_unused_51
   - first:
       213: -4265379068580593962
-    second: entities_89
+    second: Z_unused_52
   - first:
       213: 5827108671027385445
-    second: entities_90
+    second: Z_unused_53
   - first:
       213: 906329189770073754
-    second: entities_91
+    second: Z_unused_54
   - first:
       213: -8195220526238906197
-    second: entities_92
+    second: Z_unused_55
   - first:
       213: 8193389005699019235
-    second: entities_93
+    second: Z_unused_56
   - first:
       213: -3032635269548398950
-    second: entities_94
+    second: Z_unused_57
   - first:
       213: -8784646457508655760
-    second: entities_95
+    second: Z_unused_58
   - first:
       213: -9030101920011207070
-    second: entities_96
+    second: Z_unused_59
   - first:
       213: -7588686074506960279
-    second: entities_97
+    second: Z_unused_60
   - first:
       213: -2012762395771936112
-    second: entities_98
+    second: player_start
   - first:
       213: -4745100181007178582
-    second: entities_99
+    second: player_end
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -384,7 +384,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: entities_0
+      name: idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -392,7 +392,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -405,7 +405,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_1
+      name: idle_1
       rect:
         serializedVersion: 2
         x: 32
@@ -413,7 +413,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -426,7 +426,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_2
+      name: idle_2
       rect:
         serializedVersion: 2
         x: 64
@@ -434,7 +434,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -447,7 +447,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_3
+      name: idle_whistle_00
       rect:
         serializedVersion: 2
         x: 96
@@ -455,7 +455,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -468,7 +468,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_4
+      name: idle_whistle_01
       rect:
         serializedVersion: 2
         x: 128
@@ -476,7 +476,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -489,7 +489,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_5
+      name: idle_whistle_02
       rect:
         serializedVersion: 2
         x: 160
@@ -497,7 +497,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -510,7 +510,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_6
+      name: idle_whistle_03
       rect:
         serializedVersion: 2
         x: 192
@@ -518,7 +518,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -531,7 +531,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_7
+      name: idle_whistle_04
       rect:
         serializedVersion: 2
         x: 224
@@ -539,7 +539,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -552,7 +552,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_8
+      name: idle_whistle_05
       rect:
         serializedVersion: 2
         x: 256
@@ -560,7 +560,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -573,7 +573,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_9
+      name: idle_whistle_06
       rect:
         serializedVersion: 2
         x: 288
@@ -581,7 +581,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -594,7 +594,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_10
+      name: idle_whistle_07
       rect:
         serializedVersion: 2
         x: 0
@@ -602,7 +602,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -615,7 +615,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_11
+      name: idle_whistle_08
       rect:
         serializedVersion: 2
         x: 32
@@ -623,7 +623,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -636,7 +636,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_12
+      name: idle_whistle_09
       rect:
         serializedVersion: 2
         x: 64
@@ -644,7 +644,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -657,7 +657,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_13
+      name: idle_whistle_10
       rect:
         serializedVersion: 2
         x: 96
@@ -665,7 +665,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -678,7 +678,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_14
+      name: transition_00
       rect:
         serializedVersion: 2
         x: 128
@@ -686,7 +686,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -699,7 +699,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_15
+      name: transition_01
       rect:
         serializedVersion: 2
         x: 160
@@ -707,7 +707,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -720,7 +720,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_16
+      name: arrow_side_00
       rect:
         serializedVersion: 2
         x: 192
@@ -728,7 +728,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -741,7 +741,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_17
+      name: arrow_side_01
       rect:
         serializedVersion: 2
         x: 224
@@ -749,7 +749,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -762,7 +762,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_18
+      name: arrow_jump_00
       rect:
         serializedVersion: 2
         x: 256
@@ -770,7 +770,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -783,7 +783,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_19
+      name: arrow_jump_01
       rect:
         serializedVersion: 2
         x: 288
@@ -791,7 +791,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -804,7 +804,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_20
+      name: flag_00
       rect:
         serializedVersion: 2
         x: 0
@@ -812,7 +812,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -825,7 +825,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_21
+      name: flag_01
       rect:
         serializedVersion: 2
         x: 32
@@ -833,7 +833,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -846,7 +846,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_22
+      name: flag_02
       rect:
         serializedVersion: 2
         x: 64
@@ -854,7 +854,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -867,7 +867,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_23
+      name: flag_03
       rect:
         serializedVersion: 2
         x: 96
@@ -875,7 +875,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -888,7 +888,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_24
+      name: flag_04
       rect:
         serializedVersion: 2
         x: 128
@@ -896,7 +896,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -909,7 +909,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_25
+      name: flag_05
       rect:
         serializedVersion: 2
         x: 160
@@ -917,7 +917,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -930,7 +930,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_26
+      name: flag_06
       rect:
         serializedVersion: 2
         x: 192
@@ -938,7 +938,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -951,7 +951,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_27
+      name: flag_07
       rect:
         serializedVersion: 2
         x: 224
@@ -959,7 +959,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -972,7 +972,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_28
+      name: flag_08
       rect:
         serializedVersion: 2
         x: 256
@@ -980,7 +980,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -993,7 +993,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_29
+      name: flag_09
       rect:
         serializedVersion: 2
         x: 288
@@ -1001,7 +1001,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1014,7 +1014,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_30
+      name: key_00
       rect:
         serializedVersion: 2
         x: 0
@@ -1022,7 +1022,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1035,7 +1035,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_31
+      name: key_01
       rect:
         serializedVersion: 2
         x: 32
@@ -1043,7 +1043,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1056,7 +1056,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_32
+      name: key_02
       rect:
         serializedVersion: 2
         x: 64
@@ -1064,7 +1064,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1077,7 +1077,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_33
+      name: key_03
       rect:
         serializedVersion: 2
         x: 96
@@ -1085,7 +1085,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1098,7 +1098,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_34
+      name: key_04
       rect:
         serializedVersion: 2
         x: 128
@@ -1106,7 +1106,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1119,7 +1119,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_35
+      name: key_05
       rect:
         serializedVersion: 2
         x: 160
@@ -1127,7 +1127,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1140,7 +1140,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_36
+      name: key_06
       rect:
         serializedVersion: 2
         x: 192
@@ -1148,7 +1148,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1161,7 +1161,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_37
+      name: Z_unused_00
       rect:
         serializedVersion: 2
         x: 224
@@ -1169,7 +1169,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1182,7 +1182,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_38
+      name: Z_unused_01
       rect:
         serializedVersion: 2
         x: 256
@@ -1190,7 +1190,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1203,7 +1203,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_39
+      name: Z_unused_02
       rect:
         serializedVersion: 2
         x: 288
@@ -1211,7 +1211,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1224,7 +1224,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_40
+      name: Z_unused_03
       rect:
         serializedVersion: 2
         x: 0
@@ -1232,7 +1232,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1245,15 +1245,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_41
+      name: Z_unused_04
       rect:
         serializedVersion: 2
         x: 32
-        y: 160
+        y: 161
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1266,7 +1266,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_42
+      name: Z_unused_05
       rect:
         serializedVersion: 2
         x: 64
@@ -1274,7 +1274,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1287,7 +1287,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_43
+      name: Z_unused_06
       rect:
         serializedVersion: 2
         x: 96
@@ -1295,7 +1295,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1308,7 +1308,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_44
+      name: Z_unused_07
       rect:
         serializedVersion: 2
         x: 128
@@ -1316,7 +1316,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1329,7 +1329,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_45
+      name: Z_unused_08
       rect:
         serializedVersion: 2
         x: 160
@@ -1337,7 +1337,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1350,7 +1350,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_46
+      name: Z_unused_09
       rect:
         serializedVersion: 2
         x: 192
@@ -1358,7 +1358,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1371,7 +1371,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_47
+      name: Z_unused_10
       rect:
         serializedVersion: 2
         x: 224
@@ -1379,7 +1379,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1392,7 +1392,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_48
+      name: Z_unused_11
       rect:
         serializedVersion: 2
         x: 256
@@ -1400,7 +1400,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1413,7 +1413,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_49
+      name: Z_unused_12
       rect:
         serializedVersion: 2
         x: 288
@@ -1421,7 +1421,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1434,7 +1434,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_50
+      name: Z_unused_13
       rect:
         serializedVersion: 2
         x: 0
@@ -1442,7 +1442,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1455,7 +1455,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_51
+      name: Z_unused_14
       rect:
         serializedVersion: 2
         x: 32
@@ -1463,7 +1463,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1476,7 +1476,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_52
+      name: Z_unused_15
       rect:
         serializedVersion: 2
         x: 64
@@ -1484,7 +1484,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1497,7 +1497,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_53
+      name: Z_unused_16
       rect:
         serializedVersion: 2
         x: 96
@@ -1505,7 +1505,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1518,7 +1518,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_54
+      name: Z_unused_17
       rect:
         serializedVersion: 2
         x: 128
@@ -1526,7 +1526,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1539,7 +1539,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_55
+      name: Z_unused_18
       rect:
         serializedVersion: 2
         x: 160
@@ -1547,7 +1547,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1560,7 +1560,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_56
+      name: Z_unused_19
       rect:
         serializedVersion: 2
         x: 192
@@ -1568,7 +1568,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1581,7 +1581,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_57
+      name: Z_unused_20
       rect:
         serializedVersion: 2
         x: 224
@@ -1589,7 +1589,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1602,7 +1602,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_58
+      name: Z_unused_21
       rect:
         serializedVersion: 2
         x: 256
@@ -1610,7 +1610,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1623,7 +1623,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_59
+      name: Z_unused_22
       rect:
         serializedVersion: 2
         x: 288
@@ -1631,7 +1631,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1644,7 +1644,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_60
+      name: Z_unused_23
       rect:
         serializedVersion: 2
         x: 0
@@ -1652,7 +1652,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1665,7 +1665,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_61
+      name: Z_unused_24
       rect:
         serializedVersion: 2
         x: 32
@@ -1673,7 +1673,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1686,7 +1686,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_62
+      name: Z_unused_25
       rect:
         serializedVersion: 2
         x: 64
@@ -1694,7 +1694,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1707,7 +1707,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_63
+      name: Z_unused_26
       rect:
         serializedVersion: 2
         x: 96
@@ -1715,7 +1715,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1728,7 +1728,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_64
+      name: Z_unused_27
       rect:
         serializedVersion: 2
         x: 128
@@ -1736,7 +1736,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1749,7 +1749,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_65
+      name: Z_unused_28
       rect:
         serializedVersion: 2
         x: 160
@@ -1757,7 +1757,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1770,7 +1770,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_66
+      name: Z_unused_29
       rect:
         serializedVersion: 2
         x: 192
@@ -1778,7 +1778,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1791,7 +1791,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_67
+      name: Z_unused_30
       rect:
         serializedVersion: 2
         x: 224
@@ -1799,7 +1799,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1812,7 +1812,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_68
+      name: Z_unused_31
       rect:
         serializedVersion: 2
         x: 256
@@ -1820,7 +1820,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1833,7 +1833,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_69
+      name: Z_unused_32
       rect:
         serializedVersion: 2
         x: 288
@@ -1841,7 +1841,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1854,7 +1854,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_70
+      name: Z_unused_33
       rect:
         serializedVersion: 2
         x: 0
@@ -1862,7 +1862,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1875,7 +1875,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_71
+      name: Z_unused_34
       rect:
         serializedVersion: 2
         x: 32
@@ -1883,7 +1883,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1896,7 +1896,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_72
+      name: Z_unused_35
       rect:
         serializedVersion: 2
         x: 64
@@ -1904,7 +1904,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1917,7 +1917,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_73
+      name: Z_unused_36
       rect:
         serializedVersion: 2
         x: 96
@@ -1925,7 +1925,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1938,7 +1938,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_74
+      name: Z_unused_37
       rect:
         serializedVersion: 2
         x: 128
@@ -1946,7 +1946,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1959,7 +1959,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_75
+      name: Z_unused_38
       rect:
         serializedVersion: 2
         x: 160
@@ -1967,7 +1967,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1980,7 +1980,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_76
+      name: Z_unused_39
       rect:
         serializedVersion: 2
         x: 192
@@ -1988,7 +1988,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2001,7 +2001,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_77
+      name: Z_unused_40
       rect:
         serializedVersion: 2
         x: 224
@@ -2009,7 +2009,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2022,7 +2022,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_78
+      name: Z_unused_41
       rect:
         serializedVersion: 2
         x: 256
@@ -2030,7 +2030,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2043,7 +2043,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_79
+      name: Z_unused_42
       rect:
         serializedVersion: 2
         x: 288
@@ -2051,7 +2051,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2064,7 +2064,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_80
+      name: Z_unused_43
       rect:
         serializedVersion: 2
         x: 0
@@ -2072,7 +2072,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2085,7 +2085,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_81
+      name: Z_unused_44
       rect:
         serializedVersion: 2
         x: 32
@@ -2093,7 +2093,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2106,7 +2106,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_82
+      name: Z_unused_45
       rect:
         serializedVersion: 2
         x: 64
@@ -2114,7 +2114,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2127,7 +2127,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_83
+      name: Z_unused_46
       rect:
         serializedVersion: 2
         x: 96
@@ -2135,7 +2135,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2148,7 +2148,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_84
+      name: Z_unused_47
       rect:
         serializedVersion: 2
         x: 128
@@ -2156,7 +2156,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2169,7 +2169,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_85
+      name: Z_unused_48
       rect:
         serializedVersion: 2
         x: 160
@@ -2177,7 +2177,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2190,7 +2190,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_86
+      name: Z_unused_49
       rect:
         serializedVersion: 2
         x: 192
@@ -2198,7 +2198,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2211,7 +2211,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_87
+      name: Z_unused_50
       rect:
         serializedVersion: 2
         x: 224
@@ -2219,7 +2219,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2232,7 +2232,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_88
+      name: Z_unused_51
       rect:
         serializedVersion: 2
         x: 256
@@ -2240,7 +2240,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2253,7 +2253,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_89
+      name: Z_unused_52
       rect:
         serializedVersion: 2
         x: 288
@@ -2261,7 +2261,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2274,7 +2274,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_90
+      name: Z_unused_53
       rect:
         serializedVersion: 2
         x: 0
@@ -2282,7 +2282,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2295,7 +2295,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_91
+      name: Z_unused_54
       rect:
         serializedVersion: 2
         x: 32
@@ -2303,7 +2303,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2316,7 +2316,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_92
+      name: Z_unused_55
       rect:
         serializedVersion: 2
         x: 64
@@ -2324,7 +2324,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2337,7 +2337,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_93
+      name: Z_unused_56
       rect:
         serializedVersion: 2
         x: 96
@@ -2345,7 +2345,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2358,7 +2358,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_94
+      name: Z_unused_57
       rect:
         serializedVersion: 2
         x: 128
@@ -2366,7 +2366,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2379,7 +2379,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_95
+      name: Z_unused_58
       rect:
         serializedVersion: 2
         x: 160
@@ -2387,7 +2387,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2400,7 +2400,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_96
+      name: Z_unused_59
       rect:
         serializedVersion: 2
         x: 192
@@ -2408,7 +2408,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2421,7 +2421,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_97
+      name: Z_unused_60
       rect:
         serializedVersion: 2
         x: 224
@@ -2429,7 +2429,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2442,7 +2442,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_98
+      name: player_start
       rect:
         serializedVersion: 2
         x: 256
@@ -2450,7 +2450,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2463,7 +2463,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: entities_99
+      name: player_end
       rect:
         serializedVersion: 2
         x: 288
@@ -2471,7 +2471,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

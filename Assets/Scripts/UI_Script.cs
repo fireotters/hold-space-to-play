@@ -12,17 +12,20 @@ public class UI_Script : MonoBehaviour
 
     float startHoldTime = 0f;
     float timeTapToChange = 0.2f;
-    float timeHoldToActivate = 0.5f;
-    float timeBetweenTapAndHold = 0.3f; // Set to (timeHoldToActivate - timeTapToChange)
+    float timeHoldToActivate = 0.4f;
+    float timeBetweenTapAndHold = 0.2f; // Set to (timeHoldToActivate - timeTapToChange)
     bool cancelling = false;
     bool beingHeld = false;
     public GameObject fadeBlack;
 
     private Player player;
     private MusicManager musicManager;
+    private GameObject baseUI;
 
     void Start()
     {
+        baseUI = gameObject.transform.GetChild(0).gameObject;
+        baseUI.SetActive(true);
         musicManager = GameObject.FindObjectOfType<MusicManager>();
         if (musicManager)
         {

@@ -5,11 +5,11 @@ using UnityEngine;
 public class OneWayPlatforms : MonoBehaviour
 {
     [SerializeField] SpriteRenderer topTriggerRenderer, bottomTriggerRenderer;
-    Collider parentCollider;
+    Collider2D parentCollider;
 
     void Awake()
     {
-        parentCollider = GetComponent<Collider>();
+        parentCollider = GetComponent<Collider2D>();
     }
 
     void Start()
