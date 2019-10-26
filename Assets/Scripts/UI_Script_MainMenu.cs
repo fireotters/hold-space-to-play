@@ -240,6 +240,14 @@ public class UI_Script_MainMenu : MonoBehaviour
             
     }
 
+    public void SetUIChoice()
+    {
+        if (PlayerPrefs.GetInt("UI Type") == 0)
+            PlayerPrefs.SetInt("UI Type", 1);
+        else
+            PlayerPrefs.SetInt("UI Type", 0);
+    }
+
     // Other functions
     void OpenGame()
     {
