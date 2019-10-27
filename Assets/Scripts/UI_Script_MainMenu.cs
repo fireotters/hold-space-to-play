@@ -17,8 +17,9 @@ public class UI_Script_MainMenu : MonoBehaviour
     float timeBetweenTapAndHold = 0.8f; // Set to (timeHoldToActivate - timeTapToChange)
     bool cancelling = false;
     bool beingHeld = false;
-
     bool gameStarting = false;
+
+    // Option Screen
     bool optionsAreOpen = false;
     public GameObject optionsDialog;
     public Slider optionMusicSlider, optionSFXSlider;
@@ -28,6 +29,8 @@ public class UI_Script_MainMenu : MonoBehaviour
     public Text levelSelectText;
     public AudioSource sfxDemoSlider;
     public Button fullscreenToggle;
+    public RawImage uiDemo1, uiDemo2;
+    public Text uiDescTitle, uiDesc;
 
     public GameObject fadeBlack;
 
@@ -184,7 +187,25 @@ public class UI_Script_MainMenu : MonoBehaviour
         fullscreenToggle.interactable = !Screen.fullScreen;
         optionMusicSlider.SetValueWithoutNotify(PlayerPrefs.GetFloat("Music"));
         optionSFXSlider.SetValueWithoutNotify(PlayerPrefs.GetFloat("SFX"));
+        SetControlDisplay();
+    }
 
+    public void SetControlDisplay()
+    {
+        if (PlayerPrefs.GetInt("UI Type") == 0)
+        {
+            uiDemo1.gameObject.SetActive(true);
+            uiDemo2.gameObject.SetActive(false);
+            uiDescTitle.text = "Easier Movement";
+            uiDesc.text = "Three buttons, each\ndedicated to an action.";
+        }
+        else
+        {
+            uiDemo1.gameObject.SetActive(false);
+            uiDemo2.gameObject.SetActive(true);
+            uiDescTitle.text = "Easier Running Jumps";
+            uiDesc.text = "Two buttons. One jumps,\none flips between moving\nplayer left or right.";
+        }
     }
     public void CloseOptions()
     {
@@ -246,6 +267,7 @@ public class UI_Script_MainMenu : MonoBehaviour
             PlayerPrefs.SetInt("UI Type", 1);
         else
             PlayerPrefs.SetInt("UI Type", 0);
+        SetControlDisplay();
     }
 
     // Other functions
