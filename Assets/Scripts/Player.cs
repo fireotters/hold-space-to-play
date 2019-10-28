@@ -112,7 +112,7 @@ public class Player : MonoBehaviour
                 key.DestroyKey();
                 break;
             case "Lock":
-                if (amountOfKeys > 0)
+                if (amountOfKeys > 0 && other.gameObject.GetComponent<Lock>().unlockable)
                 {
                     amountOfKeys--;
                     UpdateKeyCounter();
