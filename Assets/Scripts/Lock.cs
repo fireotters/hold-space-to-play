@@ -8,6 +8,7 @@ public class Lock : MonoBehaviour
     private Animator animator;
     private SpriteRenderer lockSprite;
     [SerializeField] private Collider2D lockSolidCollider = null;
+    public bool unlockable = true;
 
     void Awake()
     {
@@ -23,6 +24,7 @@ public class Lock : MonoBehaviour
     public void DestroyLock()
     {
         lockSolidCollider.enabled = false;
+        unlockable = false;
         sfx.Play();
         animator.SetBool("Die", true);
         Invoke("Die", 0.5f);

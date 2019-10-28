@@ -1827,6 +1827,16 @@ PrefabInstance:
       propertyPath: choiceOfMusic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4593923665429352272, guid: bf3b0e299d4fc19448023a9828c6a7dc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155852679534417643, guid: bf3b0e299d4fc19448023a9828c6a7dc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf3b0e299d4fc19448023a9828c6a7dc, type: 3}
 --- !u!1001 &1287441108
