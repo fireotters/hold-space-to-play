@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Cinemachine;
 
 public class Player : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class Player : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private float moveDirection;
-    private new Camera camera;
+    private CinemachineVirtualCamera cinemachineCamera;
     private float movementValue = 0f, baseSpeed = 1.5f;
     public bool jump = false;
     private bool moveLeft = false, moveRight = false;
@@ -29,7 +30,9 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-        camera = FindObjectOfType<Camera>();
+        cinemachineCamera = FindObjectOfType<CinemachineVirtualCamera>();
+
+        cinemachineCamera.Follow = gameObject.transform;
 
         // Find key counter text object
         var listOfTextObjects = FindObjectsOfType<Text>();
@@ -41,11 +44,6 @@ public class Player : MonoBehaviour
                 break;
             }
         }
-    }
-
-    void Start()
-    {
-        CameraFollowPlayer();
     }
 
     // Update is called once per frame
@@ -69,7 +67,6 @@ public class Player : MonoBehaviour
         SetAnimatorValues(Mathf.Abs(moveDirection), jump);
 
         // Set camera to center on the character
-        CameraFollowPlayer();
     }
 
     /// <summary>
@@ -203,14 +200,6 @@ public class Player : MonoBehaviour
         {
             spriteRenderer.flipX = true;
         }
-    }
-
-    /// <summary>
-    /// Sets the camera position to look wherever the player is, both vertically and horizontally
-    /// </summary>
-    void CameraFollowPlayer()
-    {
-        camera.transform.SetPositionAndRotation(new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 1f,  -1f), Quaternion.identity);
     }
 
     /// <summary>
