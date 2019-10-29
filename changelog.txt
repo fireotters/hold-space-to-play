@@ -12,6 +12,7 @@ MINOR
 - Text changed in places, 'Options' menu layout improved.
 
 BUG FIXES
+- Jump inputs now work on any refresh rate. 144hz monitors, etc. can now fully enjoy the game.
 - Flags and locks can no longer be activated multiple times. Prevents multiple level ending sounds, and softlocks related to not having enough keys respectively.
 - Music and sound volume can now be changed after starting the game and leaving.
 - Glitchy double-jumps can't be performed inside one-way platforms anymore. Helps with ascending Level 8.
