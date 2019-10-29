@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class OneWayPlatforms : MonoBehaviour
 {
+    // Disable warning CS0649 (never assigned to). These are serialized fields that are assigned in Unity.
+    #pragma warning disable CS0649
     [SerializeField] SpriteRenderer topTriggerRenderer, bottomTriggerRenderer;
+    #pragma warning restore CS0649
+
     Collider2D parentCollider;
 
     void Awake()

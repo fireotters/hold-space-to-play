@@ -397,13 +397,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 352983267}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.77, y: -6.65, z: -10.541619}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.605089, y: -0.80575895, z: 18.622444}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 975481388}
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 1150136239}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &539517558 stripped
 Transform:
@@ -656,7 +656,7 @@ GameObject:
   m_Component:
   - component: {fileID: 824435317}
   - component: {fileID: 824435316}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: CameraBounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -688,10 +688,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -5.9466476, y: 7.5828133}
-      - {x: -5.910469, y: -6.9806123}
-      - {x: 17.2327, y: -6.941256}
-      - {x: 17.183525, y: 7.569091}
+    - - {x: -8, y: 7.5828133}
+      - {x: -8, y: -9}
+      - {x: 19, y: -9}
+      - {x: 19, y: 7.569091}
       - {x: 1.0410643, y: 7.5546913}
 --- !u!4 &824435317
 Transform:
@@ -700,12 +700,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 824435315}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.6, y: -8.7, z: -27.835094}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -29.43509, y: -2.8557587, z: 1.328968}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 1150136239}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &975481387
 GameObject:
@@ -946,6 +946,38 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1129898528}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1150136238
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1150136239}
+  m_Layer: 0
+  m_Name: Camera Objects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1150136239
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150136238}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.8350894, y: -5.844241, z: -29.164062}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 352983270}
+  - {fileID: 824435317}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1213016599
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,6 +1198,9 @@ MonoBehaviour:
     desired.
 
 
+    Edit the CameraBounds points depending on level size.
+
+
     Delete this gameobject when those are done.'
 --- !u!222 &1271093556
 CanvasRenderer:
@@ -1187,7 +1222,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1209,12 +1244,12 @@ PrefabInstance:
     - target: {fileID: 1393822567414316259, guid: f8732cb986586c248a9b34d4831b31cd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.894
+      value: 9.39
       objectReference: {fileID: 0}
     - target: {fileID: 1393822567414316259, guid: f8732cb986586c248a9b34d4831b31cd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 28.692
+      value: 20.69
       objectReference: {fileID: 0}
     - target: {fileID: 1393822567414316259, guid: f8732cb986586c248a9b34d4831b31cd,
         type: 3}
@@ -1347,7 +1382,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1555471599}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.420288, y: -6.760909, z: -10.541619}
+  m_LocalPosition: {x: -17.603783, y: -6.7689376, z: -10.541618}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

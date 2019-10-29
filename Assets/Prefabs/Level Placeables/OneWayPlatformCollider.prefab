@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 1090564586482201834}
   - component: {fileID: 1090564586482201835}
   - component: {fileID: 3400988024667504096}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SolidifyTriggerTop
   m_TagString: TopTrigger
   m_Icon: {fileID: 0}
@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 1090564587249648293}
   - component: {fileID: 1090564587249648312}
   - component: {fileID: 7301360954371046862}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SolidifyTriggerBottom
   m_TagString: BottomTrigger
   m_Icon: {fileID: 0}

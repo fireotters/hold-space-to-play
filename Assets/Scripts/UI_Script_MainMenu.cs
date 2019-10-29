@@ -91,7 +91,6 @@ public class UI_Script_MainMenu : MonoBehaviour
         }
         else
         {
-            // TODO: Fix Options space bar spam graphical glitch
             DecreaseAllFillBoxes();
         }
     }

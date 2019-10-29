@@ -98,10 +98,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrounded: 0
   groundCheck: {fileID: 1973245286}
-  groundedRadius: 0.2
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 23
+  groundedRadius: 0.1
 --- !u!50 &4878766265246827441
 Rigidbody2D:
   serializedVersion: 4

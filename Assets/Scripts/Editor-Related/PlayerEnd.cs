@@ -38,9 +38,9 @@ public class PlayerEnd : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    public void StartEndingLevel()
     {
-        if (other.tag == "Player" && !levelEnding)
+        if (!levelEnding)
         {
             levelEnding = true;
             StartCoroutine(FadeBlack("to"));
