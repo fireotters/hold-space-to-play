@@ -726,13 +726,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190826150}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.77, y: -6.65, z: -10.541619}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.605089, y: -0.80575895, z: 18.622444}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1198024851}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 901344224}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &294109155
 GameObject:
@@ -812,7 +812,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294109155}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.3651385, y: -58.31712, z: -10.541619}
+  m_LocalPosition: {x: 5.362055, y: -29.660738, z: -10.541618}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1827,6 +1827,38 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 892261305}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &901344223
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 901344224}
+  m_Layer: 0
+  m_Name: Camera Objects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &901344224
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901344223}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.8350894, y: -5.844241, z: -29.164062}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 190826153}
+  - {fileID: 1464340819}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &923741685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3006,7 +3038,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1464340819}
   - component: {fileID: 1464340818}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: CameraBounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3050,12 +3082,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1464340817}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.28, y: -60.27, z: -27.835094}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.5550895, y: -54.42576, z: 1.328968}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 901344224}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1467892002
 PrefabInstance:
@@ -3982,6 +4014,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OneWayPlatformCollider (0)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090564586137347997, guid: 8f1fac4a285bf214d9e24081abbf59b2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1090564586137347985, guid: 8f1fac4a285bf214d9e24081abbf59b2,
         type: 3}
@@ -20748,7 +20785,7 @@ Tilemap:
       - {fileID: -538331831730588137, guid: a0e035ca30c889a40b5ca91c8c104a40, type: 3}
       - {fileID: -1385786070971223102, guid: a0e035ca30c889a40b5ca91c8c104a40, type: 3}
       - {fileID: 6116080786932476827, guid: a0e035ca30c889a40b5ca91c8c104a40, type: 3}
-      m_AnimationSpeed: 1.5
+      m_AnimationSpeed: 1.5000001
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 15, y: 4, z: 0}
@@ -20774,7 +20811,7 @@ Tilemap:
       - {fileID: -538331831730588137, guid: a0e035ca30c889a40b5ca91c8c104a40, type: 3}
       - {fileID: -1385786070971223102, guid: a0e035ca30c889a40b5ca91c8c104a40, type: 3}
       - {fileID: 6116080786932476827, guid: a0e035ca30c889a40b5ca91c8c104a40, type: 3}
-      m_AnimationSpeed: 1.5000001
+      m_AnimationSpeed: 1.5
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 24, y: 10, z: 0}

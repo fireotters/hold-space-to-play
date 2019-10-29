@@ -167,7 +167,7 @@ public class Player : MonoBehaviour
                 movementValue = 0;
             }
         }
-
+        
         return movementValue;
     }
 
@@ -224,13 +224,15 @@ public class Player : MonoBehaviour
         {
             moveLeft = true;
             moveRight = false;
-            movementValue = 0f;
+            if (movementValue > 0) // If moving right before, stop on a dime and start moving left.
+                movementValue = 0f;
         }
         else if (direction == "right")
         {
             moveRight = true;
             moveLeft = false;
-            movementValue = 0f;
+            if (movementValue < 0) // If moving left before, stop on a dime and start moving right.
+                movementValue = 0f;
         }
         else if (direction == "stop")
         {

@@ -6,9 +6,14 @@ public class Player_Controller_2D : MonoBehaviour
 {
     private Rigidbody2D rb;
     public bool isGrounded = false;
+
+    // Disable warning CS0649 (never assigned to). These are serialized fields that are assigned in Unity.
+    #pragma warning disable CS0649
     [SerializeField] private Transform groundCheck;
-    [SerializeField] private float groundedRadius = 0f;
     [SerializeField] private LayerMask whatIsGround;
+    #pragma warning restore CS0649
+
+    [SerializeField] private float groundedRadius = 0f;
 
     void Start()
     {
@@ -25,7 +30,6 @@ public class Player_Controller_2D : MonoBehaviour
         {
             if (colliders[i].gameObject != gameObject)
             {
-                // TODO find a way to disallow double jumps inside oneway platforms
                 isGrounded = true;
             }
         }
