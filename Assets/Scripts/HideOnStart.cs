@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class HideOnStart : MonoBehaviour
 {
-    SpriteRenderer renderer;
+    SpriteRenderer platformRenderer;
 
     void Awake()
     {
-        renderer = GetComponent<SpriteRenderer>();    
+        platformRenderer = GetComponent<SpriteRenderer>();    
     }
 
     void Start()
     {
-        renderer.enabled = false;   
+        platformRenderer.enabled = false;   
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K)) {
+        /*if (Input.GetKeyDown(KeyCode.K)) {
             renderer.enabled = !renderer.enabled;
-        }
+        }*/
     }
 }

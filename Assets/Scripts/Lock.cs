@@ -7,22 +7,24 @@ public class Lock : MonoBehaviour
     private AudioSource sfx;
     private Animator animator;
     private SpriteRenderer lockSprite;
-    [SerializeField] private Collider lockCollider = null;
+    [SerializeField] private Collider2D lockSolidCollider = null;
+    public bool unlockable = true;
 
     void Awake()
     {
         lockSprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         sfx = GetComponent<AudioSource>();
-        if (lockCollider == null)
+        if (lockSolidCollider == null)
         {
-            Debug.LogError("You need to specify the collision box collider in the Inspector!");
+            Debug.LogError("You need to specify the SOLID (not trigger) collision box in the Inspector!");
         }
     }
 
     public void DestroyLock()
     {
-        lockCollider.enabled = false;
+        lockSolidCollider.enabled = false;
+        unlockable = false;
         sfx.Play();
         animator.SetBool("Die", true);
         Invoke("Die", 0.5f);

@@ -17,8 +17,9 @@ public class UI_Script_MainMenu : MonoBehaviour
     float timeBetweenTapAndHold = 0.8f; // Set to (timeHoldToActivate - timeTapToChange)
     bool cancelling = false;
     bool beingHeld = false;
-
     bool gameStarting = false;
+
+    // Option Screen
     bool optionsAreOpen = false;
     public GameObject optionsDialog;
     public Slider optionMusicSlider, optionSFXSlider;
@@ -27,6 +28,9 @@ public class UI_Script_MainMenu : MonoBehaviour
     private int levelNoSelected;
     public Text levelSelectText;
     public AudioSource sfxDemoSlider;
+    public Button fullscreenToggle;
+    public RawImage uiDemo1, uiDemo2;
+    public Text uiDescTitle, uiDesc;
 
     public GameObject fadeBlack;
 
@@ -87,7 +91,6 @@ public class UI_Script_MainMenu : MonoBehaviour
         }
         else
         {
-            // TODO: Fix Options space bar spam graphical glitch
             DecreaseAllFillBoxes();
         }
     }
@@ -180,8 +183,28 @@ public class UI_Script_MainMenu : MonoBehaviour
         optionsAreOpen = true;
         musicManager.sfxDemo = sfxDemoSlider;
         optionsDialog.SetActive(true);
+        fullscreenToggle.interactable = !Screen.fullScreen;
         optionMusicSlider.SetValueWithoutNotify(PlayerPrefs.GetFloat("Music"));
         optionSFXSlider.SetValueWithoutNotify(PlayerPrefs.GetFloat("SFX"));
+        SetControlDisplay();
+    }
+
+    public void SetControlDisplay()
+    {
+        if (PlayerPrefs.GetInt("UI Type") == 0)
+        {
+            uiDemo1.gameObject.SetActive(true);
+            uiDemo2.gameObject.SetActive(false);
+            uiDescTitle.text = "Easier Movement";
+            uiDesc.text = "Three buttons, each\ndedicated to an action.";
+        }
+        else
+        {
+            uiDemo1.gameObject.SetActive(false);
+            uiDemo2.gameObject.SetActive(true);
+            uiDescTitle.text = "Easier Running Jumps";
+            uiDesc.text = "Two buttons. One jumps,\none flips between moving\nplayer left or right.";
+        }
     }
     public void CloseOptions()
     {
@@ -194,7 +217,6 @@ public class UI_Script_MainMenu : MonoBehaviour
 
     public void GoToLevel()
     {
-        print(levelSelectText.text);
         if (int.TryParse(levelSelectText.text, out int levelNo))
         {
             if (levelNo > 0 && levelNo < 9)
@@ -209,6 +231,42 @@ public class UI_Script_MainMenu : MonoBehaviour
     void DoLevelLoad()
     {
         SceneManager.LoadScene("Level" + levelNoSelected);
+    }
+
+    public void SwapFullscreen()
+    {
+        fullscreenToggle.interactable = false;
+        Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, true);
+    }
+
+    public void SetResolution(int resolutionChoice)
+    {
+        fullscreenToggle.interactable = true;
+        switch (resolutionChoice)
+        {
+            case 480:
+                Screen.SetResolution(848, 480, false);
+                break;
+            case 720:
+                Screen.SetResolution(1280, 720, false);
+                break;
+            case 1080:
+                Screen.SetResolution(1920, 1080, false);
+                break;
+            case 1440:
+                Screen.SetResolution(2560, 1440, false);
+                break;
+        }
+            
+    }
+
+    public void SetUIChoice()
+    {
+        if (PlayerPrefs.GetInt("UI Type") == 0)
+            PlayerPrefs.SetInt("UI Type", 1);
+        else
+            PlayerPrefs.SetInt("UI Type", 0);
+        SetControlDisplay();
     }
 
     // Other functions

@@ -7,39 +7,65 @@ using UnityEngine.SceneManagement;
 public class UI_Script : MonoBehaviour
 {
     public int choiceOfMusic;
-    public Image outlineImg, leftArrowImg, upArrowImg, rightArrowImg, pauseImg;
+    public Image outlineImg, leftArrowImg, upArrowImg, rightArrowImg;
+    public Image altUiMoveArrowImg, altUiUpArrowImg, altUiReversedArrowImg; // Alt UI uses different image files for transform.position purposes
     private string currentOutline;
+    private string altUiDirection = "left";
 
     float startHoldTime = 0f;
     float timeTapToChange = 0.2f;
-    float timeHoldToActivate = 0.5f;
-    float timeBetweenTapAndHold = 0.3f; // Set to (timeHoldToActivate - timeTapToChange)
+    float timeHoldToActivate = 0.4f;
+    float timeBetweenTapAndHold = 0.2f; // Set to (timeHoldToActivate - timeTapToChange)
     bool cancelling = false;
     bool beingHeld = false;
     public GameObject fadeBlack;
 
     private Player player;
     private MusicManager musicManager;
+    private GameObject baseUI;
+    private GameObject baseUIAlt;
 
     void Start()
     {
+        // Begin with assigning the UI gameobjects
+        baseUI = gameObject.transform.GetChild(0).gameObject;
+        baseUIAlt = gameObject.transform.GetChild(1).gameObject;
+
+        // Set initial UI transform values, etc
+        if (PlayerPrefs.GetInt("UI Type") == 0)
+        {
+            baseUI.SetActive(true);
+            outlineImg.transform.position = upArrowImg.transform.position;
+            currentOutline = "UpArrow";
+        }
+        else
+        {
+            baseUIAlt.SetActive(true);
+            outlineImg.transform.position = altUiMoveArrowImg.transform.position;
+            currentOutline = "MoveArrowAlt";
+        }
+
+        // Change music track
         musicManager = GameObject.FindObjectOfType<MusicManager>();
         if (musicManager)
         {
             musicManager.ChangeMusicTrack(choiceOfMusic);
         }
-        outlineImg.transform.position = upArrowImg.transform.position;
-        currentOutline = "UpArrow";
+
+        // Find the player gameobject and fade in the level
         player = FindObjectOfType<Player>();
         StartCoroutine(FadeBlack("from"));
     }
 
     void Update()
     {
-        if (player == null) //Because Unity is the worst
+        // Check for a null player gameobject, reassign it if it goes missing
+        if (player == null) 
         {
             player = FindObjectOfType<Player>();
         }
+
+        // Key input checks
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             StartCoroutine(FadeBlack("to"));
@@ -87,21 +113,49 @@ public class UI_Script : MonoBehaviour
 
     private void ChangeSelection()
     {
+        Vector3 positionToMoveSelector = new Vector3();
         switch (currentOutline)
         {
             case "LeftArrow":
-                outlineImg.transform.position = upArrowImg.transform.position;
+                positionToMoveSelector = upArrowImg.transform.position;
                 currentOutline = "UpArrow";
                 break;
             case "UpArrow":
-                outlineImg.transform.position = rightArrowImg.transform.position;
+                positionToMoveSelector = rightArrowImg.transform.position;
                 currentOutline = "RightArrow";
                 break;
             case "RightArrow":
-                outlineImg.transform.position = leftArrowImg.transform.position;
+                positionToMoveSelector = leftArrowImg.transform.position;
                 currentOutline = "LeftArrow";
                 break;
+            // Alternate UI
+            case "MoveArrowAlt":
+                positionToMoveSelector = altUiUpArrowImg.transform.position;
+                currentOutline = "UpArrowAlt";
+                // When the selector passes over alt UI movement arrow, change the direction
+                ChangeAltUiDirection();
+                break;
+            case "UpArrowAlt":
+                positionToMoveSelector = altUiMoveArrowImg.transform.position;
+                currentOutline = "MoveArrowAlt";
+                break;
         }
+        outlineImg.transform.position = positionToMoveSelector;
+    }
+
+    private void ChangeAltUiDirection()
+    {
+        if (altUiDirection == "left")
+        {
+            altUiDirection = "right";
+            altUiReversedArrowImg.gameObject.SetActive(false);
+        }
+        else
+        {
+            altUiDirection = "left";
+            altUiReversedArrowImg.gameObject.SetActive(true);
+        }
+        altUiMoveArrowImg.transform.Rotate(0, 0, 180);
     }
 
     private void ActivateSelection()
@@ -117,48 +171,85 @@ public class UI_Script : MonoBehaviour
             case "RightArrow":
                 player.SetPlayerDirection("right");
                 break;
+            // Alternate UI
+            case "MoveArrowAlt":
+                player.SetPlayerDirection(altUiDirection); // "left" or "right" set by ChangeSelection()
+                break;
+            case "UpArrowAlt":
+                player.jump = true;
+                break;
         }
     }
     private void KeepSelectionBoxFilled()
     {
+        Image boxToKeepFilled = null;
         switch (currentOutline)
         {
             case "LeftArrow":
-                leftArrowImg.fillAmount = 1.0f;
+                boxToKeepFilled = leftArrowImg;
                 break;
             case "UpArrow":
-                upArrowImg.fillAmount = 1.0f;
+                boxToKeepFilled = upArrowImg;
                 break;
             case "RightArrow":
-                rightArrowImg.fillAmount = 1.0f;
+                boxToKeepFilled = rightArrowImg;
+                break;
+            // Alternate UI
+            case "MoveArrowAlt":
+                boxToKeepFilled = altUiMoveArrowImg;
+                break;
+            case "UpArrowAlt":
+                boxToKeepFilled = altUiUpArrowImg;
                 break;
         }
+        boxToKeepFilled.fillAmount = 1.0f;
     }
 
     private void FillBoxOfSelection()
     {
+        Image boxToFill = null;
         switch (currentOutline)
         {
             case "LeftArrow":
-                leftArrowImg.fillAmount += 1.0f/timeBetweenTapAndHold * Time.deltaTime;
+                boxToFill = leftArrowImg;
                 break;
             case "UpArrow":
-                upArrowImg.fillAmount += 1.0f/timeBetweenTapAndHold * Time.deltaTime;
+                boxToFill = upArrowImg;
                 break;
             case "RightArrow":
-                rightArrowImg.fillAmount += 1.0f/timeBetweenTapAndHold * Time.deltaTime;
+                boxToFill = rightArrowImg;
+                break;
+            // Alternate UI
+            case "MoveArrowAlt":
+                boxToFill = altUiMoveArrowImg;
+                break;
+            case "UpArrowAlt":
+                boxToFill = altUiUpArrowImg;
                 break;
         }
+        boxToFill.fillAmount += 1.0f / timeBetweenTapAndHold * Time.deltaTime;
     }
 
     private void DecreaseAllFillBoxes()
     {
-        leftArrowImg.fillAmount -= 0.05f;
-        upArrowImg.fillAmount -= 0.05f;
-        rightArrowImg.fillAmount -= 0.05f;
-        if (leftArrowImg.fillAmount == 0 && upArrowImg.fillAmount == 0 && rightArrowImg.fillAmount == 0)
+        if (baseUI.activeInHierarchy)
         {
-            cancelling = false;
+            leftArrowImg.fillAmount -= 0.05f;
+            upArrowImg.fillAmount -= 0.05f;
+            rightArrowImg.fillAmount -= 0.05f;
+            if (leftArrowImg.fillAmount == 0 && upArrowImg.fillAmount == 0 && rightArrowImg.fillAmount == 0)
+            {
+                cancelling = false;
+            }
+        }
+        else if (baseUIAlt.activeInHierarchy)
+        {
+            altUiMoveArrowImg.fillAmount -= 0.05f;
+            altUiUpArrowImg.fillAmount -= 0.05f;
+            if (altUiMoveArrowImg.fillAmount == 0 && altUiUpArrowImg.fillAmount == 0)
+            {
+                cancelling = false;
+            }
         }
     }
 

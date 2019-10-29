@@ -9,7 +9,9 @@ public class PlayerEnd : MonoBehaviour
 {
     private SpriteRenderer sprite;
     public GameObject fadeBlack;
-    [SerializeField] private string levelToLoad;
+    public string levelToLoad;
+    [SerializeField] private GameObject flag = null;
+    private bool levelEnding = false;
 
     void Awake()
     {
@@ -23,13 +25,24 @@ public class PlayerEnd : MonoBehaviour
     {
         sprite = GetComponent<SpriteRenderer>();
         fadeBlack = GameObject.FindObjectOfType<Canvas>().GetComponent<UI_Script>().fadeBlack;
-        sprite.enabled = false;    
+        sprite.enabled = false;
+
+        // Spawns a player.
+        if (flag != null)
+        {
+            Instantiate(flag, gameObject.transform.position, Quaternion.identity);
+        }
+        else // This error shouldn't appear, but it's better to be safe than sorry.
+        {
+            Debug.LogError("You must set the Player prefab in the Inspector!");
+        }
     }
 
-    void OnTriggerEnter(Collider other)
+    public void StartEndingLevel()
     {
-        if (other.tag == "Player")
+        if (!levelEnding)
         {
+            levelEnding = true;
             StartCoroutine(FadeBlack("to"));
             Invoke("TriggerEndLevel", 5f);
         }

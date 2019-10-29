@@ -6,13 +6,13 @@ public class Key : MonoBehaviour
 {
     private AudioSource sfx;
     private SpriteRenderer key;
-    private Collider triggerCollider;
+    private Collider2D triggerCollider;
 
     void Awake()
     {
         sfx = GetComponent<AudioSource>();
         key = GetComponent<SpriteRenderer>();
-        triggerCollider = GetComponent<Collider>();
+        triggerCollider = GetComponent<Collider2D>();
     }
 
     public void DestroyKey()

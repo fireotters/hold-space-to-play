@@ -9,6 +9,7 @@ TagManager:
   - Key
   - Lock
   - Flag
+  - UI
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Player
+  - OneWayPlatform Triggers
   - 
   - 
   - 

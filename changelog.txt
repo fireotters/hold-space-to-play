@@ -1,0 +1,19 @@
+------------------
+Changelog for v1.1
+------------------
+MAJOR
+- New control scheme. Two buttons instead of three. Can be set in 'Options'.
+- New camera system. Shows more of the screen and moves around smoothly.
+- Resolution and control options added to 'Options' menu.
+
+MINOR
+- Space bar only needs to be held for 0.4s, down from 0.5s.
+- Level layouts are slightly changed. Especially in Level 8, as jumps are more forgiving.
+- Text changed in places, 'Options' menu layout improved.
+
+BUG FIXES
+- Jump inputs now work on any refresh rate. 144hz monitors, etc. can now fully enjoy the game.
+- Flags and locks can no longer be activated multiple times. Prevents multiple level ending sounds, and softlocks related to not having enough keys respectively.
+- Music and sound volume can now be changed after starting the game and leaving.
+- Glitchy double-jumps can't be performed inside one-way platforms anymore. Helps with ascending Level 8.
+- The player no longer instantly stops if the same left/right action is performed twice. However, changing direction (intentionally) still instantly stops them from moving their prior direction.
