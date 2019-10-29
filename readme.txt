@@ -24,7 +24,7 @@ MAJOR
 
 MINOR
 - Space bar only needs to be held for 0.4s, down from 0.5s.
-- Camera altered to focus on the center of the character.
+- Camera altered to focus on the center of the character, and move smoothly around the player.
 - Level layouts are slightly changed. Especially in Level 8, as jumps are more forgiving.
 - Text changed in places, 'Options' menu layout improved.
 
