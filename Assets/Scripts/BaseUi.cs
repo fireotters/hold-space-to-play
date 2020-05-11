@@ -7,8 +7,6 @@ public abstract class BaseUi : MonoBehaviour
     internal string currentOutline;
     internal float startHoldTime;
     internal const float TimeTapToChange = 0.2f;
-    internal const float TimeHoldToActivate = 0.4f;
-    internal const float TimeBetweenTapAndHold = 0.2f; // Set to (timeHoldToActivate - timeTapToChange)
     internal bool cancelling;
     internal bool beingHeld;
     public GameObject fadeBlack;

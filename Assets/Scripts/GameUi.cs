@@ -12,6 +12,8 @@ public class GameUi : BaseUi
     private MusicManager musicManager;
     private GameObject baseUI;
     private GameObject baseUIAlt;
+    internal const float TimeHoldToActivate = 0.4f;
+    internal const float TimeBetweenTapAndHold = 0.2f; // Set to (TimeHoldToActivate - BaseUi.TimeTapToChange)
 
     void Start()
     {

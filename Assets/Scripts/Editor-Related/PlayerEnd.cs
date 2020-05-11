@@ -6,7 +6,7 @@ public class PlayerEnd : MonoBehaviour
     private SpriteRenderer sprite;
     private GameUi gameUi;
     public string levelToLoad;
-    [SerializeField] private GameObject flag;
+    [SerializeField] private GameObject flag = null; // Set in inspector
     private bool levelEnding;
 
     void Awake()
