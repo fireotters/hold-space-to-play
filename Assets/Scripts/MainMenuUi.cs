@@ -20,8 +20,8 @@ public class MainMenuUi : BaseUi
     public Button fullscreenToggle;
     public RawImage uiDemo1, uiDemo2;
     public Text uiDescTitle, uiDesc;
-    internal const float TimeHoldToActivate = 1.0f;
-    internal const float TimeBetweenTapAndHold = 0.8f; // Set to (TimeHoldToActivate - BaseUi.TimeTapToChange)
+    private const float TimeHoldToActivate = 1.0f;
+    private const float TimeBetweenTapAndHold = 0.8f; // Set to (TimeHoldToActivate - BaseUi.TimeTapToChange)
 
     void Start()
     {

@@ -10,27 +10,27 @@ public class GameUi : BaseUi
     private string altUiDirection = "left";
     private Player player;
     private MusicManager musicManager;
-    private GameObject baseUI;
-    private GameObject baseUIAlt;
-    internal const float TimeHoldToActivate = 0.4f;
-    internal const float TimeBetweenTapAndHold = 0.2f; // Set to (TimeHoldToActivate - BaseUi.TimeTapToChange)
+    private GameObject baseUiObject;
+    private GameObject altBaseUiObject;
+    private const float TimeHoldToActivate = 0.4f;
+    private const float TimeBetweenTapAndHold = 0.2f; // Set to (TimeHoldToActivate - BaseUi.TimeTapToChange)
 
     void Start()
     {
         // Begin with assigning the UI gameobjects
-        baseUI = gameObject.transform.GetChild(0).gameObject;
-        baseUIAlt = gameObject.transform.GetChild(1).gameObject;
+        baseUiObject = gameObject.transform.GetChild(0).gameObject;
+        altBaseUiObject = gameObject.transform.GetChild(1).gameObject;
 
         // Set initial UI transform values, etc
         if (PlayerPrefs.GetInt("UI Type") == 0)
         {
-            baseUI.SetActive(true);
+            baseUiObject.SetActive(true);
             outlineImg.transform.position = upArrowImg.transform.position;
             currentOutline = "UpArrow";
         }
         else
         {
-            baseUIAlt.SetActive(true);
+            altBaseUiObject.SetActive(true);
             outlineImg.transform.position = altUiMoveArrowImg.transform.position;
             currentOutline = "MoveArrowAlt";
         }
@@ -222,7 +222,7 @@ public class GameUi : BaseUi
 
     protected override void DecreaseAllFillBoxes()
     {
-        if (baseUI.activeInHierarchy)
+        if (baseUiObject.activeInHierarchy)
         {
             leftArrowImg.fillAmount -= 0.05f;
             upArrowImg.fillAmount -= 0.05f;
@@ -232,7 +232,7 @@ public class GameUi : BaseUi
                 cancelling = false;
             }
         }
-        else if (baseUIAlt.activeInHierarchy)
+        else if (altBaseUiObject.activeInHierarchy)
         {
             altUiMoveArrowImg.fillAmount -= 0.05f;
             altUiUpArrowImg.fillAmount -= 0.05f;
