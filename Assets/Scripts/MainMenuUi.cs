@@ -1,26 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
-public class UI_Script_MainMenu : MonoBehaviour
+public class MainMenuUi : BaseUi
 {
-
     public Image outlineImg, outlineSlimImg, playButtonImg, optionsButtonImg, exitButtonImg;
-    private string currentOutline;
-
-    float startHoldTime = 0f;
-    float timeTapToChange = 0.2f;
-    float timeHoldToActivate = 1.0f;
-    float timeBetweenTapAndHold = 0.8f; // Set to (timeHoldToActivate - timeTapToChange)
-    bool cancelling = false;
-    bool beingHeld = false;
-    bool gameStarting = false;
+    private bool gameStarting;
 
     // Option Screen
-    bool optionsAreOpen = false;
+    private bool optionsAreOpen;
     public GameObject optionsDialog;
     public Slider optionMusicSlider, optionSFXSlider;
     public AudioMixer mixer;
@@ -31,13 +20,12 @@ public class UI_Script_MainMenu : MonoBehaviour
     public Button fullscreenToggle;
     public RawImage uiDemo1, uiDemo2;
     public Text uiDescTitle, uiDesc;
-
-    public GameObject fadeBlack;
-
+    private const float TimeHoldToActivate = 1.0f;
+    private const float TimeBetweenTapAndHold = 0.8f; // Set to (TimeHoldToActivate - BaseUi.TimeTapToChange)
 
     void Start()
     {
-        musicManager = GameObject.FindObjectOfType<MusicManager>();
+        musicManager = FindObjectOfType<MusicManager>();
         if (musicManager)
         {
             musicManager.ChangeMusicTrack(0);
@@ -63,7 +51,7 @@ public class UI_Script_MainMenu : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space) && !optionsAreOpen)
         {
             beingHeld = false;
-            if (startHoldTime + timeTapToChange >= Time.time)
+            if (startHoldTime + TimeTapToChange >= Time.time)
             {
                 ChangeSelection();
             }
@@ -79,11 +67,11 @@ public class UI_Script_MainMenu : MonoBehaviour
             {
                 KeepSelectionBoxFilled();
             }
-            else if (startHoldTime + timeTapToChange < Time.time)
+            else if (startHoldTime + TimeTapToChange < Time.time)
             {
                 FillBoxOfSelection();
             }
-            if (startHoldTime + timeHoldToActivate <= Time.time && !beingHeld)
+            if (startHoldTime + TimeHoldToActivate <= Time.time && !beingHeld)
             {
                 ActivateSelection();
                 beingHeld = true;
@@ -95,7 +83,7 @@ public class UI_Script_MainMenu : MonoBehaviour
         }
     }
 
-    private void ChangeSelection()
+    protected override void ChangeSelection()
     {
         switch (currentOutline)
         {
@@ -117,14 +105,14 @@ public class UI_Script_MainMenu : MonoBehaviour
         }
     }
 
-    private void ActivateSelection()
+    protected override void ActivateSelection()
     {
         switch (currentOutline)
         {
             case "PlayButton":
                 StartCoroutine(FadeBlack("to"));
                 gameStarting = true;
-                Invoke("OpenGame", 1f);
+                Invoke(nameof(OpenGame), 1f);
                 break;
             case "OptionsButton":
                 ShowOptions();
@@ -135,7 +123,7 @@ public class UI_Script_MainMenu : MonoBehaviour
         }
     }
 
-    private void KeepSelectionBoxFilled()
+    protected override void KeepSelectionBoxFilled()
     {
         switch (currentOutline)
         {
@@ -150,23 +138,23 @@ public class UI_Script_MainMenu : MonoBehaviour
                 break;
         }
     }
-    private void FillBoxOfSelection()
+    protected override void FillBoxOfSelection()
     {
         switch (currentOutline)
         {
             case "PlayButton":
-                playButtonImg.fillAmount += 1.0f / timeBetweenTapAndHold * Time.deltaTime;
+                playButtonImg.fillAmount += 1.0f / TimeBetweenTapAndHold * Time.deltaTime;
                 break;
             case "OptionsButton":
-                optionsButtonImg.fillAmount += 1.0f / timeBetweenTapAndHold * Time.deltaTime;
+                optionsButtonImg.fillAmount += 1.0f / TimeBetweenTapAndHold * Time.deltaTime;
                 break;
             case "ExitButton":
-                exitButtonImg.fillAmount += 1.0f / timeBetweenTapAndHold * Time.deltaTime;
+                exitButtonImg.fillAmount += 1.0f / TimeBetweenTapAndHold * Time.deltaTime;
                 break;
         }
     }
 
-    private void DecreaseAllFillBoxes()
+    protected override void DecreaseAllFillBoxes()
     {
         playButtonImg.fillAmount -= 0.05f;
         optionsButtonImg.fillAmount -= 0.05f;
@@ -178,7 +166,7 @@ public class UI_Script_MainMenu : MonoBehaviour
     }
 
     // Functions related to options menu
-    void ShowOptions()
+    private void ShowOptions()
     {
         optionsAreOpen = true;
         musicManager.sfxDemo = sfxDemoSlider;
@@ -189,7 +177,7 @@ public class UI_Script_MainMenu : MonoBehaviour
         SetControlDisplay();
     }
 
-    public void SetControlDisplay()
+    private void SetControlDisplay()
     {
         if (PlayerPrefs.GetInt("UI Type") == 0)
         {
@@ -223,12 +211,12 @@ public class UI_Script_MainMenu : MonoBehaviour
             {
                 levelNoSelected = levelNo;
                 StartCoroutine(FadeBlack("to"));
-                Invoke("DoLevelLoad", 1f);
+                Invoke(nameof(DoLevelLoad), 1f);
             }
         }
     }
 
-    void DoLevelLoad()
+    private void DoLevelLoad()
     {
         SceneManager.LoadScene("Level" + levelNoSelected);
     }
@@ -260,7 +248,7 @@ public class UI_Script_MainMenu : MonoBehaviour
             
     }
 
-    public void SetUIChoice()
+    public void SetUiChoice()
     {
         if (PlayerPrefs.GetInt("UI Type") == 0)
             PlayerPrefs.SetInt("UI Type", 1);
@@ -270,37 +258,8 @@ public class UI_Script_MainMenu : MonoBehaviour
     }
 
     // Other functions
-    void OpenGame()
+    private void OpenGame()
     {
         SceneManager.LoadScene("Level1");
-    }
-    public IEnumerator FadeBlack(string ToOrFrom)
-    {
-        Image tempFade = fadeBlack.GetComponent<Image>();
-        Color origColor = tempFade.color;
-        float speedOfFade = 1.2f;
-        float fadingAlpha;
-        fadeBlack.SetActive(true);
-        if (ToOrFrom == "from")
-        {
-            fadingAlpha = 1f;
-            while (fadingAlpha > 0f)
-            {
-                fadingAlpha -= speedOfFade * Time.deltaTime;
-                tempFade.color = new Color(origColor.r, origColor.g, origColor.b, fadingAlpha);
-                yield return null;
-            }
-            fadeBlack.SetActive(false);
-        }
-        else if (ToOrFrom == "to")
-        {
-            fadingAlpha = 0f;
-            while (fadingAlpha < 1f)
-            {
-                fadingAlpha += speedOfFade * Time.deltaTime;
-                tempFade.color = new Color(origColor.r, origColor.g, origColor.b, fadingAlpha);
-                yield return null;
-            }
-        }
     }
 }

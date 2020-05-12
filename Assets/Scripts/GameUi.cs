@@ -1,52 +1,42 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class UI_Script : MonoBehaviour
+public class GameUi : BaseUi
 {
     public int choiceOfMusic;
     public Image outlineImg, leftArrowImg, upArrowImg, rightArrowImg;
     public Image altUiMoveArrowImg, altUiUpArrowImg, altUiReversedArrowImg; // Alt UI uses different image files for transform.position purposes
-    private string currentOutline;
     private string altUiDirection = "left";
-
-    float startHoldTime = 0f;
-    float timeTapToChange = 0.2f;
-    float timeHoldToActivate = 0.4f;
-    float timeBetweenTapAndHold = 0.2f; // Set to (timeHoldToActivate - timeTapToChange)
-    bool cancelling = false;
-    bool beingHeld = false;
-    public GameObject fadeBlack;
-
     private Player player;
     private MusicManager musicManager;
-    private GameObject baseUI;
-    private GameObject baseUIAlt;
+    private GameObject baseUiObject;
+    private GameObject altBaseUiObject;
+    private const float TimeHoldToActivate = 0.4f;
+    private const float TimeBetweenTapAndHold = 0.2f; // Set to (TimeHoldToActivate - BaseUi.TimeTapToChange)
 
     void Start()
     {
         // Begin with assigning the UI gameobjects
-        baseUI = gameObject.transform.GetChild(0).gameObject;
-        baseUIAlt = gameObject.transform.GetChild(1).gameObject;
+        baseUiObject = gameObject.transform.GetChild(0).gameObject;
+        altBaseUiObject = gameObject.transform.GetChild(1).gameObject;
 
         // Set initial UI transform values, etc
         if (PlayerPrefs.GetInt("UI Type") == 0)
         {
-            baseUI.SetActive(true);
+            baseUiObject.SetActive(true);
             outlineImg.transform.position = upArrowImg.transform.position;
             currentOutline = "UpArrow";
         }
         else
         {
-            baseUIAlt.SetActive(true);
+            altBaseUiObject.SetActive(true);
             outlineImg.transform.position = altUiMoveArrowImg.transform.position;
             currentOutline = "MoveArrowAlt";
         }
 
         // Change music track
-        musicManager = GameObject.FindObjectOfType<MusicManager>();
+        musicManager = FindObjectOfType<MusicManager>();
         if (musicManager)
         {
             musicManager.ChangeMusicTrack(choiceOfMusic);
@@ -69,7 +59,7 @@ public class UI_Script : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             StartCoroutine(FadeBlack("to"));
-            Invoke("ExitLevel", 1f);
+            Invoke(nameof(ExitLevel), 1f);
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -79,7 +69,7 @@ public class UI_Script : MonoBehaviour
         {
             beingHeld = false;
             player.SetPlayerDirection("stop");
-            if (startHoldTime + timeTapToChange >= Time.time)
+            if (startHoldTime + TimeTapToChange >= Time.time)
             {
                 ChangeSelection();
             }
@@ -95,11 +85,11 @@ public class UI_Script : MonoBehaviour
             {
                 KeepSelectionBoxFilled();
             }
-            else if (startHoldTime + timeTapToChange < Time.time)
+            else if (startHoldTime + TimeTapToChange < Time.time)
             {
                 FillBoxOfSelection();
             }
-            if (startHoldTime + timeHoldToActivate <= Time.time && !beingHeld)
+            if (startHoldTime + TimeHoldToActivate <= Time.time && !beingHeld)
             {
                 ActivateSelection();
                 beingHeld = true;
@@ -111,7 +101,7 @@ public class UI_Script : MonoBehaviour
         }
     }
 
-    private void ChangeSelection()
+    protected override void ChangeSelection()
     {
         Vector3 positionToMoveSelector = new Vector3();
         switch (currentOutline)
@@ -158,7 +148,7 @@ public class UI_Script : MonoBehaviour
         altUiMoveArrowImg.transform.Rotate(0, 0, 180);
     }
 
-    private void ActivateSelection()
+    protected override void ActivateSelection()
     {
         switch (currentOutline)
         {
@@ -180,7 +170,7 @@ public class UI_Script : MonoBehaviour
                 break;
         }
     }
-    private void KeepSelectionBoxFilled()
+    protected override void KeepSelectionBoxFilled()
     {
         Image boxToKeepFilled = null;
         switch (currentOutline)
@@ -205,7 +195,7 @@ public class UI_Script : MonoBehaviour
         boxToKeepFilled.fillAmount = 1.0f;
     }
 
-    private void FillBoxOfSelection()
+    protected override void FillBoxOfSelection()
     {
         Image boxToFill = null;
         switch (currentOutline)
@@ -227,12 +217,12 @@ public class UI_Script : MonoBehaviour
                 boxToFill = altUiUpArrowImg;
                 break;
         }
-        boxToFill.fillAmount += 1.0f / timeBetweenTapAndHold * Time.deltaTime;
+        boxToFill.fillAmount += 1.0f / TimeBetweenTapAndHold * Time.deltaTime;
     }
 
-    private void DecreaseAllFillBoxes()
+    protected override void DecreaseAllFillBoxes()
     {
-        if (baseUI.activeInHierarchy)
+        if (baseUiObject.activeInHierarchy)
         {
             leftArrowImg.fillAmount -= 0.05f;
             upArrowImg.fillAmount -= 0.05f;
@@ -242,49 +232,18 @@ public class UI_Script : MonoBehaviour
                 cancelling = false;
             }
         }
-        else if (baseUIAlt.activeInHierarchy)
+        else if (altBaseUiObject.activeInHierarchy)
         {
             altUiMoveArrowImg.fillAmount -= 0.05f;
             altUiUpArrowImg.fillAmount -= 0.05f;
-            if (altUiMoveArrowImg.fillAmount == 0 && altUiUpArrowImg.fillAmount == 0)
+            if (altUiMoveArrowImg.fillAmount == 0f && altUiUpArrowImg.fillAmount == 0f)
             {
                 cancelling = false;
             }
         }
     }
 
-    // Other functions
-    public IEnumerator FadeBlack(string ToOrFrom)
-    {
-        Image tempFade = fadeBlack.GetComponent<Image>();
-        Color origColor = tempFade.color;
-        float speedOfFade = 1.2f;
-        float fadingAlpha;
-        fadeBlack.SetActive(true);
-        if (ToOrFrom == "from")
-        {
-            fadingAlpha = 1f;
-            while (fadingAlpha > 0f)
-            {
-                fadingAlpha -= speedOfFade * Time.deltaTime;
-                tempFade.color = new Color(origColor.r, origColor.g, origColor.b, fadingAlpha);
-                yield return null;
-            }
-            fadeBlack.SetActive(false);
-        }
-        else if (ToOrFrom == "to")
-        {
-            fadingAlpha = 0f;
-            while (fadingAlpha < 1f)
-            {
-                fadingAlpha += speedOfFade * Time.deltaTime;
-                tempFade.color = new Color(origColor.r, origColor.g, origColor.b, fadingAlpha);
-                yield return null;
-            }
-        }
-    }
-
-    void ExitLevel()
+    private void ExitLevel()
     {
         SceneManager.LoadScene("MainMenu");
     }

@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class PlayerEnd : MonoBehaviour
 {
     private SpriteRenderer sprite;
-    public GameObject fadeBlack;
+    private GameUi gameUi;
     public string levelToLoad;
-    [SerializeField] private GameObject flag = null;
-    private bool levelEnding = false;
+    [SerializeField] private GameObject flag = null; // Set in inspector
+    private bool levelEnding;
 
     void Awake()
     {
@@ -24,7 +20,7 @@ public class PlayerEnd : MonoBehaviour
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
-        fadeBlack = GameObject.FindObjectOfType<Canvas>().GetComponent<UI_Script>().fadeBlack;
+        gameUi = FindObjectOfType<Canvas>().GetComponent<GameUi>();
         sprite.enabled = false;
 
         // Spawns a player.
@@ -43,45 +39,13 @@ public class PlayerEnd : MonoBehaviour
         if (!levelEnding)
         {
             levelEnding = true;
-            StartCoroutine(FadeBlack("to"));
-            Invoke("TriggerEndLevel", 5f);
+            StartCoroutine(gameUi.FadeBlack("to", 3f));
+            Invoke(nameof(TriggerEndLevel), 5f);
         }
     }
 
     void TriggerEndLevel()
     {
         SceneManager.LoadScene(levelToLoad);
-    }
-
-    // Other methods
-    public IEnumerator FadeBlack(string ToOrFrom)
-    {
-        Image tempFade = fadeBlack.GetComponent<Image>();
-        Color origColor = tempFade.color;
-        float speedOfFade = 1.2f;
-        float fadingAlpha;
-        fadeBlack.SetActive(true);
-        yield return new WaitForSeconds(3f);
-        if (ToOrFrom == "from")
-        {
-            fadingAlpha = 1f;
-            while (fadingAlpha > 0f)
-            {
-                fadingAlpha -= speedOfFade * Time.deltaTime;
-                tempFade.color = new Color(origColor.r, origColor.g, origColor.b, fadingAlpha);
-                yield return null;
-            }
-            fadeBlack.SetActive(false);
-        }
-        else if (ToOrFrom == "to")
-        {
-            fadingAlpha = 0f;
-            while (fadingAlpha < 1f)
-            {
-                fadingAlpha += speedOfFade * Time.deltaTime;
-                tempFade.color = new Color(origColor.r, origColor.g, origColor.b, fadingAlpha);
-                yield return null;
-            }
-        }
     }
 }
