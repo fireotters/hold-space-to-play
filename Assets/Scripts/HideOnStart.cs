@@ -15,11 +15,4 @@ public class HideOnStart : MonoBehaviour
     {
         platformRenderer.enabled = false;   
     }
-
-    void Update()
-    {
-        /*if (Input.GetKeyDown(KeyCode.K)) {
-            renderer.enabled = !renderer.enabled;
-        }*/
-    }
 }

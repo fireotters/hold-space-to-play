@@ -12,22 +12,33 @@ public class MainMenuUi : BaseUi
     private bool optionsAreOpen;
     public GameObject optionsDialog;
     public Slider optionMusicSlider, optionSFXSlider;
+    private int levelNoSelected;
+
+    // Audio
     public AudioMixer mixer;
     private MusicManager musicManager;
-    private int levelNoSelected;
-    public Text levelSelectText;
     public AudioSource sfxDemoSlider;
-    public Button fullscreenToggle;
+
+    // UI
+    public Text levelSelectText;
+    public Button btnFullscreenToggle;
     public RawImage uiDemo1, uiDemo2;
     public Text uiDescTitle, uiDesc;
+
     private const float TimeHoldToActivate = 1.0f;
     private const float TimeBetweenTapAndHold = 0.8f; // Set to (TimeHoldToActivate - BaseUi.TimeTapToChange)
 
     void Start()
     {
         musicManager = FindObjectOfType<MusicManager>();
+        if (!musicManager)
+        {
+            Instantiate(musicManagerIfNotFoundInScene);
+            musicManager = FindObjectOfType<MusicManager>();
+        }
         if (musicManager)
         {
+            musicManager.sfxDemo = optionSFXSlider.GetComponent<AudioSource>();
             musicManager.ChangeMusicTrack(0);
         }
         if (!PlayerPrefs.HasKey("Music") || !PlayerPrefs.HasKey("SFX"))
@@ -171,7 +182,7 @@ public class MainMenuUi : BaseUi
         optionsAreOpen = true;
         musicManager.sfxDemo = sfxDemoSlider;
         optionsDialog.SetActive(true);
-        fullscreenToggle.interactable = !Screen.fullScreen;
+        SetBtnFullscreenText();
         optionMusicSlider.SetValueWithoutNotify(PlayerPrefs.GetFloat("Music"));
         optionSFXSlider.SetValueWithoutNotify(PlayerPrefs.GetFloat("SFX"));
         SetControlDisplay();
@@ -223,29 +234,27 @@ public class MainMenuUi : BaseUi
 
     public void SwapFullscreen()
     {
-        fullscreenToggle.interactable = false;
-        Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, true);
+        if (Screen.fullScreen)
+        {
+            Screen.SetResolution(Screen.currentResolution.width / 2, Screen.currentResolution.height / 2, false);
+        }
+        else
+        {
+            Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, true);
+        }
+        Invoke(nameof(SetBtnFullscreenText), 0.1f);
     }
 
-    public void SetResolution(int resolutionChoice)
+    public void SetBtnFullscreenText()
     {
-        fullscreenToggle.interactable = true;
-        switch (resolutionChoice)
+        if (Screen.fullScreen)
         {
-            case 480:
-                Screen.SetResolution(848, 480, false);
-                break;
-            case 720:
-                Screen.SetResolution(1280, 720, false);
-                break;
-            case 1080:
-                Screen.SetResolution(1920, 1080, false);
-                break;
-            case 1440:
-                Screen.SetResolution(2560, 1440, false);
-                break;
+            btnFullscreenToggle.GetComponentInChildren<Text>().text = "Fullscreen ON";
         }
-            
+        else
+        {
+            btnFullscreenToggle.GetComponentInChildren<Text>().text = "Fullscreen OFF";
+        }
     }
 
     public void SetUiChoice()

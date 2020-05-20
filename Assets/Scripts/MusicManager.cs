@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -9,7 +10,7 @@ public class MusicManager : MonoBehaviour
     public AudioMixer mixer;
     public AudioSource sfxDemo, currentMusicPlayer;
     public AudioClip mainMenuMusic, track1, track2, track3;
-    private int lastTrackRequested = 1;
+    private int lastTrackRequested = -1; // When first created, pick the scene's chosen song
 
     public static MusicManager instance;
     public void ChangeMusic(float sliderValue) {
@@ -38,10 +39,40 @@ public class MusicManager : MonoBehaviour
         }
     }
 
+    public void FindAllSfxAndPlayPause(int intent)
+    {
+        List<GameObject> listOfSfxObjects = new List<GameObject>();
+        listOfSfxObjects.AddRange(GameObject.FindGameObjectsWithTag("Key"));
+        listOfSfxObjects.AddRange(GameObject.FindGameObjectsWithTag("Lock"));
+        listOfSfxObjects.AddRange(GameObject.FindGameObjectsWithTag("Flag"));
+
+        if (intent == 0) // Pause
+        {
+            foreach (GameObject sfxObject in listOfSfxObjects)
+            {
+                if (sfxObject.GetComponent<AudioSource>().isPlaying)
+                {
+                    sfxObject.GetComponent<AudioSource>().Pause();
+                }
+            }
+        }
+        if (intent == 1) // Resume
+        {
+            foreach (GameObject sfxObject in listOfSfxObjects)
+            {
+                if (!sfxObject.GetComponent<AudioSource>().isPlaying)
+                {
+                    sfxObject.GetComponent<AudioSource>().UnPause();
+                }
+            }
+        }
+    }
+
     public void ChangeMusicTrack(int index)
     {
-        if (index != lastTrackRequested)
+        if (index != lastTrackRequested || index == 0)
         {
+            currentMusicPlayer.enabled = true;
             if (currentMusicPlayer.isPlaying)
             {
                 currentMusicPlayer.Stop();
@@ -66,6 +97,21 @@ public class MusicManager : MonoBehaviour
             }
             currentMusicPlayer.Play();
             lastTrackRequested = index;
+        }
+    }
+
+    public void PauseMusic()
+    {
+        if (currentMusicPlayer.isPlaying)
+        {
+            currentMusicPlayer.Pause();
+        }
+    }
+    public void ResumeMusic()
+    {
+        if (!currentMusicPlayer.isPlaying)
+        {
+            currentMusicPlayer.UnPause();
         }
     }
 
