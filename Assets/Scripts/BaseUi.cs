@@ -10,6 +10,7 @@ public abstract class BaseUi : MonoBehaviour
     internal bool cancelling;
     internal bool beingHeld;
     public GameObject fadeBlack;
+    public GameObject musicManagerIfNotFoundInScene;
 
     protected abstract void ChangeSelection();
     protected abstract void ActivateSelection();

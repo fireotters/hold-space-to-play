@@ -17,10 +17,13 @@ public class Player : MonoBehaviour
     private Animator animator;
     private float moveDirection;
     private CinemachineVirtualCamera cinemachineCamera;
-    private float movementValue = 0f, baseSpeed = 1.5f;
-    public bool jump = false;
+    private float movementValue = 0f;
+    private readonly float baseSpeed = 1.5f;
+    public bool initiateJump = false;
+    public bool currentlyJumping = false;
     private bool moveLeft = false, moveRight = false;
     private int amountOfKeys = 0;
+
     #endregion
 
     #region Unity methods
@@ -57,14 +60,18 @@ public class Player : MonoBehaviour
         else
         {
             // Or falsify jump boolean if the player is not grounded.
-            jump = false;
+            initiateJump = false;
+        }
+        if (rb.velocity.y > -0.0001 && rb.velocity.y < 0.0001)
+        {
+            currentlyJumping = false;
         }
         
         // Flip sprite depending on move direction
         CheckFlipCharacter(moveDirection);
 
         // Animate player
-        SetAnimatorValues(Mathf.Abs(moveDirection), jump);
+        SetAnimatorValues(Mathf.Abs(moveDirection), currentlyJumping);
 
         // Set camera to center on the character
     }
@@ -78,10 +85,11 @@ public class Player : MonoBehaviour
     {
         if (controller.isGrounded)
         {
-            if (jump)
+            if (initiateJump && rb.velocity.y < 0.0001 && rb.velocity.y > -0.0001)
             {
                 rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-                jump = false;
+                initiateJump = false;
+                currentlyJumping = true;
             }
         }
         rb.velocity = new Vector2(moveDirection, rb.velocity.y);
@@ -148,7 +156,11 @@ public class Player : MonoBehaviour
         {
             movementValue += Time.deltaTime;
         }
-        // If both moveRight and moveLeft == false and the Space key is not being pressed
+        else if (rb.velocity.x > -0.0001 && rb.velocity.x < 0.0001)
+        {
+            movementValue = 0;
+        }
+        // If both moveRight and moveLeft == false, the Space key is not being pressed
         // depending on if the movementValue is positive or negative, we start subtracting or adding
         // deltaTime to the value. Once the value reaches 0.1 levels of precision, we just set the value to 0,
         // since deltaTime never ends up returning plain zero.

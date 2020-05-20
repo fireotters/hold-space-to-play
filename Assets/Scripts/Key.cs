@@ -20,7 +20,7 @@ public class Key : MonoBehaviour
         key.enabled = false;
         triggerCollider.enabled = false;
         sfx.Play();
-        Invoke("Die", 1f);
+        Invoke(nameof(Die), 1f);
     }
 
     void Die()

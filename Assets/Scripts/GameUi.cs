@@ -4,14 +4,18 @@ using UnityEngine.SceneManagement;
 
 public class GameUi : BaseUi
 {
+    private Player player;
+    public MusicManager musicManager;
     public int choiceOfMusic;
+
+    // UI Placement Variables
+    public GameObject gamePausePanel;
+    private GameObject baseUiObject, altBaseUiObject;
     public Image outlineImg, leftArrowImg, upArrowImg, rightArrowImg;
     public Image altUiMoveArrowImg, altUiUpArrowImg, altUiReversedArrowImg; // Alt UI uses different image files for transform.position purposes
     private string altUiDirection = "left";
-    private Player player;
-    private MusicManager musicManager;
-    private GameObject baseUiObject;
-    private GameObject altBaseUiObject;
+
+    // UI Gameplay Variables
     private const float TimeHoldToActivate = 0.4f;
     private const float TimeBetweenTapAndHold = 0.2f; // Set to (TimeHoldToActivate - BaseUi.TimeTapToChange)
 
@@ -37,10 +41,12 @@ public class GameUi : BaseUi
 
         // Change music track
         musicManager = FindObjectOfType<MusicManager>();
-        if (musicManager)
+        if (!musicManager)
         {
-            musicManager.ChangeMusicTrack(choiceOfMusic);
+            Instantiate(musicManagerIfNotFoundInScene);
+            musicManager = FindObjectOfType<MusicManager>();
         }
+        musicManager.ChangeMusicTrack(choiceOfMusic);
 
         // Find the player gameobject and fade in the level
         player = FindObjectOfType<Player>();
@@ -49,23 +55,35 @@ public class GameUi : BaseUi
 
     void Update()
     {
-        // Check for a null player gameobject, reassign it if it goes missing
-        if (player == null) 
-        {
-            player = FindObjectOfType<Player>();
-        }
+        if (player == null) { player = FindObjectOfType<Player>(); } // Reassign player if it goes missing
+        CheckKeyInputs();
+        HandleSelectionBoxes();
+    }
+
+    private void CheckKeyInputs()
+    {
 
         // Key input checks
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            StartCoroutine(FadeBlack("to"));
-            Invoke(nameof(ExitLevel), 1f);
+            if (!gamePausePanel.activeInHierarchy)
+            {
+                PauseGame(0);
+            }
+            else
+            {
+                PauseGame(1);
+            }
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            SwapFullscreen();
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && !gamePausePanel.activeInHierarchy)
         {
             startHoldTime = Time.time;
         }
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Space) && !gamePausePanel.activeInHierarchy)
         {
             beingHeld = false;
             player.SetPlayerDirection("stop");
@@ -78,8 +96,12 @@ public class GameUi : BaseUi
                 cancelling = true;
             }
         }
+    }
+    private void HandleSelectionBoxes()
+    {
+
         // If the current action is not being cancelled, then fill the selection box.
-        if (Input.GetKey(KeyCode.Space) && !cancelling)
+        if (Input.GetKey(KeyCode.Space) && !cancelling && !gamePausePanel.activeInHierarchy)
         {
             if (beingHeld)
             {
@@ -156,7 +178,7 @@ public class GameUi : BaseUi
                 player.SetPlayerDirection("left");
                 break;
             case "UpArrow":
-                player.jump = true;
+                player.initiateJump = true;
                 break;
             case "RightArrow":
                 player.SetPlayerDirection("right");
@@ -166,7 +188,7 @@ public class GameUi : BaseUi
                 player.SetPlayerDirection(altUiDirection); // "left" or "right" set by ChangeSelection()
                 break;
             case "UpArrowAlt":
-                player.jump = true;
+                player.initiateJump = true;
                 break;
         }
     }
@@ -243,8 +265,45 @@ public class GameUi : BaseUi
         }
     }
 
-    private void ExitLevel()
+    public void PauseGame(int intent)
+    {
+        if (intent == 0)
+        { // Pause game
+            if (musicManager != null) {
+                musicManager.PauseMusic();
+                musicManager.FindAllSfxAndPlayPause(0);
+            }
+
+            gamePausePanel.SetActive(true);
+            Time.timeScale = 0;
+        }
+        else if (intent == 1)
+        { // Resume game
+            if (PlayerPrefs.GetFloat("Music") > 0f && musicManager != null) {
+                musicManager.ResumeMusic();
+                musicManager.FindAllSfxAndPlayPause(1);
+            }
+
+            gamePausePanel.SetActive(false);
+            Time.timeScale = 1;
+        }
+    }
+
+    public void SwapFullscreen()
+    {
+        if (Screen.fullScreen)
+        {
+            Screen.SetResolution(Screen.currentResolution.width / 2, Screen.currentResolution.height / 2, false);
+        }
+        else
+        {
+            Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, true);
+        }
+    }
+
+    public void ExitLevel()
     {
         SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1;
     }
 }

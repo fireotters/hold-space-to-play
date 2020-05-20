@@ -27,14 +27,14 @@ public class Lock : MonoBehaviour
         unlockable = false;
         sfx.Play();
         animator.SetBool("Die", true);
-        Invoke("Die", 0.5f);
+        Invoke(nameof(Die), 0.5f);
         
     }
 
     void Die()
     {
         lockSprite.enabled = false;
-        Invoke("ActuallyDie", 2f);
+        Invoke(nameof(ActuallyDie), 2f);
     }
 
     void ActuallyDie()
