@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using Discord;
+using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
@@ -25,11 +27,18 @@ public class MainMenuUi : BaseUi
     public RawImage uiDemo1, uiDemo2;
     public Text uiDescTitle, uiDesc;
 
+    private DiscordManager discordManager;
+
     private const float TimeHoldToActivate = 1.0f;
     private const float TimeBetweenTapAndHold = 0.8f; // Set to (TimeHoldToActivate - BaseUi.TimeTapToChange)
 
     void Start()
     {
+        discordManager = FindObjectOfType<DiscordManager>();
+        if (discordManager.UpdateDiscordRp(DiscordActivities.MainMenuActivity))
+        {
+            Debug.Log("Rich presence updated.");
+        }
         musicManager = FindObjectOfType<MusicManager>();
         if (!musicManager)
         {
@@ -270,5 +279,9 @@ public class MainMenuUi : BaseUi
     private void OpenGame()
     {
         SceneManager.LoadScene("Level1");
+        if (discordManager.UpdateDiscordRp(DiscordActivities.StartGameActivity()))
+        {
+            Debug.Log("Rich presence has been updated.");
+        }
     }
 }
