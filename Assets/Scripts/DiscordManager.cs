@@ -17,14 +17,13 @@ public class DiscordManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            discord = new Discord.Discord(DiscordClientId, (UInt64) CreateFlags.NoRequireDiscord);
+            discord = new Discord.Discord(DiscordClientId, (ulong) CreateFlags.NoRequireDiscord);
             activityManager = discord.GetActivityManager();
         }
         else
         {
             Destroy(gameObject);
         }
-
     }
     
     private void Update()
@@ -69,5 +68,4 @@ public class DiscordManager : MonoBehaviour
         
         discord.Dispose();
     }
-
 }
