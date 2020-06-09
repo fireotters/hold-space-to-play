@@ -1,6 +1,4 @@
-﻿using System;
-using Discord;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;

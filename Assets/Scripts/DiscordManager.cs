@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using Discord;
 using UnityEngine;
 
@@ -8,8 +7,8 @@ public class DiscordManager : MonoBehaviour
     public static DiscordManager Instance { get; private set; }
     private Discord.Discord discord;
     private ActivityManager activityManager;
-    
-    private const long DiscordClientId = 641934700033867787; // THIS IS ULTRA, HELLA, MEGA BAD TO DO THIS PROBABLY SHOULD BE LOADED IN FROM SOMEWHERE AND NOT HARDCODED.
+    private static readonly byte[] ObfsId = {14, 0, 80, 12, 11, 69, 1, 85, 4, 8, 4, 82, 13, 69, 83, 70, 10, 82};
+    private const string Key = "84a58q6e487a5sdq2e";
     
     private void Awake()
     {
@@ -17,7 +16,8 @@ public class DiscordManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            discord = new Discord.Discord(DiscordClientId, (ulong) CreateFlags.NoRequireDiscord);
+            var sec = new SimpleEncrypt(Key);
+            discord = new Discord.Discord(Convert.ToInt64(sec.Decrypt(ObfsId)), (ulong) CreateFlags.NoRequireDiscord);
             activityManager = discord.GetActivityManager();
         }
         else
