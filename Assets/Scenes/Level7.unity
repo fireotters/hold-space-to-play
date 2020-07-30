@@ -844,6 +844,11 @@ PrefabInstance:
       propertyPath: choiceOfMusic
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4593923664176206152, guid: bf3b0e299d4fc19448023a9828c6a7dc,
+        type: 3}
+      propertyPath: levelNo
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf3b0e299d4fc19448023a9828c6a7dc, type: 3}
 --- !u!1 &1374920274
@@ -7985,7 +7990,7 @@ Tilemap:
       - {fileID: -538331831730588137, guid: a0e035ca30c889a40b5ca91c8c104a40, type: 3}
       - {fileID: -1385786070971223102, guid: a0e035ca30c889a40b5ca91c8c104a40, type: 3}
       - {fileID: 6116080786932476827, guid: a0e035ca30c889a40b5ca91c8c104a40, type: 3}
-      m_AnimationSpeed: 1.5000001
+      m_AnimationSpeed: 1.5
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 12, y: 8, z: 0}

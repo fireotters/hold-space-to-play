@@ -230,10 +230,6 @@ public class MainMenuUi : BaseUi
                 levelNoSelected = levelNo;
                 StartCoroutine(FadeBlack("to"));
                 Invoke(nameof(DoLevelLoad), 1f);
-                if (discordManager.UpdateDiscordRp(DiscordActivities.StartGameActivity()))
-                {
-                    Debug.Log("Rich presence has been updated.");
-                }
             }
         }
     }
@@ -281,9 +277,5 @@ public class MainMenuUi : BaseUi
     private void OpenGame()
     {
         SceneManager.LoadScene("Level1");
-        if (discordManager.UpdateDiscordRp(DiscordActivities.StartGameActivity()))
-        {
-            Debug.Log("Rich presence has been updated.");
-        }
     }
 }

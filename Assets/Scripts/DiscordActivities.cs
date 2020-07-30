@@ -13,18 +13,17 @@ public static class DiscordActivities
         Instance = false
     };
 
-    public static Activity StartGameActivity()
+    public static Activity StartGameActivity(int levelLoaded)
     {
         return new Activity {
-            State = "Exploring the caves...",
+            State = "Exploring Level " + levelLoaded.ToString(),
             Timestamps =
             {
                 Start = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()
             },
             Assets =
             {
-                LargeImage = "hs2p_caves",
-                LargeText = "What secrets awaits in there...?"
+                LargeImage = "hs2p_caves"
             },
             Instance = false
         };

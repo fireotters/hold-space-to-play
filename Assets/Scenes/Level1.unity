@@ -1958,15 +1958,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5037601128239012255, guid: bf3b0e299d4fc19448023a9828c6a7dc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4593923664176206199, guid: bf3b0e299d4fc19448023a9828c6a7dc,
         type: 3}
       propertyPath: m_Name
       value: Canvas & UI_Script
+      objectReference: {fileID: 0}
+    - target: {fileID: 5037601128239012255, guid: bf3b0e299d4fc19448023a9828c6a7dc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4593923664176206155, guid: bf3b0e299d4fc19448023a9828c6a7dc,
         type: 3}
@@ -2076,6 +2076,11 @@ PrefabInstance:
     - target: {fileID: 4593923664176206152, guid: bf3b0e299d4fc19448023a9828c6a7dc,
         type: 3}
       propertyPath: choiceOfMusic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4593923664176206152, guid: bf3b0e299d4fc19448023a9828c6a7dc,
+        type: 3}
+      propertyPath: levelNo
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4593923665429352272, guid: bf3b0e299d4fc19448023a9828c6a7dc,
