@@ -16,6 +16,9 @@
 # TextMesh Pro files
 [Aa]ssets/TextMesh*Pro/
 
+# Lean files
+[Aa]ssets/Lean/
+
 # Visual Studio cache directory
 .vs/
 
