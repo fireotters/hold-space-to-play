@@ -207,6 +207,57 @@ Transform:
   m_Father: {fileID: 754659905}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &360094364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 360094365}
+  - component: {fileID: 360094366}
+  m_Layer: 0
+  m_Name: LevelEnd/Text1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &360094365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360094364}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1526770012}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &360094366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360094364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: "Thank you so much for\nplaying.\n\n\u2665"
+    Object: {fileID: 0}
+  - Language: Spanish
+    Text: "Muchas gracias\n por jugar.\n\n\u2665"
+    Object: {fileID: 0}
 --- !u!1 &552155274
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,7 +334,7 @@ PrefabInstance:
     - target: {fileID: 4788231124566162436, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_Name
-      value: World Text Template (2)
+      value: WorldText1
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162435, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
@@ -374,7 +425,7 @@ PrefabInstance:
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_Text
-      value: "Thank you so much for\nplaying.\n\n\u2665"
+      value: "Muchas gracias\n por jugar.\n\n\u2665"
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
@@ -394,6 +445,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 568895341}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &568895343 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4788231124566162436, guid: 7aab983edfd45e041b97a6235b590547,
+    type: 3}
+  m_PrefabInstance: {fileID: 568895341}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &568895344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568895343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 365897690d9e7c54f9fd65401bffb0d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: LevelEnd/Text1
+  FallbackText: "<Missing> Thank you so much for\nplaying.\n\n\u2665"
 --- !u!1 &746009595
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,7 +568,7 @@ PrefabInstance:
     - target: {fileID: 4788231124566162436, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_Name
-      value: World Text Template (3)
+      value: WorldText2
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162435, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
@@ -588,9 +659,7 @@ PrefabInstance:
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_Text
-      value: 'You can press [Escape] to pause
-
-        and go back to the main menu.'
+      value: "Puedes pulsar [Escape] para\npausar y volver al men\xFA."
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
@@ -610,6 +679,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 830973916}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &830973918 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4788231124566162436, guid: 7aab983edfd45e041b97a6235b590547,
+    type: 3}
+  m_PrefabInstance: {fileID: 830973916}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &830973919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830973918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 365897690d9e7c54f9fd65401bffb0d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: LevelEnd/Text2
+  FallbackText: '<Missing> You can press [Escape] to pause
+
+    and go back to the main menu.'
 --- !u!1 &1041442414
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,7 +811,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1113381378}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.272833, y: -14.742334, z: -10.541618}
+  m_LocalPosition: {x: 6.2720814, y: -14.742334, z: -10.541618}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -763,6 +854,59 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Cinemachine.CinemachineBrain+VcamActivatedEvent, Cinemachine, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &1130009954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1130009955}
+  - component: {fileID: 1130009956}
+  m_Layer: 0
+  m_Name: LevelEnd/Text2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1130009955
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130009954}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1526770012}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1130009956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130009954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: 'You can press [Escape] to pause
+
+      and go back to the main menu.'
+    Object: {fileID: 0}
+  - Language: Spanish
+    Text: "Puedes pulsar [Escape] para\npausar y volver al men\xFA."
+    Object: {fileID: 0}
 --- !u!213 &1297901132
 Sprite:
   m_ObjectHideFlags: 0
@@ -973,6 +1117,81 @@ Sprite:
   m_PhysicsShape: []
   m_Bones: []
   m_SpriteID: 
+--- !u!1001 &1526770011
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6345541163938982663, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_Name
+      value: LeanLocalization
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f313513bd9867034fad428d43238bb27, type: 3}
+--- !u!4 &1526770012 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+    type: 3}
+  m_PrefabInstance: {fileID: 1526770011}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1534493521
 GameObject:
   m_ObjectHideFlags: 3

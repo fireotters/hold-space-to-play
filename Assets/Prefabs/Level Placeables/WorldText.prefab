@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4788231124566162434}
   - component: {fileID: 4788231124566162437}
   m_Layer: 0
-  m_Name: World Text
+  m_Name: WorldText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,7 +86,7 @@ TextMesh:
   m_CharacterSize: 1
   m_LineSpacing: 1
   m_Anchor: 4
-  m_Alignment: 0
+  m_Alignment: 1
   m_TabSize: 4
   m_FontSize: 0
   m_FontStyle: 2

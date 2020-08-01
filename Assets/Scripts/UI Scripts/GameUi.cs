@@ -6,7 +6,8 @@ public class GameUi : BaseUi
 {
     private Player player;
     public MusicManager musicManager;
-    public int choiceOfMusic;
+    public int choiceOfMusic, levelNo;
+    private DiscordManager discordManager;
 
     // UI Placement Variables
     public GameObject gamePausePanel;
@@ -47,6 +48,17 @@ public class GameUi : BaseUi
             musicManager = FindObjectOfType<MusicManager>();
         }
         musicManager.ChangeMusicTrack(choiceOfMusic);
+
+        // Change discord status
+        discordManager = FindObjectOfType<DiscordManager>();
+        if (discordManager == null)
+        {
+            Debug.Log("DiscordManager not updated: Debugging individual level.");
+        }
+        else if (discordManager.UpdateDiscordRp(DiscordActivities.StartGameActivity(levelNo)))
+        {
+            Debug.Log("Rich presence has been updated.");
+        }
 
         // Find the player gameobject and fade in the level
         player = FindObjectOfType<Player>();

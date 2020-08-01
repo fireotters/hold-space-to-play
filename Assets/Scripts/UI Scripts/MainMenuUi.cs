@@ -2,6 +2,8 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
+using System.Collections;
+using Lean.Localization;
 
 public class MainMenuUi : BaseUi
 {
@@ -12,6 +14,7 @@ public class MainMenuUi : BaseUi
     private bool optionsAreOpen;
     public GameObject optionsDialog;
     public Slider optionMusicSlider, optionSFXSlider;
+    public Button optionEngButton, optionEspButton;
     private int levelNoSelected;
 
     // Audio
@@ -192,26 +195,52 @@ public class MainMenuUi : BaseUi
         SetBtnFullscreenText();
         optionMusicSlider.SetValueWithoutNotify(PlayerPrefs.GetFloat("Music"));
         optionSFXSlider.SetValueWithoutNotify(PlayerPrefs.GetFloat("SFX"));
+        SetActiveLangButton();
         SetControlDisplay();
     }
 
     private void SetControlDisplay()
     {
+        string descTitle = LeanLocalization.GetTranslationText("Options/Controls/DescTitle" + PlayerPrefs.GetInt("UI Type"));
+        string descText = LeanLocalization.GetTranslationText("Options/Controls/Desc" + PlayerPrefs.GetInt("UI Type"));
+
         if (PlayerPrefs.GetInt("UI Type") == 0)
         {
             uiDemo1.gameObject.SetActive(true);
             uiDemo2.gameObject.SetActive(false);
-            uiDescTitle.text = "Easier Movement";
-            uiDesc.text = "Three buttons, each\ndedicated to an action.";
         }
         else
         {
             uiDemo1.gameObject.SetActive(false);
             uiDemo2.gameObject.SetActive(true);
-            uiDescTitle.text = "Easier Running Jumps";
-            uiDesc.text = "Two buttons. One jumps,\none flips between moving\nplayer left or right.";
+        }
+
+        uiDescTitle.text = descTitle;
+        uiDesc.text = descText;
+    }
+
+    public void SetNewLanguage(string newLang)
+    {
+        LeanLocalization leanLoc = FindObjectOfType<LeanLocalization>();
+        leanLoc.SetCurrentLanguage(newLang);
+        SetControlDisplay();
+        SetBtnFullscreenText();
+    }
+    private void SetActiveLangButton()
+    {
+        switch (LeanLocalization.CurrentLanguage)
+        {
+            case "English":
+                optionEngButton.interactable = false;
+                optionEspButton.interactable = true;
+                break;
+            case "Spanish":
+                optionEngButton.interactable = true;
+                optionEspButton.interactable = false;
+                break;
         }
     }
+
     public void CloseOptions()
     {
         optionsAreOpen = false;
@@ -230,10 +259,6 @@ public class MainMenuUi : BaseUi
                 levelNoSelected = levelNo;
                 StartCoroutine(FadeBlack("to"));
                 Invoke(nameof(DoLevelLoad), 1f);
-                if (discordManager.UpdateDiscordRp(DiscordActivities.StartGameActivity()))
-                {
-                    Debug.Log("Rich presence has been updated.");
-                }
             }
         }
     }
@@ -260,11 +285,11 @@ public class MainMenuUi : BaseUi
     {
         if (Screen.fullScreen)
         {
-            btnFullscreenToggle.GetComponentInChildren<Text>().text = "Fullscreen ON";
+            btnFullscreenToggle.GetComponentInChildren<Text>().text = LeanLocalization.GetTranslationText("Options/Visuals/ButtonON");
         }
         else
         {
-            btnFullscreenToggle.GetComponentInChildren<Text>().text = "Fullscreen OFF";
+            btnFullscreenToggle.GetComponentInChildren<Text>().text = LeanLocalization.GetTranslationText("Options/Visuals/ButtonOFF");
         }
     }
 
@@ -281,9 +306,5 @@ public class MainMenuUi : BaseUi
     private void OpenGame()
     {
         SceneManager.LoadScene("Level1");
-        if (discordManager.UpdateDiscordRp(DiscordActivities.StartGameActivity()))
-        {
-            Debug.Log("Rich presence has been updated.");
-        }
     }
 }
