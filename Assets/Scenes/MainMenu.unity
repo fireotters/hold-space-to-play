@@ -361,8 +361,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000024437904, y: 38}
-  m_SizeDelta: {x: 1107.1, y: 404.6}
+  m_AnchoredPosition: {x: -0.000024437904, y: 75.225006}
+  m_SizeDelta: {x: 1107.1, y: 605.45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &60841679
 MonoBehaviour:
@@ -386,12 +386,12 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 538d61fe0f866eb47ab199adccd321a6, type: 3}
-    m_FontSize: 30
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 50
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -711,6 +711,8 @@ MonoBehaviour:
 
       Visual, & Control settings.
 
+
+      This game can be played
 
       Level Select is also in ''Options''.'
     Object: {fileID: 0}
@@ -1255,7 +1257,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Back to menu
+  m_Text: "Volver al men\xFA"
 --- !u!222 &214416337
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1525,7 +1527,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Language
+  m_Text: Idioma
 --- !u!222 &278315702
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2093,7 +2095,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Options
+  m_Text: Opciones
 --- !u!222 &448788154
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2510,7 +2512,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SFX Volume
+  m_Text: Sonidos
 --- !u!222 &553809501
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2678,7 +2680,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Three buttons, each dedicated to an action.
+  m_Text: "Tres botones, uno para cada acci\xF3n."
 --- !u!222 &642822519
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3114,7 +3116,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Change Controls
+  m_Text: Cambiar controles
 --- !u!222 &796307036
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3247,9 +3249,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 146a71e74e8820b4fae6ee8ec0df9e4e, type: 3}
+    m_Font: {fileID: 12800000, guid: 538d61fe0f866eb47ab199adccd321a6, type: 3}
     m_FontSize: 30
-    m_FontStyle: 0
+    m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 186
@@ -3903,16 +3905,16 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 31
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 31
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fullscreen ON
+  m_Text: Pantalla completa ON
 --- !u!222 &951292795
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4270,7 +4272,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Music Volume
+  m_Text: "M\xFAsica"
 --- !u!222 &1033255014
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4784,8 +4786,8 @@ MonoBehaviour:
   optionsDialog: {fileID: 1305414888}
   optionMusicSlider: {fileID: 1712846603}
   optionSFXSlider: {fileID: 209415934}
-  optionEngButton: {fileID: 0}
-  optionEspButton: {fileID: 0}
+  optionEngButton: {fileID: 1458943897}
+  optionEspButton: {fileID: 1574073690}
   mixer: {fileID: 24100000, guid: ce31f67688ab4d8449fbaa59ff2d06f9, type: 2}
   sfxDemoSlider: {fileID: 209415935}
   levelSelectText: {fileID: 1494863404}
@@ -5126,7 +5128,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Easier Movement
+  m_Text: Movimiento sencillo
 --- !u!222 &1320234108
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5220,7 +5222,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Controls
+  m_Text: Controles
 --- !u!222 &1329400166
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5609,7 +5611,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Visuals
+  m_Text: "Gr\xE1ficos"
 --- !u!222 &1489417407
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6634,7 +6636,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 0.8
-  m_Text: Fullscreen / Windowed
+  m_Text: Tipo de pantalla
 --- !u!222 &1752910422
 CanvasRenderer:
   m_ObjectHideFlags: 0
