@@ -576,6 +576,81 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &797299661
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6345541163938982663, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_Name
+      value: LeanLocalization
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f313513bd9867034fad428d43238bb27, type: 3}
+--- !u!4 &797299662 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+    type: 3}
+  m_PrefabInstance: {fileID: 797299661}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &804527744
 GameObject:
   m_ObjectHideFlags: 3
@@ -786,17 +861,17 @@ PrefabInstance:
     - target: {fileID: 4788231124566162436, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_Name
-      value: World Text
+      value: WorldText1
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162435, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.62
+      value: -3.91
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162435, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.71
+      value: 0.66
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162435, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
@@ -877,9 +952,7 @@ PrefabInstance:
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_Text
-      value: 'What defines us is how
-
-        well we rise after falling.'
+      value: Untranslated
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
@@ -891,6 +964,11 @@ PrefabInstance:
       propertyPath: m_Alignment
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
+        type: 3}
+      propertyPath: m_Anchor
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aab983edfd45e041b97a6235b590547, type: 3}
 --- !u!4 &1123315104 stripped
@@ -899,6 +977,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1123315103}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1123315105 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4788231124566162436, guid: 7aab983edfd45e041b97a6235b590547,
+    type: 3}
+  m_PrefabInstance: {fileID: 1123315103}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1123315106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123315105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 365897690d9e7c54f9fd65401bffb0d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Level4/Text1
+  FallbackText: <Missing> What defines us is how well we rise after falling.
 --- !u!1 &1174062580
 GameObject:
   m_ObjectHideFlags: 0
@@ -941,12 +1039,12 @@ PrefabInstance:
     - target: {fileID: 4788231124566162436, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_Name
-      value: World Text (1)
+      value: WorldText2
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162435, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.33
+      value: -3.85
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162435, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
@@ -1032,7 +1130,7 @@ PrefabInstance:
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_Text
-      value: Anything is possible.
+      value: Untranslated
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
@@ -1044,14 +1142,92 @@ PrefabInstance:
       propertyPath: m_Alignment
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
+        type: 3}
+      propertyPath: m_Anchor
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aab983edfd45e041b97a6235b590547, type: 3}
+--- !u!1 &1180250549 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4788231124566162436, guid: 7aab983edfd45e041b97a6235b590547,
+    type: 3}
+  m_PrefabInstance: {fileID: 1180250548}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1180250550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180250549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 365897690d9e7c54f9fd65401bffb0d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Level4/Text2
+  FallbackText: <Missing> Anything is possible.
 --- !u!4 &1216695067 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4788231124566162435, guid: 7aab983edfd45e041b97a6235b590547,
     type: 3}
   m_PrefabInstance: {fileID: 1180250548}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1397764503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1397764504}
+  - component: {fileID: 1397764505}
+  m_Layer: 0
+  m_Name: Level4/Text1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1397764504
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397764503}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 797299662}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1397764505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397764503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: 'What defines us is how
+
+      well we rise after falling.'
+    Object: {fileID: 0}
+  - Language: Spanish
+    Text: Untranslated
+    Object: {fileID: 0}
 --- !u!1 &1581331883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,6 +1476,57 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1862782398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1862782399}
+  - component: {fileID: 1862782400}
+  m_Layer: 0
+  m_Name: Level4/Text2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1862782399
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862782398}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 797299662}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1862782400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862782398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: Anything is possible.
+    Object: {fileID: 0}
+  - Language: Spanish
+    Text: Untranslated
+    Object: {fileID: 0}
 --- !u!1 &1900304038
 GameObject:
   m_ObjectHideFlags: 0
@@ -1439,7 +1666,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2118749770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0264387, y: -11.620156, z: -10.541618}
+  m_LocalPosition: {x: -1.0212736, y: -11.620179, z: -10.541618}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
