@@ -276,7 +276,7 @@ MonoBehaviour:
     Text: How could you reach it?
     Object: {fileID: 0}
   - Language: Spanish
-    Text: Untranslated
+    Text: "\xBFPodr\xE1s alcanzarlo?"
     Object: {fileID: 0}
 --- !u!1001 &762915286
 PrefabInstance:
@@ -966,7 +966,7 @@ PrefabInstance:
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_Text
-      value: How could you reach it?
+      value: "\xBFPodr\xE1s alcanzarlo?"
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
@@ -1276,7 +1276,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1463892186}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9357033, y: -18.256989, z: -10.541618}
+  m_LocalPosition: {x: -1.9443293, y: -18.256975, z: -10.541618}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

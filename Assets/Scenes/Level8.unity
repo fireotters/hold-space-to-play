@@ -540,9 +540,9 @@ PrefabInstance:
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_Text
-      value: 'Welcome to the final level.
+      value: 'Bienvenido al final.
 
-        Good luck with this one.'
+        Buena suerte.'
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
@@ -829,7 +829,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294109155}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.3713436, y: -29.660738, z: -10.541618}
+  m_LocalPosition: {x: 5.3627176, y: -29.660738, z: -10.541618}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1095,11 +1095,8 @@ PrefabInstance:
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_Text
-      value: '(If you''re having trouble jumping
-
-        to the right, try the ''Two Button''
-
-        control scheme in the Options)'
+      value: "(Si tienes problemas saltando a \nderecha, intenta cambiar el modo\nde
+        control a dos botones en las Opciones)"
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
@@ -2187,7 +2184,9 @@ MonoBehaviour:
       Good luck with this one.'
     Object: {fileID: 0}
   - Language: Spanish
-    Text: Untranslated
+    Text: 'Bienvenido al final.
+
+      Buena suerte.'
     Object: {fileID: 0}
 --- !u!1001 &1039190851
 PrefabInstance:
@@ -3468,7 +3467,7 @@ MonoBehaviour:
     Text: You're almost there.
     Object: {fileID: 0}
   - Language: Spanish
-    Text: Untranslated
+    Text: "Ya est\xE1s casi."
     Object: {fileID: 0}
 --- !u!1001 &1609268679
 PrefabInstance:
@@ -3656,7 +3655,7 @@ PrefabInstance:
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_Text
-      value: You're almost there.
+      value: "Ya est\xE1s casi."
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
@@ -3749,7 +3748,8 @@ MonoBehaviour:
       control scheme in the Options)'
     Object: {fileID: 0}
   - Language: Spanish
-    Text: Untranslated
+    Text: "(Si tienes problemas saltando a \nderecha, intenta cambiar el modo\nde
+      control a dos botones en las Opciones)"
     Object: {fileID: 0}
 --- !u!114 &1719332123
 MonoBehaviour:
@@ -21156,7 +21156,7 @@ Tilemap:
       - {fileID: -538331831730588137, guid: a0e035ca30c889a40b5ca91c8c104a40, type: 3}
       - {fileID: -1385786070971223102, guid: a0e035ca30c889a40b5ca91c8c104a40, type: 3}
       - {fileID: 6116080786932476827, guid: a0e035ca30c889a40b5ca91c8c104a40, type: 3}
-      m_AnimationSpeed: 1.5
+      m_AnimationSpeed: 1.5000001
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 15, y: 4, z: 0}

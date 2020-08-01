@@ -544,8 +544,8 @@ PrefabInstance:
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_Text
-      value: "Run and jump to the exit.\n\nWhenever you have momentum,\njump and you'll
-        jump to the\ndirection where you were \nmoving."
+      value: "Corre y salta a la salida.\n\nSiempre que tengas inercia,\nsalta y saltar\xE1s
+        a la direcci\xF3n\nen la que te estabas moviendo."
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
@@ -1432,7 +1432,8 @@ MonoBehaviour:
       jump to the\ndirection where you were \nmoving."
     Object: {fileID: 0}
   - Language: Spanish
-    Text: Untranslated
+    Text: "Corre y salta a la salida.\n\nSiempre que tengas inercia,\nsalta y saltar\xE1s
+      a la direcci\xF3n\nen la que te estabas moviendo."
     Object: {fileID: 0}
 --- !u!1001 &1644512183
 PrefabInstance:

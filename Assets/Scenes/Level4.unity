@@ -952,7 +952,7 @@ PrefabInstance:
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_Text
-      value: Untranslated
+      value: "Lo que nos define es\ncomo nos levantamos \ndespu\xE9s de tropezar."
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
@@ -1130,7 +1130,7 @@ PrefabInstance:
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_Text
-      value: Untranslated
+      value: Todo es posible.
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
@@ -1226,7 +1226,7 @@ MonoBehaviour:
       well we rise after falling.'
     Object: {fileID: 0}
   - Language: Spanish
-    Text: Untranslated
+    Text: "Lo que nos define es\ncomo nos levantamos \ndespu\xE9s de tropezar."
     Object: {fileID: 0}
 --- !u!1 &1581331883
 GameObject:
@@ -1525,7 +1525,7 @@ MonoBehaviour:
     Text: Anything is possible.
     Object: {fileID: 0}
   - Language: Spanish
-    Text: Untranslated
+    Text: Todo es posible.
     Object: {fileID: 0}
 --- !u!1 &1900304038
 GameObject:
@@ -1666,7 +1666,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2118749770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0212736, y: -11.620179, z: -10.541618}
+  m_LocalPosition: {x: -1.0298996, y: -11.62014, z: -10.541618}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

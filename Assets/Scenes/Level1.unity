@@ -211,7 +211,8 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 61365542}
-  m_Text: "Press space to rotate between actions.\r\nHold space to perform the action."
+  m_Text: "Pulsa espacio para rotar entre acciones.\nMant\xE9n espacio para realizar
+    la acci\xF3n"
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -951,7 +952,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 640826304}
-  m_Text: "Your goal is\r\nreaching the exit.\r\n|\r\n\rV"
+  m_Text: "Tu objetivo es \nllegar a la salida\n|\r\n\rV"
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -2312,7 +2313,8 @@ MonoBehaviour:
     Text: "Press space to rotate between actions.\r\nHold space to perform the action."
     Object: {fileID: 0}
   - Language: Spanish
-    Text: Untranslated
+    Text: "Pulsa espacio para rotar entre acciones.\nMant\xE9n espacio para realizar
+      la acci\xF3n"
     Object: {fileID: 0}
 --- !u!1 &1402638180
 GameObject:
@@ -2658,7 +2660,7 @@ MonoBehaviour:
     Text: "Your goal is\r\nreaching the exit.\r\n|\r\n\rV"
     Object: {fileID: 0}
   - Language: Spanish
-    Text: "Untranslated\n|\r\n\rV"
+    Text: "Tu objetivo es \nllegar a la salida\n|\r\n\rV"
     Object: {fileID: 0}
 --- !u!1 &1555471599
 GameObject:

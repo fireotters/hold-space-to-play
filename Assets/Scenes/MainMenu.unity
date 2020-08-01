@@ -258,7 +258,7 @@ MonoBehaviour:
     Text: Controls
     Object: {fileID: 0}
   - Language: Spanish
-    Text: Untranslated
+    Text: Controles
     Object: {fileID: 0}
 --- !u!1 &36593593
 GameObject:
@@ -323,7 +323,8 @@ MonoBehaviour:
       Jam 2019'
     Object: {fileID: 0}
   - Language: Spanish
-    Text: Untranslated
+    Text: "Versi\xF3n 1.2\n\nHecho por:\nbenchi99 y\nCrossfireCam\n\nRealizado para
+      \nla GMTK GameJam 2019"
     Object: {fileID: 0}
 --- !u!1 &60841677
 GameObject:
@@ -396,23 +397,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
-  m_Text: 'How to Play:
-
-
-    Tap Space : Change Action.
-
-    Hold Space : Perform Action
-
-    Release Space : Cancel Action
-
-
-
-    Visit ''Options'' for Volume,
-
-    Visual, & Control settings.
-
-
-    Level Select is also in ''Options''.'
+  m_Text: "Como jugar:\n\nPulsa espacio para cambiar de acci\xF3n\nMant\xE9n espacio
+    para realizar una acci\xF3n\nSuelta espacio para cancelar la opci\xF3n\n\nEn Opciones,
+    puedes cambiar\nel volumen, gr\xE1ficos y controles\n\nTambi\xE9n puedes seleccionar
+    nivel desde ah\xED\n"
 --- !u!222 &60841680
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -727,7 +715,10 @@ MonoBehaviour:
       Level Select is also in ''Options''.'
     Object: {fileID: 0}
   - Language: Spanish
-    Text: Untranslated
+    Text: "Como jugar:\n\nPulsa espacio para cambiar de acci\xF3n\nMant\xE9n espacio
+      para realizar una acci\xF3n\nSuelta espacio para cancelar la opci\xF3n\n\nEn
+      Opciones, puedes cambiar\nel volumen, gr\xE1ficos y controles\n\nTambi\xE9n
+      puedes seleccionar nivel desde ah\xED\n"
     Object: {fileID: 0}
 --- !u!1 &165960919
 GameObject:
@@ -911,7 +902,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 92540dc417aaa6643a70853a1846a9d1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01e560c4b147f1947bdca0ca32158de7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -977,7 +968,7 @@ MonoBehaviour:
     Text: Visuals
     Object: {fileID: 0}
   - Language: Spanish
-    Text: Untranslated
+    Text: "Gr\xE1ficos"
     Object: {fileID: 0}
 --- !u!1 &209415932
 GameObject:
@@ -1336,7 +1327,7 @@ MonoBehaviour:
     Text: Easier Running Jumps
     Object: {fileID: 0}
   - Language: Spanish
-    Text: Untransl Jumps
+    Text: Salto en movimiento sencillo
     Object: {fileID: 0}
 --- !u!1 &235474170
 GameObject:
@@ -1461,7 +1452,7 @@ MonoBehaviour:
     Text: SFX Volume
     Object: {fileID: 0}
   - Language: Spanish
-    Text: Untranslated
+    Text: Sonidos
     Object: {fileID: 0}
 --- !u!1 &278315699
 GameObject:
@@ -2174,7 +2165,7 @@ MonoBehaviour:
     Text: Music Volume
     Object: {fileID: 0}
   - Language: Spanish
-    Text: Untranslated
+    Text: "M\xFAsica"
     Object: {fileID: 0}
 --- !u!1 &517162631
 GameObject:
@@ -2366,7 +2357,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: e7398f2906ff3e34a9e9729a91a21e37, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fa4cdf4c6a0e3704da6916447fc31371, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2443,7 +2434,7 @@ MonoBehaviour:
   data: 0
   entries:
   - Language: Spanish
-    Text: Untranslated OFF
+    Text: Pantalla completa OFF
     Object: {fileID: 0}
   - Language: English
     Text: Fullscreen OFF
@@ -2838,7 +2829,7 @@ MonoBehaviour:
     Text: Fullscreen / Windowed
     Object: {fileID: 0}
   - Language: Spanish
-    Text: Untranslated
+    Text: Tipo de pantalla
     Object: {fileID: 0}
 --- !u!1 &735692077
 GameObject:
@@ -2889,7 +2880,7 @@ MonoBehaviour:
     Text: Easier Movement
     Object: {fileID: 0}
   - Language: Spanish
-    Text: Untransl Moves
+    Text: Movimiento sencillo
     Object: {fileID: 0}
 --- !u!1 &740613755
 GameObject:
@@ -3018,7 +3009,7 @@ MonoBehaviour:
     Text: Options
     Object: {fileID: 0}
   - Language: Spanish
-    Text: Untranslated
+    Text: Opciones
     Object: {fileID: 0}
 --- !u!1 &771513118
 GameObject:
@@ -3268,7 +3259,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The platformer with only one button
+  m_Text: "El juego de plataformas con un \xFAnico bot\xF3n"
 --- !u!222 &843861216
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3468,7 +3459,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: e129a05b00c4e37408defc6da9b1d036, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 89219650633f7484bba4c6ded1fd9a40, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3545,7 +3536,7 @@ MonoBehaviour:
   data: 0
   entries:
   - Language: Spanish
-    Text: Untranslated TwoButton
+    Text: Dos botones. Uno para saltar, otro para mover a la derecha o izquierda.
     Object: {fileID: 0}
   - Language: English
     Text: Two buttons. One jumps, one flips between moving player left or right.
@@ -4793,8 +4784,8 @@ MonoBehaviour:
   optionsDialog: {fileID: 1305414888}
   optionMusicSlider: {fileID: 1712846603}
   optionSFXSlider: {fileID: 209415934}
-  optionEngButton: {fileID: 1458943897}
-  optionEspButton: {fileID: 1574073690}
+  optionEngButton: {fileID: 0}
+  optionEspButton: {fileID: 0}
   mixer: {fileID: 24100000, guid: ce31f67688ab4d8449fbaa59ff2d06f9, type: 2}
   sfxDemoSlider: {fileID: 209415935}
   levelSelectText: {fileID: 1494863404}
@@ -4910,21 +4901,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Version 1.2
-
-
-    Made by:
-
-    benchi99 &
-
-    CrossfireCam
-
-
-    Originally for
-
-    the GMTK Game
-
-    Jam 2019'
+  m_Text: "Versi\xF3n 1.2\n\nHecho por:\nbenchi99 y\nCrossfireCam\n\nRealizado para
+    \nla GMTK GameJam 2019"
 --- !u!222 &1265029151
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4996,7 +4974,7 @@ MonoBehaviour:
     Text: Change Controls
     Object: {fileID: 0}
   - Language: Spanish
-    Text: Untranslated
+    Text: Cambiar controles
     Object: {fileID: 0}
 --- !u!1 &1305414888
 GameObject:
@@ -5311,7 +5289,7 @@ MonoBehaviour:
   data: 0
   entries:
   - Language: Spanish
-    Text: Untranslated ON
+    Text: Pantalla completa ON
     Object: {fileID: 0}
   - Language: English
     Text: Fullscreen ON
@@ -6278,7 +6256,7 @@ MonoBehaviour:
   data: 0
   entries:
   - Language: Spanish
-    Text: Untranslated ThreeButton
+    Text: "Tres botones, uno para cada acci\xF3n."
     Object: {fileID: 0}
   - Language: English
     Text: Three buttons, each dedicated to an action.
@@ -7152,7 +7130,7 @@ MonoBehaviour:
     Text: The platformer with only one button
     Object: {fileID: 0}
   - Language: Spanish
-    Text: Untranslated
+    Text: "El juego de plataformas con un \xFAnico bot\xF3n"
     Object: {fileID: 0}
 --- !u!1 &1971646447
 GameObject:
@@ -7203,7 +7181,7 @@ MonoBehaviour:
     Text: Back to menu
     Object: {fileID: 0}
   - Language: Spanish
-    Text: Untranslated
+    Text: "Volver al men\xFA"
     Object: {fileID: 0}
 --- !u!1 &1976604014
 GameObject:
@@ -7441,7 +7419,7 @@ MonoBehaviour:
     Text: Language
     Object: {fileID: 0}
   - Language: Spanish
-    Text: Untranslated
+    Text: Idioma
     Object: {fileID: 0}
 --- !u!1 &2072852146
 GameObject:
@@ -7682,7 +7660,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: e9ab560dbcd7dc44bb064ea7b200f4b6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 94482b1ee1dab5d418a798ec3d0f4a9e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

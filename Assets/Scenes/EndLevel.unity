@@ -256,7 +256,7 @@ MonoBehaviour:
     Text: "Thank you so much for\nplaying.\n\n\u2665"
     Object: {fileID: 0}
   - Language: Spanish
-    Text: "Untranslated\n\n\u2665"
+    Text: "Muchas gracias\n por jugar.\n\n\u2665"
     Object: {fileID: 0}
 --- !u!1 &552155274
 GameObject:
@@ -425,7 +425,7 @@ PrefabInstance:
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_Text
-      value: "Thank you so much for\nplaying.\n\n\u2665"
+      value: "Muchas gracias\n por jugar.\n\n\u2665"
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
@@ -659,9 +659,7 @@ PrefabInstance:
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_Text
-      value: 'You can press [Escape] to pause
-
-        and go back to the main menu.'
+      value: "Puedes pulsar [Escape] para\npausar y volver al men\xFA."
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
@@ -813,7 +811,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1113381378}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.2807083, y: -14.742334, z: -10.541618}
+  m_LocalPosition: {x: 6.2720814, y: -14.742334, z: -10.541618}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -907,7 +905,7 @@ MonoBehaviour:
       and go back to the main menu.'
     Object: {fileID: 0}
   - Language: Spanish
-    Text: Untranslated
+    Text: "Puedes pulsar [Escape] para\npausar y volver al men\xFA."
     Object: {fileID: 0}
 --- !u!213 &1297901132
 Sprite:

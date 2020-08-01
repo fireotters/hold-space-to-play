@@ -219,13 +219,11 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 61365542}
-  m_Text: 'This is a template level.
+  m_Text: 'Este es un nivel modelo.
 
-    It comes pre-packed with
+    Incluye los prefabs necesarios
 
-    the prefabs needed to make
-
-    a level.'
+    para formar un nivel.'
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -483,7 +481,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 500377048}
-  m_Text: Rope tile variations demo
+  m_Text: Demo de varios tipos de cuerda
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -731,9 +729,9 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 640826304}
-  m_Text: 'Your goal is
+  m_Text: 'Tu meta es
 
-    reaching the exit.
+    alzanzar la salida.
 
     |
 
@@ -1351,7 +1349,7 @@ MonoBehaviour:
     Text: Rope tile variations demo
     Object: {fileID: 0}
   - Language: Spanish
-    Text: Untranslated
+    Text: Demo de varios tipos de cuerda
     Object: {fileID: 0}
 --- !u!1 &1213016599
 GameObject:
@@ -1758,7 +1756,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1555471599}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.613071, y: -6.76888, z: -10.541618}
+  m_LocalPosition: {x: -17.604446, y: -6.7689333, z: -10.541618}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1946,7 +1944,9 @@ MonoBehaviour:
       V'
     Object: {fileID: 0}
   - Language: Spanish
-    Text: 'Untranslated
+    Text: 'Tu meta es
+
+      alzanzar la salida.
 
       |
 
@@ -2172,7 +2172,11 @@ MonoBehaviour:
       a level.'
     Object: {fileID: 0}
   - Language: Spanish
-    Text: Untranslated
+    Text: 'Este es un nivel modelo.
+
+      Incluye los prefabs necesarios
+
+      para formar un nivel.'
     Object: {fileID: 0}
 --- !u!483693784 &3435034124230471712
 TilemapRenderer:
