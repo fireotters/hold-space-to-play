@@ -17,8 +17,8 @@ public class GameUi : BaseUi
     private string altUiDirection = "left";
 
     // UI Gameplay Variables
-    private const float TimeHoldToActivate = 0.4f;
-    private const float TimeBetweenTapAndHold = 0.2f; // Set to (TimeHoldToActivate - BaseUi.TimeTapToChange)
+    private const float TimeHoldToActivate = 0.35f;
+    private const float TimeBetweenTapAndHold = 0.15f; // Set to (TimeHoldToActivate - BaseUi.TimeTapToChange)
 
     void Start()
     {
@@ -258,9 +258,9 @@ public class GameUi : BaseUi
     {
         if (baseUiObject.activeInHierarchy)
         {
-            leftArrowImg.fillAmount -= 0.05f;
-            upArrowImg.fillAmount -= 0.05f;
-            rightArrowImg.fillAmount -= 0.05f;
+            leftArrowImg.fillAmount -= 2.5f * Time.deltaTime;
+            upArrowImg.fillAmount -= 2.5f * Time.deltaTime;
+            rightArrowImg.fillAmount -= 2.5f * Time.deltaTime;
             if (leftArrowImg.fillAmount == 0 && upArrowImg.fillAmount == 0 && rightArrowImg.fillAmount == 0)
             {
                 cancelling = false;
@@ -268,8 +268,8 @@ public class GameUi : BaseUi
         }
         else if (altBaseUiObject.activeInHierarchy)
         {
-            altUiMoveArrowImg.fillAmount -= 0.05f;
-            altUiUpArrowImg.fillAmount -= 0.05f;
+            altUiMoveArrowImg.fillAmount -= 2.5f * Time.deltaTime;
+            altUiUpArrowImg.fillAmount -= 2.5f * Time.deltaTime;
             if (altUiMoveArrowImg.fillAmount == 0f && altUiUpArrowImg.fillAmount == 0f)
             {
                 cancelling = false;
