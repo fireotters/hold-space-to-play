@@ -625,8 +625,8 @@ MonoBehaviour:
   - Language: Spanish
     Text: "Como jugar:\n\nPulsa espacio para cambiar de acci\xF3n\nMant\xE9n espacio
       para realizar una acci\xF3n\nSuelta espacio para cancelar la opci\xF3n\n\nVisite
-      'Opciones' para cambiar la configuraci\xF3n.\r\n\u2022 Selecciona el nivel inicial\r\n\u2022
-      Controles, volumen, visuales\n\u2022 Juega en English o Espa\xF1ol"
+      'Opciones' para cambiar la configuraci\xF3n\r\n\u2022 Selecciona el nivel inicial\r\n\u2022
+      Controles, volumen, gr\xE1ficos\r\n\u2022 Juega en English o Espa\xF1ol"
     Object: {fileID: 0}
 --- !u!1 &165960919
 GameObject:
