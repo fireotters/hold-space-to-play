@@ -1,4 +1,20 @@
 ------------------
+Changelog for v1.2
+------------------
+MAJOR
+- Game can be played in English or Spanish.
+- Discord Rich Presence added. The game tells friends on Discord which level you're playing.
+- Pause menu. Game can be paused with the Esc key.
+
+MINOR
+- Animation and player controller changes.
+- Visual options made simpler.
+
+BUG FIXES
+- Fixed thin black lines that rendered on certain resolutions.
+- Fixed some glitchy jumps and removed building momentum while pressing against walls.
+
+------------------
 Changelog for v1.1
 ------------------
 MAJOR
