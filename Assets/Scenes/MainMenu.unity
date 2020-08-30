@@ -386,7 +386,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 538d61fe0f866eb47ab199adccd321a6, type: 3}
-    m_FontSize: 28
+    m_FontSize: 27
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -397,10 +397,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
-  m_Text: "Como jugar:\n\nPulsa espacio para cambiar de acci\xF3n\nMant\xE9n espacio
-    para realizar una acci\xF3n\nSuelta espacio para cancelar la opci\xF3n\n\nEn Opciones,
-    puedes cambiar\nel volumen, gr\xE1ficos y controles\n\nTambi\xE9n puedes seleccionar
-    nivel desde ah\xED\n"
+  m_Text: "How to Play:\n\nTap Space : Change Action.\nHold Space : Perform Action\nRelease
+    Space : Cancel Action\n\n\nVisit 'Options' to change settings.\n\u2022 Select
+    the starting level\n\u2022 Controls, Volume, Visuals\n\u2022 Play in English or
+    Espa\xF1ol"
 --- !u!222 &60841680
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -571,85 +571,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &91445380
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 91445381}
-  - component: {fileID: 91445383}
-  - component: {fileID: 91445382}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &91445381
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 91445380}
-  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1162585735}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 288.84, y: 33.35}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &91445382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 91445380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.9528302, g: 0.9528302, b: 0.9528302, a: 1}
-  m_RaycastTarget: 0
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 29
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Soon to be removed
---- !u!222 &91445383
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 91445380}
-  m_CullTransparentMesh: 0
 --- !u!1 &96578852
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,31 +617,16 @@ MonoBehaviour:
   data: 0
   entries:
   - Language: English
-    Text: 'How to Play:
-
-
-      Tap Space : Change Action.
-
-      Hold Space : Perform Action
-
-      Release Space : Cancel Action
-
-
-
-      Visit ''Options'' for Volume,
-
-      Visual, & Control settings.
-
-
-      This game can be played
-
-      Level Select is also in ''Options''.'
+    Text: "How to Play:\n\nTap Space : Change Action.\nHold Space : Perform Action\nRelease
+      Space : Cancel Action\n\n\nVisit 'Options' to change settings.\n\u2022 Select
+      the starting level\n\u2022 Controls, Volume, Visuals\n\u2022 Play in English
+      or Espa\xF1ol"
     Object: {fileID: 0}
   - Language: Spanish
     Text: "Como jugar:\n\nPulsa espacio para cambiar de acci\xF3n\nMant\xE9n espacio
-      para realizar una acci\xF3n\nSuelta espacio para cancelar la opci\xF3n\n\nEn
-      Opciones, puedes cambiar\nel volumen, gr\xE1ficos y controles\n\nTambi\xE9n
-      puedes seleccionar nivel desde ah\xED\n"
+      para realizar una acci\xF3n\nSuelta espacio para cancelar la opci\xF3n\n\nVisite
+      'Opciones' para cambiar la configuraci\xF3n\r\n\u2022 Selecciona el nivel inicial\r\n\u2022
+      Controles, volumen, gr\xE1ficos\r\n\u2022 Juega en English o Espa\xF1ol"
     Object: {fileID: 0}
 --- !u!1 &165960919
 GameObject:
@@ -904,7 +810,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 01e560c4b147f1947bdca0ca32158de7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 92540dc417aaa6643a70853a1846a9d1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1257,7 +1163,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Volver al men\xFA"
+  m_Text: Back to menu
 --- !u!222 &214416337
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1527,7 +1433,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Idioma
+  m_Text: Language
 --- !u!222 &278315702
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1585,7 +1491,6 @@ RectTransform:
   - {fileID: 1494863403}
   - {fileID: 941561903}
   - {fileID: 2089193073}
-  - {fileID: 1162585735}
   m_Father: {fileID: 959055482}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2095,7 +2000,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Opciones
+  m_Text: Options
 --- !u!222 &448788154
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2359,7 +2264,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: fa4cdf4c6a0e3704da6916447fc31371, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e7398f2906ff3e34a9e9729a91a21e37, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2512,7 +2417,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Sonidos
+  m_Text: SFX Volume
 --- !u!222 &553809501
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2645,7 +2550,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: -1.4998858, y: 138.31003}
-  m_SizeDelta: {x: 380.3, y: 110.33}
+  m_SizeDelta: {x: 424.3, y: 110.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &642822518
 MonoBehaviour:
@@ -2680,7 +2585,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Tres botones, uno para cada acci\xF3n."
+  m_Text: Three buttons, each dedicated to an action.
 --- !u!222 &642822519
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3116,7 +3021,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Cambiar controles
+  m_Text: Change Controls
 --- !u!222 &796307036
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3250,10 +3155,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 538d61fe0f866eb47ab199adccd321a6, type: 3}
-    m_FontSize: 30
+    m_FontSize: 29
     m_FontStyle: 2
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 186
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -3261,7 +3166,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "El juego de plataformas con un \xFAnico bot\xF3n"
+  m_Text: The platformer with only one button
 --- !u!222 &843861216
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3461,7 +3366,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 89219650633f7484bba4c6ded1fd9a40, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e129a05b00c4e37408defc6da9b1d036, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3914,7 +3819,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pantalla completa ON
+  m_Text: Fullscreen ON
 --- !u!222 &951292795
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4272,7 +4177,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "M\xFAsica"
+  m_Text: Music Volume
 --- !u!222 &1033255014
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4584,81 +4489,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1126173395}
   m_CullTransparentMesh: 0
---- !u!1 &1162585734
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1162585735}
-  - component: {fileID: 1162585738}
-  - component: {fileID: 1162585737}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1162585735
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1162585734}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 91445381}
-  m_Father: {fileID: 325758643}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50.803, y: 4.75}
-  m_SizeDelta: {x: 240.79, y: 229.3}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1162585737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1162585734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.43529412}
-  m_RaycastTarget: 0
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
---- !u!222 &1162585738
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1162585734}
-  m_CullTransparentMesh: 0
 --- !u!1 &1163891421
 GameObject:
   m_ObjectHideFlags: 0
@@ -4903,8 +4733,21 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Versi\xF3n 1.2\n\nHecho por:\nbenchi99 y\nCrossfireCam\n\nRealizado para
-    \nla GMTK GameJam 2019"
+  m_Text: 'Version 1.2
+
+
+    Made by:
+
+    benchi99 &
+
+    CrossfireCam
+
+
+    Originally for
+
+    the GMTK Game
+
+    Jam 2019'
 --- !u!222 &1265029151
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5128,7 +4971,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Movimiento sencillo
+  m_Text: Easier Movement
 --- !u!222 &1320234108
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5222,7 +5065,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Controles
+  m_Text: Controls
 --- !u!222 &1329400166
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5611,7 +5454,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Gr\xE1ficos"
+  m_Text: Visuals
 --- !u!222 &1489417407
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6636,7 +6479,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 0.8
-  m_Text: Tipo de pantalla
+  m_Text: Fullscreen / Windowed
 --- !u!222 &1752910422
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7662,7 +7505,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 94482b1ee1dab5d418a798ec3d0f4a9e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e9ab560dbcd7dc44bb064ea7b200f4b6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

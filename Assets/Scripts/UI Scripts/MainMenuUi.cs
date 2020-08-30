@@ -177,9 +177,9 @@ public class MainMenuUi : BaseUi
 
     protected override void DecreaseAllFillBoxes()
     {
-        playButtonImg.fillAmount -= 0.05f;
-        optionsButtonImg.fillAmount -= 0.05f;
-        exitButtonImg.fillAmount -= 0.05f;
+        playButtonImg.fillAmount -= 2.5f * Time.deltaTime;
+        optionsButtonImg.fillAmount -= 2.5f * Time.deltaTime;
+        exitButtonImg.fillAmount -= 2.5f * Time.deltaTime;
         if (playButtonImg.fillAmount == 0 && optionsButtonImg.fillAmount == 0 && exitButtonImg.fillAmount == 0)
         {
             cancelling = false;
