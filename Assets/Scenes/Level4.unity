@@ -313,6 +313,72 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 259087948}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &283379561
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 283379564}
+  - component: {fileID: 283379563}
+  - component: {fileID: 283379562}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &283379562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283379561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &283379563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283379561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &283379564
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283379561}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &553317971
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -510,6 +576,81 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &797299661
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6345541163938982663, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_Name
+      value: LeanLocalization
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f313513bd9867034fad428d43238bb27, type: 3}
+--- !u!4 &797299662 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+    type: 3}
+  m_PrefabInstance: {fileID: 797299661}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &804527744
 GameObject:
   m_ObjectHideFlags: 3
@@ -720,17 +861,17 @@ PrefabInstance:
     - target: {fileID: 4788231124566162436, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_Name
-      value: World Text
+      value: WorldText1
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162435, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.62
+      value: -3.91
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162435, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.71
+      value: 0.66
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162435, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
@@ -811,9 +952,7 @@ PrefabInstance:
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_Text
-      value: 'What defines us is how
-
-        well we rise after falling.'
+      value: "Lo que nos define es\ncomo nos levantamos \ndespu\xE9s de tropezar."
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
@@ -825,6 +964,11 @@ PrefabInstance:
       propertyPath: m_Alignment
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
+        type: 3}
+      propertyPath: m_Anchor
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aab983edfd45e041b97a6235b590547, type: 3}
 --- !u!4 &1123315104 stripped
@@ -833,6 +977,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1123315103}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1123315105 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4788231124566162436, guid: 7aab983edfd45e041b97a6235b590547,
+    type: 3}
+  m_PrefabInstance: {fileID: 1123315103}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1123315106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123315105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 365897690d9e7c54f9fd65401bffb0d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Level4/Text1
+  FallbackText: <Missing> What defines us is how well we rise after falling.
 --- !u!1 &1174062580
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,12 +1039,12 @@ PrefabInstance:
     - target: {fileID: 4788231124566162436, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_Name
-      value: World Text (1)
+      value: WorldText2
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162435, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.33
+      value: -3.85
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162435, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
@@ -966,7 +1130,7 @@ PrefabInstance:
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_Text
-      value: Anything is possible.
+      value: Todo es posible.
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
@@ -978,14 +1142,92 @@ PrefabInstance:
       propertyPath: m_Alignment
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
+        type: 3}
+      propertyPath: m_Anchor
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aab983edfd45e041b97a6235b590547, type: 3}
+--- !u!1 &1180250549 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4788231124566162436, guid: 7aab983edfd45e041b97a6235b590547,
+    type: 3}
+  m_PrefabInstance: {fileID: 1180250548}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1180250550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180250549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 365897690d9e7c54f9fd65401bffb0d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Level4/Text2
+  FallbackText: <Missing> Anything is possible.
 --- !u!4 &1216695067 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4788231124566162435, guid: 7aab983edfd45e041b97a6235b590547,
     type: 3}
   m_PrefabInstance: {fileID: 1180250548}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1397764503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1397764504}
+  - component: {fileID: 1397764505}
+  m_Layer: 0
+  m_Name: Level4/Text1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1397764504
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397764503}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 797299662}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1397764505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397764503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: 'What defines us is how
+
+      well we rise after falling.'
+    Object: {fileID: 0}
+  - Language: Spanish
+    Text: "Lo que nos define es\ncomo nos levantamos \ndespu\xE9s de tropezar."
+    Object: {fileID: 0}
 --- !u!1 &1581331883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1195,6 +1437,11 @@ PrefabInstance:
       propertyPath: choiceOfMusic
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4593923664176206152, guid: bf3b0e299d4fc19448023a9828c6a7dc,
+        type: 3}
+      propertyPath: levelNo
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf3b0e299d4fc19448023a9828c6a7dc, type: 3}
 --- !u!1 &1799717405
@@ -1229,6 +1476,57 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1862782398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1862782399}
+  - component: {fileID: 1862782400}
+  m_Layer: 0
+  m_Name: Level4/Text2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1862782399
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862782398}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 797299662}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1862782400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862782398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: Anything is possible.
+    Object: {fileID: 0}
+  - Language: Spanish
+    Text: Todo es posible.
+    Object: {fileID: 0}
 --- !u!1 &1900304038
 GameObject:
   m_ObjectHideFlags: 0
@@ -1327,7 +1625,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1368,7 +1666,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2118749770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0305624, y: -11.620138, z: -10.541618}
+  m_LocalPosition: {x: -1.0298996, y: -11.62014, z: -10.541618}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1529,7 +1827,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0, y: 0.000006198883, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -3461,7 +3759,7 @@ Tilemap:
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
-      m_ColliderType: 1
+      m_ColliderType: 0
   - first: {x: 24, y: 3, z: 0}
     second:
       m_TileIndex: 4
@@ -3839,7 +4137,7 @@ Tilemap:
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
-      m_ColliderType: 1
+      m_ColliderType: 0
   - first: {x: 22, y: 5, z: 0}
     second:
       m_TileIndex: 6
@@ -4577,7 +4875,7 @@ Tilemap:
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
-      m_ColliderType: 1
+      m_ColliderType: 0
   - first: {x: 25, y: 8, z: 0}
     second:
       m_TileIndex: 8
@@ -7182,161 +7480,161 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 3435034124730674191}
     m_ColliderPaths:
-    - - X: 349999971
+    - - X: 349999942
         Y: -40000000
-      - X: 349999971
+      - X: 349999942
         Y: 180000000
       - X: 20000000
-        Y: 179999971
-      - X: 20000029
+        Y: 179999942
+      - X: 20000058
         Y: -40000000
-    - - X: 180000006
-        Y: 3
+    - - X: 180000012
+        Y: 6
       - X: 110000000
-        Y: 29
-      - X: 110000029
+        Y: 58
+      - X: 110000058
         Y: 60000000
       - X: 120000000
-        Y: 60000029
-      - X: 120000029
+        Y: 60000058
+      - X: 120000058
         Y: 65000000
       - X: 130000000
-        Y: 65000029
-      - X: 130000029
+        Y: 65000058
+      - X: 130000058
         Y: 70000000
       - X: 140000000
-        Y: 70000029
-      - X: 140000029
+        Y: 70000058
+      - X: 140000058
         Y: 75000000
       - X: 150000000
-        Y: 75000029
-      - X: 150000029
+        Y: 75000058
+      - X: 150000058
         Y: 80000000
       - X: 160000000
-        Y: 80000029
-      - X: 160000029
+        Y: 80000058
+      - X: 160000058
         Y: 85000000
       - X: 170000000
-        Y: 85000029
-      - X: 169999971
+        Y: 85000058
+      - X: 169999942
         Y: 90000000
       - X: 110000000
-        Y: 90000029
-      - X: 110000029
+        Y: 90000058
+      - X: 110000058
         Y: 110000000
       - X: 120000000
-        Y: 110000029
-      - X: 120000029
+        Y: 110000058
+      - X: 120000058
         Y: 115000000
       - X: 130000000
-        Y: 115000029
-      - X: 130000029
+        Y: 115000058
+      - X: 130000058
         Y: 120000000
       - X: 240000000
-        Y: 119999971
-      - X: 240000029
+        Y: 119999942
+      - X: 240000058
         Y: 115000000
       - X: 250000000
-        Y: 114999971
-      - X: 249999971
+        Y: 114999942
+      - X: 249999942
         Y: 70000000
-      - X: 239999995
-        Y: 69999997
+      - X: 239999990
+        Y: 69999994
       - X: 220000000
-        Y: 59999983
-      - X: 220000029
+        Y: 59999966
+      - X: 220000058
         Y: 55000000
-      - X: 230000006
-        Y: 54999997
-      - X: 240000006
+      - X: 230000012
+        Y: 54999994
+      - X: 240000012
         Y: 50000000
       - X: 250000000
-        Y: 49999971
-      - X: 249999971
+        Y: 49999942
+      - X: 249999942
         Y: 40000000
       - X: 240000000
-        Y: 39999971
-      - X: 240000015
-        Y: 34999993
+        Y: 39999942
+      - X: 240000030
+        Y: 34999986
       - X: 250000000
-        Y: 29999982
-      - X: 249999971
+        Y: 29999964
+      - X: 249999942
         Y: 20000000
-      - X: 229999995
-        Y: 19999997
-      - X: 209999993
+      - X: 229999990
+        Y: 19999994
+      - X: 209999986
         Y: 10000000
-      - X: 199999995
-        Y: 9999997
-    - - X: 229999971
+      - X: 199999990
+        Y: 9999994
+    - - X: 229999942
         Y: 35000000
-      - X: 229999971
+      - X: 229999942
         Y: 40000000
       - X: 210000000
-        Y: 40000029
-      - X: 210000029
+        Y: 40000058
+      - X: 210000058
         Y: 85000000
       - X: 240000000
-        Y: 85000029
-      - X: 239999971
+        Y: 85000058
+      - X: 239999942
         Y: 90000000
       - X: 200000000
-        Y: 89999971
-      - X: 200000029
+        Y: 89999942
+      - X: 200000058
         Y: 35000000
   m_CompositePaths:
     m_Paths:
-    - - {x: 34.999996, y: 18}
-      - {x: 2, y: 17.999996}
-      - {x: 2.0000029, y: -4}
-      - {x: 34.999996, y: -4}
-    - - {x: 11, y: 0.0000029}
-      - {x: 11.000003, y: 6}
-      - {x: 12, y: 6.000003}
-      - {x: 12.000004, y: 6.5}
-      - {x: 13, y: 6.500003}
-      - {x: 13.000004, y: 7}
-      - {x: 14, y: 7.0000033}
-      - {x: 14.000004, y: 7.5}
-      - {x: 15, y: 7.5000033}
-      - {x: 15.000004, y: 8}
-      - {x: 16, y: 8.000003}
-      - {x: 16.000004, y: 8.5}
-      - {x: 17, y: 8.500003}
-      - {x: 16.999996, y: 9}
-      - {x: 11, y: 9.000003}
-      - {x: 11.000003, y: 11}
-      - {x: 12, y: 11.000003}
-      - {x: 12.000004, y: 11.5}
-      - {x: 13, y: 11.500003}
-      - {x: 13.000004, y: 12}
-      - {x: 24, y: 11.999997}
-      - {x: 24.000004, y: 11.5}
-      - {x: 25, y: 11.499997}
-      - {x: 24.999996, y: 7}
-      - {x: 24, y: 7}
-      - {x: 22, y: 5.9999986}
-      - {x: 22.000004, y: 5.5}
-      - {x: 23, y: 5.4999995}
-      - {x: 24, y: 5}
-      - {x: 25, y: 4.999997}
-      - {x: 24.999996, y: 4}
-      - {x: 24, y: 3.9999971}
-      - {x: 24.000002, y: 3.4999993}
-      - {x: 25, y: 2.9999983}
-      - {x: 24.999996, y: 2}
-      - {x: 23, y: 1.9999996}
-      - {x: 21, y: 1}
-      - {x: 20, y: 0.9999997}
-      - {x: 18, y: 0.0000003}
-    - - {x: 22.999996, y: 4}
-      - {x: 21, y: 4.000003}
-      - {x: 21.000004, y: 8.5}
-      - {x: 24, y: 8.500003}
-      - {x: 23.999996, y: 9}
-      - {x: 20, y: 8.999997}
-      - {x: 20.000004, y: 3.5}
-      - {x: 22.999996, y: 3.5}
+    - - {x: 34.999992, y: 18}
+      - {x: 2, y: 17.999994}
+      - {x: 2.0000057, y: -4}
+      - {x: 34.999992, y: -4}
+    - - {x: 11, y: 0.0000058}
+      - {x: 11.000006, y: 6}
+      - {x: 12, y: 6.0000057}
+      - {x: 12.000006, y: 6.5}
+      - {x: 13, y: 6.5000057}
+      - {x: 13.000006, y: 7}
+      - {x: 14, y: 7.0000057}
+      - {x: 14.000007, y: 7.5}
+      - {x: 15, y: 7.5000057}
+      - {x: 15.000007, y: 8}
+      - {x: 16, y: 8.000006}
+      - {x: 16.000006, y: 8.5}
+      - {x: 17, y: 8.500006}
+      - {x: 16.999994, y: 9}
+      - {x: 11, y: 9.000006}
+      - {x: 11.000006, y: 11}
+      - {x: 12, y: 11.000006}
+      - {x: 12.000006, y: 11.5}
+      - {x: 13, y: 11.500006}
+      - {x: 13.000006, y: 12}
+      - {x: 24, y: 11.999994}
+      - {x: 24.000008, y: 11.5}
+      - {x: 25, y: 11.499994}
+      - {x: 24.999994, y: 7}
+      - {x: 23.999998, y: 6.999999}
+      - {x: 22, y: 5.9999967}
+      - {x: 22.000006, y: 5.5}
+      - {x: 23.000002, y: 5.499999}
+      - {x: 24.000002, y: 5}
+      - {x: 25, y: 4.9999943}
+      - {x: 24.999994, y: 4}
+      - {x: 24, y: 3.9999945}
+      - {x: 24.000004, y: 3.4999983}
+      - {x: 25, y: 2.9999964}
+      - {x: 24.999994, y: 2}
+      - {x: 22.999998, y: 1.9999994}
+      - {x: 20.999998, y: 1}
+      - {x: 19.999998, y: 0.9999994}
+      - {x: 18.000002, y: 0.0000006}
+    - - {x: 22.999994, y: 4}
+      - {x: 21, y: 4.0000057}
+      - {x: 21.000006, y: 8.5}
+      - {x: 24, y: 8.500006}
+      - {x: 23.999994, y: 9}
+      - {x: 20, y: 8.999994}
+      - {x: 20.000006, y: 3.5}
+      - {x: 22.999994, y: 3.5}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.000005
 --- !u!50 &3435034124730674193

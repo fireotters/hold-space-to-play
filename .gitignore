@@ -16,8 +16,14 @@
 # TextMesh Pro files
 [Aa]ssets/TextMesh*Pro/
 
+# Lean files
+[Aa]ssets/Lean/
+
 # Visual Studio cache directory
 .vs/
+
+# IntelliJ project directory
+.idea/
 
 # Gradle cache directory
 .gradle/

@@ -328,7 +328,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -453,17 +453,17 @@ PrefabInstance:
     - target: {fileID: 4788231124566162436, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_Name
-      value: World Text
+      value: WorldText1
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162435, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.3246864
+      value: -4.38
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162435, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -22.02502
+      value: -21.887
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162435, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
@@ -544,8 +544,8 @@ PrefabInstance:
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
       propertyPath: m_Text
-      value: "Run and jump to the exit.\n\nWhenever you have momentum,\njump and you'll
-        jump to the\ndirection where you were \nmoving.\n"
+      value: "Corre y salta a la salida.\n\nSiempre que tengas inercia,\nsalta y saltar\xE1s
+        a la direcci\xF3n\nen la que te estabas moviendo."
       objectReference: {fileID: 0}
     - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
         type: 3}
@@ -557,6 +557,11 @@ PrefabInstance:
       propertyPath: m_Alignment
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4788231124566162437, guid: 7aab983edfd45e041b97a6235b590547,
+        type: 3}
+      propertyPath: m_Anchor
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aab983edfd45e041b97a6235b590547, type: 3}
 --- !u!4 &618820409 stripped
@@ -565,6 +570,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 618820408}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &618820410 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4788231124566162436, guid: 7aab983edfd45e041b97a6235b590547,
+    type: 3}
+  m_PrefabInstance: {fileID: 618820408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &618820411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618820410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 365897690d9e7c54f9fd65401bffb0d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translationName: Level7/Text1
+  FallbackText: "Run and jump to the exit.\n\nWhenever you have momentum,\njump and
+    you'll jump to the\ndirection where you were \nmoving.\n"
 --- !u!114 &633805480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -843,6 +869,11 @@ PrefabInstance:
         type: 3}
       propertyPath: choiceOfMusic
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4593923664176206152, guid: bf3b0e299d4fc19448023a9828c6a7dc,
+        type: 3}
+      propertyPath: levelNo
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf3b0e299d4fc19448023a9828c6a7dc, type: 3}
@@ -1351,6 +1382,59 @@ Sprite:
   m_PhysicsShape: []
   m_Bones: []
   m_SpriteID: 
+--- !u!1 &1622201704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1622201705}
+  - component: {fileID: 1622201706}
+  m_Layer: 0
+  m_Name: Level7/Text1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1622201705
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622201704}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1872816584}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1622201706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622201704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb15fa0e7301ff849bf4d6dcede7c12b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: 0
+  entries:
+  - Language: English
+    Text: "Run and jump to the exit.\n\nWhenever you have momentum,\njump and you'll
+      jump to the\ndirection where you were \nmoving."
+    Object: {fileID: 0}
+  - Language: Spanish
+    Text: "Corre y salta a la salida.\n\nSiempre que tengas inercia,\nsalta y saltar\xE1s
+      a la direcci\xF3n\nen la que te estabas moviendo."
+    Object: {fileID: 0}
 --- !u!1001 &1644512183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1431,6 +1515,72 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1644512183}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1756010948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1756010951}
+  - component: {fileID: 1756010950}
+  - component: {fileID: 1756010949}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1756010949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756010948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1756010950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756010948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1756010951
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756010948}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1842562953
 GameObject:
   m_ObjectHideFlags: 0
@@ -1518,6 +1668,81 @@ Transform:
   m_Father: {fileID: 677628134}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1872816583
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6345541163938982663, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_Name
+      value: LeanLocalization
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f313513bd9867034fad428d43238bb27, type: 3}
+--- !u!4 &1872816584 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6345541163938982657, guid: f313513bd9867034fad428d43238bb27,
+    type: 3}
+  m_PrefabInstance: {fileID: 1872816583}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3435034124155990464
 Transform:
   m_ObjectHideFlags: 0
@@ -7919,7 +8144,7 @@ Tilemap:
       - {fileID: -538331831730588137, guid: a0e035ca30c889a40b5ca91c8c104a40, type: 3}
       - {fileID: -1385786070971223102, guid: a0e035ca30c889a40b5ca91c8c104a40, type: 3}
       - {fileID: 6116080786932476827, guid: a0e035ca30c889a40b5ca91c8c104a40, type: 3}
-      m_AnimationSpeed: 1.5000001
+      m_AnimationSpeed: 1.5
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 12, y: 8, z: 0}

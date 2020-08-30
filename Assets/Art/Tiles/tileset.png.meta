@@ -331,7 +331,7 @@ TextureImporter:
     second: brick_longramp03
   - first:
       213: -781294158744790408
-    second: platform
+    second: jumpthru_full
   - first:
       213: -6985117363303071740
     second: brick_ramp03
@@ -371,6 +371,21 @@ TextureImporter:
   - first:
       213: -6923900727490736670
     second: bg_eyeanim03
+  - first:
+      213: 6921453762319009
+    second: jumpthru_half
+  - first:
+      213: 9097400418776198815
+    second: jumpthru_tiny
+  - first:
+      213: -8462400104103392701
+    second: jumpthru_tiny_half
+  - first:
+      213: 4589084368017330514
+    second: jumpthru_anchor
+  - first:
+      213: -7012441123979813106
+    second: jumpthru_full_alt
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -456,8 +471,8 @@ TextureImporter:
       name: brick_00
       rect:
         serializedVersion: 2
-        x: 0
-        y: 288
+        x: 18
+        y: 223
         width: 32
         height: 32
       alignment: 0
@@ -477,8 +492,8 @@ TextureImporter:
       name: brick_slab00
       rect:
         serializedVersion: 2
-        x: 32
-        y: 288
+        x: 54
+        y: 223
         width: 32
         height: 32
       alignment: 0
@@ -502,8 +517,8 @@ TextureImporter:
       name: brick_slab01
       rect:
         serializedVersion: 2
-        x: 64
-        y: 288
+        x: 90
+        y: 223
         width: 32
         height: 32
       alignment: 0
@@ -527,8 +542,8 @@ TextureImporter:
       name: brick_ramp00
       rect:
         serializedVersion: 2
-        x: 96
-        y: 288
+        x: 126
+        y: 223
         width: 32
         height: 32
       alignment: 0
@@ -553,8 +568,8 @@ TextureImporter:
       name: brick_ramp01
       rect:
         serializedVersion: 2
-        x: 128
-        y: 288
+        x: 162
+        y: 223
         width: 32
         height: 32
       alignment: 0
@@ -579,8 +594,8 @@ TextureImporter:
       name: brick_longramp00
       rect:
         serializedVersion: 2
-        x: 160
-        y: 288
+        x: 18
+        y: 187
         width: 32
         height: 32
       alignment: 0
@@ -604,8 +619,8 @@ TextureImporter:
       name: brick_longramp01
       rect:
         serializedVersion: 2
-        x: 192
-        y: 288
+        x: 54
+        y: 187
         width: 32
         height: 32
       alignment: 0
@@ -630,8 +645,8 @@ TextureImporter:
       name: brick_longramp02
       rect:
         serializedVersion: 2
-        x: 224
-        y: 288
+        x: 90
+        y: 187
         width: 32
         height: 32
       alignment: 0
@@ -656,8 +671,8 @@ TextureImporter:
       name: brick_longramp03
       rect:
         serializedVersion: 2
-        x: 256
-        y: 288
+        x: 126
+        y: 187
         width: 32
         height: 32
       alignment: 0
@@ -678,15 +693,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform
+      name: jumpthru_full
       rect:
         serializedVersion: 2
-        x: 288
-        y: 288
+        x: 270
+        y: 249
         width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 6
+      alignment: 9
+      pivot: {x: 0.5, y: -1.6667}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
@@ -705,8 +720,8 @@ TextureImporter:
       name: brick_ramp02
       rect:
         serializedVersion: 2
-        x: 96
-        y: 256
+        x: 198
+        y: 223
         width: 32
         height: 32
       alignment: 0
@@ -731,8 +746,8 @@ TextureImporter:
       name: brick_ramp03
       rect:
         serializedVersion: 2
-        x: 128
-        y: 256
+        x: 234
+        y: 223
         width: 32
         height: 32
       alignment: 0
@@ -757,8 +772,8 @@ TextureImporter:
       name: brick_longramp04
       rect:
         serializedVersion: 2
-        x: 160
-        y: 256
+        x: 162
+        y: 187
         width: 32
         height: 32
       alignment: 0
@@ -782,8 +797,8 @@ TextureImporter:
       name: brick_longramp05
       rect:
         serializedVersion: 2
-        x: 192
-        y: 256
+        x: 198
+        y: 187
         width: 32
         height: 32
       alignment: 0
@@ -808,8 +823,8 @@ TextureImporter:
       name: brick_longramp06
       rect:
         serializedVersion: 2
-        x: 224
-        y: 256
+        x: 234
+        y: 187
         width: 32
         height: 32
       alignment: 0
@@ -834,8 +849,8 @@ TextureImporter:
       name: brick_longramp07
       rect:
         serializedVersion: 2
-        x: 256
-        y: 256
+        x: 270
+        y: 187
         width: 32
         height: 32
       alignment: 0
@@ -859,8 +874,8 @@ TextureImporter:
       name: bg_blank
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
+        x: 18
+        y: 115
         width: 32
         height: 32
       alignment: 0
@@ -880,8 +895,8 @@ TextureImporter:
       name: bg_vine00
       rect:
         serializedVersion: 2
-        x: 32
-        y: 128
+        x: 54
+        y: 115
         width: 32
         height: 32
       alignment: 0
@@ -901,8 +916,8 @@ TextureImporter:
       name: bg_vine01
       rect:
         serializedVersion: 2
-        x: 64
-        y: 128
+        x: 90
+        y: 115
         width: 32
         height: 32
       alignment: 0
@@ -922,8 +937,8 @@ TextureImporter:
       name: bg_flower
       rect:
         serializedVersion: 2
-        x: 96
-        y: 128
+        x: 126
+        y: 115
         width: 32
         height: 32
       alignment: 0
@@ -943,8 +958,8 @@ TextureImporter:
       name: bg_arrow
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
+        x: 162
+        y: 115
         width: 32
         height: 32
       alignment: 0
@@ -964,8 +979,8 @@ TextureImporter:
       name: bg_eyeanim00
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
+        x: 18
+        y: 79
         width: 32
         height: 32
       alignment: 0
@@ -985,8 +1000,8 @@ TextureImporter:
       name: bg_eyeanim01
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
+        x: 54
+        y: 79
         width: 32
         height: 32
       alignment: 0
@@ -1006,8 +1021,8 @@ TextureImporter:
       name: bg_eyeanim02
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
+        x: 90
+        y: 79
         width: 32
         height: 32
       alignment: 0
@@ -1027,8 +1042,8 @@ TextureImporter:
       name: bg_eyeanim03
       rect:
         serializedVersion: 2
-        x: 96
-        y: 32
+        x: 126
+        y: 79
         width: 32
         height: 32
       alignment: 0
@@ -1048,8 +1063,8 @@ TextureImporter:
       name: bg_eyeanim04
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 162
+        y: 79
         width: 32
         height: 32
       alignment: 0
@@ -1069,8 +1084,8 @@ TextureImporter:
       name: bg_eyeanim05
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
+        x: 198
+        y: 79
         width: 32
         height: 32
       alignment: 0
@@ -1090,8 +1105,8 @@ TextureImporter:
       name: bg_eyeanim06
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
+        x: 234
+        y: 79
         width: 32
         height: 32
       alignment: 0
@@ -1111,8 +1126,8 @@ TextureImporter:
       name: bg_eyeanim07
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
+        x: 270
+        y: 79
         width: 32
         height: 32
       alignment: 0
@@ -1124,6 +1139,90 @@ TextureImporter:
       bones: []
       spriteID: b3f8ef0cdd9095442b0c562aa9530b4e
       internalID: -4827537604736492380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpthru_half
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 223
+        width: 32
+        height: 3
+      alignment: 9
+      pivot: {x: 0.5, y: 5.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e468e96628f8d0e47ba7bbc9736225f2
+      internalID: 6921453762319009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpthru_tiny
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 243
+        width: 32
+        height: 2
+      alignment: 9
+      pivot: {x: 0.5, y: -7}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d06457090f425d74e8773ec4c1a6b51f
+      internalID: 9097400418776198815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpthru_anchor
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 232
+        width: 6
+        height: 6
+      alignment: 9
+      pivot: {x: -1.6667, y: -1.6667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 048241146bffb2c4082c504de2932dfb
+      internalID: 4589084368017330514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpthru_full_alt
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 249
+        width: 32
+        height: 6
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd60d6591568db4ea493f2986c7d80c
+      internalID: -7012441123979813106
       vertices: []
       indices: 
       edges: []

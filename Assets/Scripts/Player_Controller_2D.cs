@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Player_Controller_2D : MonoBehaviour
 {
-    private Rigidbody2D rb;
     public bool isGrounded = false;
 
     // Disable warning CS0649 (never assigned to). These are serialized fields that are assigned in Unity.
@@ -15,9 +14,6 @@ public class Player_Controller_2D : MonoBehaviour
 
     [SerializeField] private float groundedRadius = 0f;
 
-    void Start()
-    {
-    }
 
     void FixedUpdate()
     {
