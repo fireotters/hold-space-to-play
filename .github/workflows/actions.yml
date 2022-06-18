@@ -1,4 +1,4 @@
-name: Build WebGL project
+name: Build Windows Standalone project
 on: 
   push:
     branches:
@@ -31,9 +31,9 @@ jobs:
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
-          targetPlatform: WebGL
+          targetPlatform: StandaloneWindows64
           versioning: Custom
-          version: Version ${{ github.sha }}
+          version: Version \#${{ github.sha }}
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
