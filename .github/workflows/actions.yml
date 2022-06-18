@@ -12,7 +12,7 @@ jobs:
     steps: 
       # Repo checkout
       - name: Checkout project
-        uses: action/checkout@v2
+        uses: actions/checkout@v2
         with:
           lfs: true
 
