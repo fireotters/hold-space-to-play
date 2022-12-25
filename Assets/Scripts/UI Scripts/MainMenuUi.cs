@@ -32,9 +32,11 @@ public class MainMenuUi : BaseUi
 
     private const float TimeHoldToActivate = 1.0f;
     private const float TimeBetweenTapAndHold = 0.8f; // Set to (TimeHoldToActivate - BaseUi.TimeTapToChange)
+    private LeanLocalization leanLoc;
 
     void Start()
     {
+        leanLoc = FindObjectOfType<LeanLocalization>();
         discordManager = FindObjectOfType<DiscordManager>();
         if (discordManager.UpdateDiscordRp(DiscordActivities.MainMenuActivity))
         {
@@ -221,14 +223,14 @@ public class MainMenuUi : BaseUi
 
     public void SetNewLanguage(string newLang)
     {
-        LeanLocalization leanLoc = FindObjectOfType<LeanLocalization>();
         leanLoc.SetCurrentLanguage(newLang);
         SetControlDisplay();
         SetBtnFullscreenText();
     }
+
     private void SetActiveLangButton()
     {
-        switch (LeanLocalization.CurrentLanguage)
+        switch (leanLoc.CurrentLanguage)
         {
             case "English":
                 optionEngButton.interactable = false;
