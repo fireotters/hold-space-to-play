@@ -18,6 +18,7 @@
 
 # Lean files
 [Aa]ssets/Lean/
+[Aa]ssets/Plugins/CW
 
 # Visual Studio cache directory
 .vs/
