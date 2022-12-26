@@ -3,7 +3,7 @@ using Discord;
 
 public static class DiscordActivities
 {
-    public static readonly Activity MainMenuActivity = new Activity
+    public static readonly Activity MainMenuActivity = new()
     {
         State = "In the Main Menu",
         Assets =

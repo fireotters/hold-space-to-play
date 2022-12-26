@@ -2,13 +2,13 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
-using System.Collections;
 using Lean.Localization;
 using System;
 
 public class MainMenuUi : BaseUi
 {
-    public Image outlineImg, outlineSlimImg, playButtonImg, optionsButtonImg, exitButtonImg;
+    #region Variables
+    public Image outlineImg, outlineSlimImg, playButtonImg, optionsButtonImg, optionsButtonImgWeb, exitButtonImg;
     private bool gameStarting;
 
     // Option Screen
@@ -28,13 +28,16 @@ public class MainMenuUi : BaseUi
     public Button btnFullscreenToggle;
     public RawImage uiDemo1, uiDemo2;
     public Text uiDescTitle, uiDesc;
+    public GameObject optionsButton, optionsButtonWeb, exitButton;
 
     private DiscordManager discordManager;
 
     private const float TimeHoldToActivate = 1.0f;
     private const float TimeBetweenTapAndHold = 0.8f; // Set to (TimeHoldToActivate - BaseUi.TimeTapToChange)
     private LeanLocalization leanLoc;
+    #endregion
 
+    #region Start & Update
     void Start()
     {
         leanLoc = FindObjectOfType<LeanLocalization>();
@@ -43,6 +46,16 @@ public class MainMenuUi : BaseUi
         {
             SetNewLanguage("English");  // Set English as default if nothing is set
         }
+
+#if UNITY_WEBGL
+        exitButton.SetActive(false);
+        optionsButton.SetActive(false);
+        optionsButtonWeb.SetActive(true);
+#else
+        exitButton.SetActive(true);
+        optionsButton.SetActive(true);
+        optionsButtonWeb.SetActive(false);
+#endif
 
         discordManager = FindObjectOfType<DiscordManager>();
         if (discordManager.UpdateDiscordRp(DiscordActivities.MainMenuActivity))
@@ -112,7 +125,9 @@ public class MainMenuUi : BaseUi
             DecreaseAllFillBoxes();
         }
     }
+    #endregion
 
+    #region BaseUI overrides
     protected override void ChangeSelection()
     {
         switch (currentOutline)
@@ -120,18 +135,30 @@ public class MainMenuUi : BaseUi
             case "PlayButton":
                 outlineImg.gameObject.SetActive(false);
                 outlineSlimImg.gameObject.SetActive(true);
+#if UNITY_WEBGL
+                outlineSlimImg.transform.position = optionsButtonImgWeb.transform.position;
+#else
                 outlineSlimImg.transform.position = optionsButtonImg.transform.position;
+#endif
                 currentOutline = "OptionsButton";
                 break;
             case "OptionsButton":
+#if UNITY_WEBGL
+                outlineImg.gameObject.SetActive(true);
+                outlineSlimImg.gameObject.SetActive(false);
+                currentOutline = "PlayButton";                
+#else
                 outlineSlimImg.transform.position = exitButtonImg.transform.position;
                 currentOutline = "ExitButton";
+#endif
                 break;
+#if UNITY_STANDALONE
             case "ExitButton":
                 outlineImg.gameObject.SetActive(true);
                 outlineSlimImg.gameObject.SetActive(false);
                 currentOutline = "PlayButton";
                 break;
+#endif
         }
     }
 
@@ -147,9 +174,11 @@ public class MainMenuUi : BaseUi
             case "OptionsButton":
                 ShowOptions();
                 break;
+#if UNITY_STANDALONE
             case "ExitButton":
                 Application.Quit();
                 break;
+#endif
         }
     }
 
@@ -161,11 +190,17 @@ public class MainMenuUi : BaseUi
                 playButtonImg.fillAmount = 1.0f;
                 break;
             case "OptionsButton":
+#if UNITY_WEBGL
+                optionsButtonImgWeb.fillAmount = 1.0f;
+#else
                 optionsButtonImg.fillAmount = 1.0f;
+#endif
                 break;
+#if UNITY_STANDALONE
             case "ExitButton":
                 exitButtonImg.fillAmount = 1.0f;
                 break;
+#endif
         }
     }
     protected override void FillBoxOfSelection()
@@ -175,27 +210,45 @@ public class MainMenuUi : BaseUi
             case "PlayButton":
                 playButtonImg.fillAmount += 1.0f / TimeBetweenTapAndHold * Time.deltaTime;
                 break;
+#if UNITY_WEBGL
+            case "OptionsButton":
+                optionsButtonImgWeb.fillAmount += 1.0f / TimeBetweenTapAndHold * Time.deltaTime;
+                break;
+#else
             case "OptionsButton":
                 optionsButtonImg.fillAmount += 1.0f / TimeBetweenTapAndHold * Time.deltaTime;
                 break;
             case "ExitButton":
                 exitButtonImg.fillAmount += 1.0f / TimeBetweenTapAndHold * Time.deltaTime;
                 break;
+#endif
+
         }
     }
 
     protected override void DecreaseAllFillBoxes()
     {
         playButtonImg.fillAmount -= 2.5f * Time.deltaTime;
+#if UNITY_WEBGL
+        optionsButtonImgWeb.fillAmount -= 2.5f * Time.deltaTime;
+#else
         optionsButtonImg.fillAmount -= 2.5f * Time.deltaTime;
         exitButtonImg.fillAmount -= 2.5f * Time.deltaTime;
-        if (playButtonImg.fillAmount == 0 && optionsButtonImg.fillAmount == 0 && exitButtonImg.fillAmount == 0)
+#endif
+        if (playButtonImg.fillAmount == 0
+#if UNITY_WEBGL
+            && optionsButtonImgWeb.fillAmount == 0
+#else
+            && optionsButtonImg.fillAmount == 0 
+#endif
+            && exitButtonImg.fillAmount == 0)
         {
             cancelling = false;
         }
     }
+#endregion
 
-    // Functions related to options menu
+    #region Other UI methods
     private void ShowOptions()
     {
         optionsAreOpen = true;
@@ -310,10 +363,12 @@ public class MainMenuUi : BaseUi
             PlayerPrefs.SetInt("UI Type", 0);
         SetControlDisplay();
     }
+#endregion
 
-    // Other functions
+    #region Other methods
     private void OpenGame()
     {
         SceneManager.LoadScene("Level1");
     }
+    #endregion
 }
