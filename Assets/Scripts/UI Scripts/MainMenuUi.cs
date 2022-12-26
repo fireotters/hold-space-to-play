@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using System.Collections;
 using Lean.Localization;
+using System;
 
 public class MainMenuUi : BaseUi
 {
@@ -37,6 +38,12 @@ public class MainMenuUi : BaseUi
     void Start()
     {
         leanLoc = FindObjectOfType<LeanLocalization>();
+        
+        if (String.IsNullOrEmpty(leanLoc.CurrentLanguage))
+        {
+            SetNewLanguage("English");  // Set English as default if nothing is set
+        }
+
         discordManager = FindObjectOfType<DiscordManager>();
         if (discordManager.UpdateDiscordRp(DiscordActivities.MainMenuActivity))
         {
