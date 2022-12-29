@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using Lean.Localization;
 using System;
+using TMPro;
 
 public class MainMenuUi : BaseUi
 {
@@ -24,11 +25,10 @@ public class MainMenuUi : BaseUi
     public AudioSource sfxDemoSlider;
 
     // UI
-    public Text levelSelectText;
     public Button btnFullscreenToggle;
     public RawImage uiDemo1, uiDemo2;
-    public Text uiDescTitle, uiDesc;
     public GameObject optionsButton, optionsButtonWeb, exitButton;
+    [SerializeField] private TextMeshProUGUI txtBtnFullscreenToggle, txtUiDescTitle, txtUiDesc, txtLevelSelect;
 
     private DiscordManager discordManager;
 
@@ -42,7 +42,7 @@ public class MainMenuUi : BaseUi
     {
         leanLoc = FindObjectOfType<LeanLocalization>();
         
-        if (String.IsNullOrEmpty(leanLoc.CurrentLanguage))
+        if (string.IsNullOrEmpty(leanLoc.CurrentLanguage))
         {
             SetNewLanguage("English");  // Set English as default if nothing is set
         }
@@ -277,8 +277,8 @@ public class MainMenuUi : BaseUi
             uiDemo2.gameObject.SetActive(true);
         }
 
-        uiDescTitle.text = descTitle;
-        uiDesc.text = descText;
+        txtUiDescTitle.text = descTitle;
+        txtUiDesc.text = descText;
     }
 
     public void SetNewLanguage(string newLang)
@@ -312,16 +312,23 @@ public class MainMenuUi : BaseUi
         beingHeld = false;
     }
 
-    public void GoToLevel()
+    public void LevelSelectChange(int modifier)
     {
-        if (int.TryParse(levelSelectText.text, out int levelNo))
+        int.TryParse(txtLevelSelect.text, out int levelNo);
+        levelNo += modifier;
+        if (levelNo == 0)
+            levelNo = 8;
+        else if (levelNo == 9)
+            levelNo = 1;
+        txtLevelSelect.text = levelNo.ToString();
+    }
+    public void LevelSelectPlay()
+    {
+        if (int.TryParse(txtLevelSelect.text, out int levelNo))
         {
-            if (levelNo > 0 && levelNo < 9)
-            {
-                levelNoSelected = levelNo;
-                StartCoroutine(FadeBlack("to"));
-                Invoke(nameof(DoLevelLoad), 1f);
-            }
+            levelNoSelected = levelNo;
+            StartCoroutine(FadeBlack("to"));
+            Invoke(nameof(DoLevelLoad), 1f);
         }
     }
 
@@ -347,11 +354,11 @@ public class MainMenuUi : BaseUi
     {
         if (Screen.fullScreen)
         {
-            btnFullscreenToggle.GetComponentInChildren<Text>().text = LeanLocalization.GetTranslationText("Options/Visuals/ButtonON");
+            txtBtnFullscreenToggle.text = LeanLocalization.GetTranslationText("Options/Visuals/BtnFS_On");
         }
         else
         {
-            btnFullscreenToggle.GetComponentInChildren<Text>().text = LeanLocalization.GetTranslationText("Options/Visuals/ButtonOFF");
+            txtBtnFullscreenToggle.text = LeanLocalization.GetTranslationText("Options/Visuals/BtnFS_Off");
         }
     }
 
