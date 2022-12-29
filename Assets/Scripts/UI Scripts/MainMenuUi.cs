@@ -41,9 +41,6 @@ public class MainMenuUi : BaseUi
     void Start()
     {
         leanLoc = FindObjectOfType<LeanLocalization>();
-        uiDemo1.url = System.IO.Path.Combine(Application.streamingAssetsPath, "Demo.ogg");
-        uiDemo2.url = System.IO.Path.Combine(Application.streamingAssetsPath, "Demo-Alt.ogg");
-
 
         if (string.IsNullOrEmpty(leanLoc.CurrentLanguage))
         {

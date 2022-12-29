@@ -1,1 +1,0 @@
-These videos are hosted on Github Pages, for playing in-game from WebGL builds.
