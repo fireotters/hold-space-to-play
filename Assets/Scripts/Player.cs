@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using Cinemachine;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
     #region Variables
     [SerializeField] private float speedMultiplier = 0, jumpForce = 3f;
-    [SerializeField] private Text keyCounter;
+    [SerializeField] private TextMeshProUGUI keyCounter;
 
     private Rigidbody2D rb;
     public Player_Controller_2D controller;
@@ -35,8 +36,8 @@ public class Player : MonoBehaviour
         cinemachineCamera.Follow = gameObject.transform;
 
         // Find key counter text object
-        var listOfTextObjects = FindObjectsOfType<Text>();
-        foreach (Text textObject in listOfTextObjects)
+        var listOfTextObjects = FindObjectsOfType<TextMeshProUGUI>();
+        foreach (TextMeshProUGUI textObject in listOfTextObjects)
         {
             if (textObject.transform.name == "KeyCounter (don't rename)")
             {
