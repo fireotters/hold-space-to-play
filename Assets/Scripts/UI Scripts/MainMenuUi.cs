@@ -3,8 +3,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using Lean.Localization;
-using System;
 using TMPro;
+using UnityEngine.Video;
 
 public class MainMenuUi : BaseUi
 {
@@ -26,7 +26,7 @@ public class MainMenuUi : BaseUi
 
     // UI
     public Button btnFullscreenToggle;
-    public RawImage uiDemo1, uiDemo2;
+    public VideoPlayer uiDemo1, uiDemo2;
     public GameObject optionsButton, optionsButtonWeb, exitButton;
     [SerializeField] private TextMeshProUGUI txtBtnFullscreenToggle, txtUiDescTitle, txtUiDesc, txtLevelSelect;
 
@@ -41,7 +41,10 @@ public class MainMenuUi : BaseUi
     void Start()
     {
         leanLoc = FindObjectOfType<LeanLocalization>();
-        
+        uiDemo1.url = System.IO.Path.Combine(Application.streamingAssetsPath, "Demo.ogg");
+        uiDemo2.url = System.IO.Path.Combine(Application.streamingAssetsPath, "Demo-Alt.ogg");
+
+
         if (string.IsNullOrEmpty(leanLoc.CurrentLanguage))
         {
             SetNewLanguage("English");  // Set English as default if nothing is set
