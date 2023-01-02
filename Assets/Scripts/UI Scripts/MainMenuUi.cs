@@ -54,8 +54,8 @@ public class MainMenuUi : BaseUi
             SetNewLanguage("English");
 
         // Load UI Demo videos
-        vidUiDemo_3btn.url = System.IO.Path.Combine(Application.streamingAssetsPath, "Demo-3button.mp4");
-        vidUiDemo_2btn.url = System.IO.Path.Combine(Application.streamingAssetsPath, "Demo-2button.mp4");
+        vidUiDemo_3btn.url = System.IO.Path.Combine(Application.streamingAssetsPath, "Demo-3button.webm");
+        vidUiDemo_2btn.url = System.IO.Path.Combine(Application.streamingAssetsPath, "Demo-2button.webm");
         rimgUiDemo_3btn = vidUiDemo_3btn.GetComponent<RawImage>();
         rimgUiDemo_2btn = vidUiDemo_2btn.GetComponent<RawImage>();
 
