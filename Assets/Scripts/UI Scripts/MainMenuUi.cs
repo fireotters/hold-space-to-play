@@ -5,6 +5,7 @@ using UnityEngine.Audio;
 using Lean.Localization;
 using TMPro;
 using UnityEngine.Video;
+using System.Collections;
 
 public class MainMenuUi : BaseUi
 {
@@ -26,27 +27,39 @@ public class MainMenuUi : BaseUi
 
     // UI
     public Button btnFullscreenToggle;
-    public VideoPlayer uiDemo1, uiDemo2;
     public GameObject optionsButton, optionsButtonWeb, exitButton;
     [SerializeField] private TextMeshProUGUI txtBtnFullscreenToggle, txtUiDescTitle, txtUiDesc, txtLevelSelect;
 
-    private DiscordManager discordManager;
+    // UI Videos
+    [SerializeField] private VideoPlayer vidUiDemo_3btn, vidUiDemo_2btn;
+    [SerializeField] private Texture firstFrameUiDemo_3btn, firstFrameUiDemo_2btn;
+    private RawImage rimgUiDemo_3btn, rimgUiDemo_2btn;
+    private Color vidVisible = new(1.0f, 1.0f, 1.0f, 1.0f), vidInvisible = new(1.0f, 1.0f, 1.0f, 0);
 
+    // Menu Interaction
     private const float TimeHoldToActivate = 1.0f;
     private const float TimeBetweenTapAndHold = 0.8f; // Set to (TimeHoldToActivate - BaseUi.TimeTapToChange)
+
+    // Plugins
     private LeanLocalization leanLoc;
+    private DiscordManager discordManager;
     #endregion
 
     #region Start & Update
     void Start()
     {
+        // Load Localization, and set English as default if nothing is set
         leanLoc = FindObjectOfType<LeanLocalization>();
-
         if (string.IsNullOrEmpty(leanLoc.CurrentLanguage))
-        {
-            SetNewLanguage("English");  // Set English as default if nothing is set
-        }
+            SetNewLanguage("English");
 
+        // Load UI Demo videos
+        vidUiDemo_3btn.url = System.IO.Path.Combine(Application.streamingAssetsPath, "Demo-3button.mp4");
+        vidUiDemo_2btn.url = System.IO.Path.Combine(Application.streamingAssetsPath, "Demo-2button.mp4");
+        rimgUiDemo_3btn = vidUiDemo_3btn.GetComponent<RawImage>();
+        rimgUiDemo_2btn = vidUiDemo_2btn.GetComponent<RawImage>();
+
+        // Remove exit button on WebGL version
 #if UNITY_WEBGL
         exitButton.SetActive(false);
         optionsButton.SetActive(false);
@@ -57,11 +70,12 @@ public class MainMenuUi : BaseUi
         optionsButtonWeb.SetActive(false);
 #endif
 
+        // Discord Rich Presence
         discordManager = FindObjectOfType<DiscordManager>();
         if (discordManager.UpdateDiscordRp(DiscordActivities.MainMenuActivity))
-        {
             Debug.Log("Rich presence updated.");
-        }
+
+        // Handle music/sfx
         musicManager = FindObjectOfType<MusicManager>();
         if (!musicManager)
         {
@@ -80,6 +94,8 @@ public class MainMenuUi : BaseUi
         }
         mixer.SetFloat("MusicVolume", Mathf.Log10(PlayerPrefs.GetFloat("Music")) * 20);
         mixer.SetFloat("SFXVolume", Mathf.Log10(PlayerPrefs.GetFloat("SFX")) * 20);
+
+        // Screen transition & select 'Play' button
         StartCoroutine(FadeBlack("from"));
         outlineImg.transform.position = playButtonImg.transform.position;
         currentOutline = "PlayButton";
@@ -259,6 +275,10 @@ public class MainMenuUi : BaseUi
         optionSFXSlider.SetValueWithoutNotify(PlayerPrefs.GetFloat("SFX"));
         SetActiveLangButton();
         SetControlDisplay();
+        // The video player's render texture retains the last played frame, and video restarts itself when gameobject is made inactive.
+        // Force the video's first frame to load.
+        Graphics.Blit(firstFrameUiDemo_2btn, vidUiDemo_2btn.targetTexture);
+        Graphics.Blit(firstFrameUiDemo_3btn, vidUiDemo_3btn.targetTexture);
     }
 
     private void SetControlDisplay()
@@ -268,13 +288,13 @@ public class MainMenuUi : BaseUi
 
         if (PlayerPrefs.GetInt("UI Type") == 0)
         {
-            uiDemo1.gameObject.SetActive(true);
-            uiDemo2.gameObject.SetActive(false);
+            rimgUiDemo_3btn.color = vidVisible;
+            rimgUiDemo_2btn.color = vidInvisible;
         }
         else
         {
-            uiDemo1.gameObject.SetActive(false);
-            uiDemo2.gameObject.SetActive(true);
+            rimgUiDemo_3btn.color = vidInvisible;
+            rimgUiDemo_2btn.color = vidVisible;
         }
 
         txtUiDescTitle.text = descTitle;
@@ -307,8 +327,6 @@ public class MainMenuUi : BaseUi
     {
         optionsAreOpen = false;
         optionsDialog.SetActive(false);
-        optionMusicSlider.SetValueWithoutNotify(PlayerPrefs.GetFloat("Music"));
-        optionSFXSlider.SetValueWithoutNotify(PlayerPrefs.GetFloat("SFX"));
         beingHeld = false;
     }
 
