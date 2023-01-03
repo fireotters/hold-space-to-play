@@ -1,4 +1,14 @@
 ------------------
+Changelog for v1.3
+------------------
+MAJOR
+- Game can be played in a web browser.
+
+MINOR
+- Changed the Video Player related code to support WebGL builds.
+- No gameplay changes.
+
+------------------
 Changelog for v1.2
 ------------------
 MAJOR
